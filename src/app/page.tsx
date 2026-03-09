@@ -1,65 +1,204 @@
-import Image from "next/image";
+import { ProjectCard } from "@/components/project-card";
+import { KaputScreens, OnboardScreens, TeamPulseScreens, FocusFlowScreens } from "@/components/project-screens";
+import { ScrollReveal, HeroReveal, StaggerContainer, StaggerItem, AnimatedDivider } from "@/components/motion";
+import { SkillsMarquee } from "@/components/skills-marquee";
+import { HeroVisual } from "@/components/hero-visual";
+import Link from "next/link";
+
+const projects = [
+  {
+    title: "Kaput",
+    subtitle: "B2C Marketplace",
+    description:
+      "Map-based marketplace connecting car owners with trusted mechanics. Real-time maps, guided quoting, Stripe payments, in-app chat.",
+    tags: ["Product Design", "Map UX", "Two-Sided Platform"],
+    href: "/case-study/kaput",
+    bg: "#DDD5C7",
+    year: "2025",
+    screens: <KaputScreens />,
+  },
+  {
+    title: "Onboard",
+    subtitle: "SaaS Onboarding Redesign",
+    description:
+      "Redesigned the onboarding flow for a PM tool, reducing drop-off by 40% and cutting time-to-value from 12 min to under 4.",
+    tags: ["User Research", "Interaction Design", "SaaS"],
+    href: "/case-study/onboard",
+    bg: "#D4DDD5",
+    year: "2025",
+    screens: <OnboardScreens />,
+  },
+  {
+    title: "TeamPulse",
+    subtitle: "Employee Feedback Dashboard",
+    description:
+      "Pulse survey platform that turns employee feedback into manager action in under 24 hours.",
+    tags: ["0-to-1 Design", "Data Visualization", "B2B SaaS"],
+    href: "/case-study/teampulse",
+    bg: "#D4D8DD",
+    year: "2025",
+    screens: <TeamPulseScreens />,
+  },
+  {
+    title: "FocusFlow",
+    subtitle: "Productivity App Concept",
+    description:
+      "Cross-platform focus management app integrating with calendars and Slack to protect deep work time.",
+    tags: ["Mobile + Web", "Product Strategy", "Cross-Platform"],
+    href: "/case-study/focusflow",
+    bg: "#DDD4D4",
+    year: "2025",
+    screens: <FocusFlowScreens />,
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* Hero */}
+      <section className="grain relative px-6 pt-28 pb-16 overflow-hidden">
+        <div className="w-full max-w-5xl mx-auto">
+          <HeroReveal delay={0.1}>
+            <p className="mb-6 text-sm tracking-[0.2em] text-[var(--text-secondary)]">
+              UX Designer
+            </p>
+          </HeroReveal>
+          <HeroReveal delay={0.25}>
+            <h1 className="mb-6 text-6xl font-bold leading-[1.05] tracking-tight sm:text-7xl md:text-8xl lg:text-9xl">
+              Kasra
+              <br />
+              Molaei<span className="text-[var(--accent)]">.</span>
+            </h1>
+          </HeroReveal>
+          <HeroReveal delay={0.45}>
+            <p className="mb-10 max-w-md text-lg leading-relaxed text-[var(--text-secondary)]">
+              Designing end-to-end experiences for SaaS products
+              that users love and companies profit from.
+            </p>
+          </HeroReveal>
+          <HeroReveal delay={0.6}>
+            <div className="flex gap-4">
+              <Link href="#work" className="btn-primary">
+                View my work
+              </Link>
+              <Link href="/about" className="btn-outline">
+                About me
+              </Link>
+            </div>
+          </HeroReveal>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <AnimatedDivider />
+
+      {/* Disciplines & Tools */}
+      <section className="px-6 py-16">
+        <div className="w-full max-w-5xl mx-auto">
+          <HeroVisual />
         </div>
-      </main>
-    </div>
+      </section>
+
+      <AnimatedDivider />
+
+      {/* Projects */}
+      <section id="work" className="px-6 pt-8 pb-16">
+        <div className="w-full max-w-5xl mx-auto">
+          <ScrollReveal>
+            <p className="mb-12 text-sm tracking-[0.2em] text-[var(--text-secondary)]">
+              Selected Work
+            </p>
+          </ScrollReveal>
+          <div className="space-y-8">
+            {projects.map((project) => (
+              <ScrollReveal key={project.title}>
+                <ProjectCard {...project} />
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <AnimatedDivider />
+
+      {/* Design Principles */}
+      <section className="px-6 py-20">
+        <div className="w-full max-w-5xl mx-auto">
+          <ScrollReveal>
+            <p className="mb-12 text-sm tracking-[0.2em] text-[var(--text-secondary)]">
+              How I Design
+            </p>
+          </ScrollReveal>
+          <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                number: "01",
+                title: "Users first, always",
+                desc: "Every decision starts with understanding real people. Research isn\u2019t a phase \u2014 it\u2019s the foundation.",
+              },
+              {
+                number: "02",
+                title: "Data over opinions",
+                desc: "I validate with metrics, not assumptions. Testing reveals what interviews can\u2019t.",
+              },
+              {
+                number: "03",
+                title: "Simple beats clever",
+                desc: "The best interface is the one users don\u2019t have to think about. Clarity always wins.",
+              },
+              {
+                number: "04",
+                title: "Design for outcomes",
+                desc: "Beautiful UI means nothing if it doesn\u2019t move the business. I design for impact.",
+              },
+            ].map((principle) => (
+              <StaggerItem key={principle.number}>
+                <div className="group rounded-xl border border-[var(--border)] p-6 transition-all duration-300 hover:border-[var(--accent)]/30 hover:-translate-y-0.5 hover:shadow-md">
+                  <span className="mb-3 block text-2xl font-bold text-[var(--accent)] opacity-40">
+                    {principle.number}
+                  </span>
+                  <h3 className="mb-2 text-base font-semibold">{principle.title}</h3>
+                  <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
+                    {principle.desc}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      <AnimatedDivider />
+
+      {/* Skills */}
+      <section className="py-20 overflow-hidden">
+        <div className="w-full max-w-5xl mx-auto px-6">
+          <ScrollReveal>
+            <p className="mb-8 text-sm tracking-[0.2em] text-[var(--text-secondary)]">
+              Skills & Tools
+            </p>
+          </ScrollReveal>
+        </div>
+        <SkillsMarquee />
+      </section>
+
+      <AnimatedDivider />
+
+      {/* CTA */}
+      <section className="px-6 py-20">
+        <ScrollReveal>
+          <div className="w-full max-w-5xl mx-auto text-center">
+            <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
+              Let&apos;s work together
+            </h2>
+            <p className="mx-auto mb-8 max-w-sm text-[var(--text-secondary)]">
+              Open to UX roles where design drives business outcomes.
+            </p>
+            <Link href="/contact" className="btn-primary">
+              Get in touch
+            </Link>
+          </div>
+        </ScrollReveal>
+      </section>
+    </>
   );
 }
