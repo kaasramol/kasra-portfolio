@@ -25,7 +25,11 @@ export default function TeamPulseCaseStudy() {
         duration: "5 Weeks",
         tools: "Figma, Notion, Optimal Workshop",
         type: "0-to-1 Product",
+        context: "Personal Project",
+        date: "2024",
+        team: "Solo",
       }}
+      prevProject={{ title: "Onboard", href: "/case-study/onboard" }}
       nextProject={{ title: "FocusFlow", href: "/case-study/focusflow" }}
     >
       <CaseSection title="Overview">
@@ -285,6 +289,35 @@ export default function TeamPulseCaseStudy() {
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--accent)] text-xs font-bold text-white">
+                {i + 1}
+              </span>
+              <div>
+                <p className="font-medium text-[var(--foreground)]">{item.title}</p>
+                <p className="text-sm mt-1">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </CaseSection>
+
+      <CaseSection title="What I'd Do Differently">
+        <div className="space-y-4">
+          {[
+            {
+              title: "Co-design with HR professionals from day one.",
+              desc: "I validated with interviews, but embedding an HR practitioner as a design partner would have caught edge cases earlier, like compliance requirements and data sensitivity concerns I discovered late.",
+            },
+            {
+              title: "Prototype the Slack integration earlier.",
+              desc: "The Slack notification redesign was one of the most impactful iterations. If I had prototyped the integration flow earlier, it would have shaped the core product design differently.",
+            },
+            {
+              title: "Test with larger team sizes.",
+              desc: "My testing was with small teams (5-15 people). The anonymity thresholds and aggregation patterns behave differently at 50+ employees. I would validate the design at scale before finalizing the IA.",
+            },
+          ].map((item, i) => (
+            <div key={i} className="flex items-start gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-[var(--accent)] text-xs font-bold text-[var(--accent)]">
                 {i + 1}
               </span>
               <div>

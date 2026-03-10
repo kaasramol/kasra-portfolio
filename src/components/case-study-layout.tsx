@@ -9,6 +9,9 @@ interface CaseStudyMeta {
   duration: string;
   tools: string;
   type: string;
+  context?: string;
+  date?: string;
+  team?: string;
 }
 
 interface CaseStudyLayoutProps {
@@ -18,6 +21,10 @@ interface CaseStudyLayoutProps {
   meta: CaseStudyMeta;
   children: ReactNode;
   nextProject?: {
+    title: string;
+    href: string;
+  };
+  prevProject?: {
     title: string;
     href: string;
   };
@@ -57,12 +64,16 @@ export function CaseStudyLayout({
   meta,
   children,
   nextProject,
+  prevProject,
 }: CaseStudyLayoutProps) {
   const metaLabels: Record<string, string> = {
     role: "Role",
     duration: "Duration",
     tools: "Tools",
     type: "Type",
+    context: "Context",
+    date: "Date",
+    team: "Team",
   };
 
   return (
@@ -131,8 +142,8 @@ export function CaseStudyLayout({
         </div>
       </section>
 
-      {/* ── Next Project ── */}
-      {nextProject && (
+      {/* ── Project Navigation ── */}
+      {(prevProject || nextProject) && (
         <section className="relative overflow-hidden">
           <div
             className="absolute inset-0 opacity-[0.06]"
@@ -140,19 +151,39 @@ export function CaseStudyLayout({
               background: `radial-gradient(ellipse at center, ${color}, transparent 70%)`,
             }}
           />
-          <div className="relative mx-auto max-w-5xl px-6 py-20 text-center">
-            <p className="mb-3 text-xs font-medium tracking-[0.3em] uppercase text-[var(--text-secondary)]">
-              Next Project
-            </p>
-            <Link
-              href={nextProject.href}
-              className="group inline-flex items-center gap-3 text-4xl sm:text-5xl font-bold tracking-tight transition-colors duration-300 hover:text-[var(--accent)]"
-            >
-              <span>{nextProject.title}</span>
-              <span className="inline-block transition-transform duration-300 group-hover:translate-x-2">
-                &rarr;
-              </span>
-            </Link>
+          <div className="relative mx-auto max-w-5xl px-6 py-20 flex items-center justify-between">
+            {prevProject ? (
+              <div className="text-left">
+                <p className="mb-3 text-xs font-medium tracking-[0.3em] uppercase text-[var(--text-secondary)]">
+                  Previous Project
+                </p>
+                <Link
+                  href={prevProject.href}
+                  className="group inline-flex items-center gap-3 text-2xl sm:text-4xl font-bold tracking-tight transition-colors duration-300 hover:text-[var(--accent)]"
+                >
+                  <span className="inline-block transition-transform duration-300 group-hover:-translate-x-2">
+                    &larr;
+                  </span>
+                  <span>{prevProject.title}</span>
+                </Link>
+              </div>
+            ) : <div />}
+            {nextProject ? (
+              <div className="text-right">
+                <p className="mb-3 text-xs font-medium tracking-[0.3em] uppercase text-[var(--text-secondary)]">
+                  Next Project
+                </p>
+                <Link
+                  href={nextProject.href}
+                  className="group inline-flex items-center gap-3 text-2xl sm:text-4xl font-bold tracking-tight transition-colors duration-300 hover:text-[var(--accent)]"
+                >
+                  <span>{nextProject.title}</span>
+                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-2">
+                    &rarr;
+                  </span>
+                </Link>
+              </div>
+            ) : <div />}
           </div>
           {/* Bottom accent line */}
           <div

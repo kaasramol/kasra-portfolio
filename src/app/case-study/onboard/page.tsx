@@ -25,7 +25,11 @@ export default function OnboardCaseStudy() {
         duration: "4 Weeks",
         tools: "Figma, Notion, Maze",
         type: "Redesign",
+        context: "Personal Project",
+        date: "2024",
+        team: "Solo",
       }}
+      prevProject={{ title: "Kaput", href: "/case-study/kaput" }}
       nextProject={{ title: "TeamPulse", href: "/case-study/teampulse" }}
     >
       <CaseSection title="Overview">
@@ -232,6 +236,35 @@ export default function OnboardCaseStudy() {
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--accent)] text-xs font-bold text-white">
+                {i + 1}
+              </span>
+              <div>
+                <p className="font-medium text-[var(--foreground)]">{item.title}</p>
+                <p className="text-sm mt-1">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </CaseSection>
+
+      <CaseSection title="What I'd Do Differently">
+        <div className="space-y-4">
+          {[
+            {
+              title: "Run a longer longitudinal study.",
+              desc: "Usability tests showed strong first-session results, but real onboarding success is measured over 7-14 days. I would track retention and feature adoption over time, not just initial completion.",
+            },
+            {
+              title: "A/B test individual steps, not the whole flow.",
+              desc: "I tested the redesigned flow against the old one as a whole. Isolating individual changes (templates vs blank slate, 3 steps vs 5 steps) would have given clearer data on what actually moved the needle.",
+            },
+            {
+              title: "Include accessibility testing from the start.",
+              desc: "The celebration animations and progress indicators look great but I should have tested with screen readers and keyboard-only users earlier in the process, not as a final check.",
+            },
+          ].map((item, i) => (
+            <div key={i} className="flex items-start gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-[var(--accent)] text-xs font-bold text-[var(--accent)]">
                 {i + 1}
               </span>
               <div>

@@ -20,9 +20,8 @@ export default function ContactPage() {
         <StaggerContainer className="grid gap-4 sm:grid-cols-2">
           {[
             { label: "Email", value: "kasra_molaei@sfu.ca", href: "mailto:kasra_molaei@sfu.ca" },
-            { label: "LinkedIn", value: "linkedin.com/in/kasramolaei", href: "https://linkedin.com/in/" },
+            { label: "LinkedIn", value: "linkedin.com/in/kasramolaei", href: "https://linkedin.com/in/kasramolaei" },
             { label: "GitHub", value: "github.com/kaasramol", href: "https://github.com/kaasramol" },
-            { label: "Resume", value: "Download PDF", href: "https://read.cv/" },
           ].map((item) => (
             <StaggerItem key={item.label}>
               <Link

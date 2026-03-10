@@ -26,8 +26,12 @@ export default function KaputCaseStudy() {
         duration: "Ongoing (MVP)",
         tools: "Figma, Next.js, Firebase, Stripe",
         type: "Live Product",
+        context: "Personal Project",
+        date: "2024 - Present",
+        team: "Kasra Molaei, Pooria Arab, Sara Dehghani",
       }}
       nextProject={{ title: "Onboard", href: "/case-study/onboard" }}
+      prevProject={{ title: "FocusFlow", href: "/case-study/focusflow" }}
     >
       <CaseSection title="Overview">
         <p>
@@ -333,6 +337,35 @@ export default function KaputCaseStudy() {
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--accent)] text-xs font-bold text-white">
+                {i + 1}
+              </span>
+              <div>
+                <p className="font-medium text-[var(--foreground)]">{item.title}</p>
+                <p className="text-sm mt-1">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </CaseSection>
+
+      <CaseSection title="What I'd Do Differently">
+        <div className="space-y-4">
+          {[
+            {
+              title: "Start with one side of the marketplace.",
+              desc: "Building for both car owners and mechanics simultaneously stretched resources. I would onboard mechanics first with a simple profile tool, then launch the consumer side once supply was established.",
+            },
+            {
+              title: "Test the quoting flow with real mechanics earlier.",
+              desc: "I designed the guided quote request based on car owner needs. Getting mechanic feedback sooner would have revealed that some fields were unnecessary and others were missing.",
+            },
+            {
+              title: "Simplify the MVP scope further.",
+              desc: "Stripe payments and in-app chat added weeks of work. A first version with just quoting and booking confirmation would have validated the core value faster.",
+            },
+          ].map((item, i) => (
+            <div key={i} className="flex items-start gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-[var(--accent)] text-xs font-bold text-[var(--accent)]">
                 {i + 1}
               </span>
               <div>

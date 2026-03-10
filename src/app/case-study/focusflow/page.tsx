@@ -25,7 +25,11 @@ export default function FocusFlowCaseStudy() {
         duration: "4 Weeks",
         tools: "Figma, Notion, Loom",
         type: "Concept (Mobile + Web)",
+        context: "Personal Project",
+        date: "2024",
+        team: "Solo",
       }}
+      prevProject={{ title: "TeamPulse", href: "/case-study/teampulse" }}
       nextProject={{ title: "Kaput", href: "/case-study/kaput" }}
     >
       <CaseSection title="Overview">
@@ -313,6 +317,35 @@ export default function FocusFlowCaseStudy() {
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--accent)] text-xs font-bold text-white">
+                {i + 1}
+              </span>
+              <div>
+                <p className="font-medium text-[var(--foreground)]">{item.title}</p>
+                <p className="text-sm mt-1">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </CaseSection>
+
+      <CaseSection title="What I'd Do Differently">
+        <div className="space-y-4">
+          {[
+            {
+              title: "Validate the calendar integration assumption.",
+              desc: "I assumed calendar awareness was the key differentiator, but I should have built a low-fi prototype with real calendar data to test whether users actually trust an app to manage their schedule.",
+            },
+            {
+              title: "Design for the 'off' state more carefully.",
+              desc: "I focused heavily on the active focus session experience. The time between sessions (reviewing stats, planning tomorrow) needed more attention to drive daily habit formation.",
+            },
+            {
+              title: "Include a diary study in research.",
+              desc: "My survey and interviews captured what people say they do. A week-long diary study tracking actual focus patterns would have revealed the gap between perceived and real behavior.",
+            },
+          ].map((item, i) => (
+            <div key={i} className="flex items-start gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-[var(--accent)] text-xs font-bold text-[var(--accent)]">
                 {i + 1}
               </span>
               <div>
