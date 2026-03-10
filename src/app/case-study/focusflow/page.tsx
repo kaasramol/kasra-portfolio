@@ -9,7 +9,7 @@ import { FocusFlowMobileHomeMockup, FocusFlowTimerMockup, FocusFlowWebDashboardM
 import { FocusFlowCompetitiveMockup, FocusFlowJourneyMapMockup, FocusFlowDesignSystemMockup } from "@/components/mockups/focusflow-extras";
 
 export const metadata = {
-  title: "FocusFlow — Case Study",
+  title: "FocusFlow | Case Study",
   description:
     "Designing a cross-platform productivity app from concept to prototype.",
 };
@@ -18,10 +18,10 @@ export default function FocusFlowCaseStudy() {
   return (
     <CaseStudyLayout
       title="FocusFlow"
-      subtitle="Product Concept — Productivity App"
+      subtitle="Product Concept, Productivity App"
       color="#C97B4B"
       meta={{
-        role: "UX Designer (E2E)",
+        role: "UX/UI Designer (E2E)",
         duration: "4 Weeks",
         tools: "Figma, Notion, Loom",
         type: "Concept (Mobile + Web)",
@@ -32,7 +32,7 @@ export default function FocusFlowCaseStudy() {
         <p>
           Remote workers lose an average of 2.5 hours per day to context
           switching, unnecessary meetings, and digital distractions. I designed
-          FocusFlow — a productivity app that combines{" "}
+          FocusFlow, a productivity app that combines{" "}
           <strong className="text-[var(--foreground)]">
             focus session management, calendar integration, and habit tracking
           </strong>{" "}
@@ -51,12 +51,12 @@ export default function FocusFlowCaseStudy() {
           <FocusFlowTimerMockup />
           <GestaltTag
             principle="Figure/Ground"
-            description="The circular timer ring commands attention as the figure, while surrounding UI elements recede — one clear focal point."
+            description="The circular timer ring commands attention as the figure, while surrounding UI elements recede. One clear focal point."
             top="10%" right="3%"
           />
           <GestaltTag
             principle="Closure"
-            description="The progress ring completing its circle creates a powerful sense of accomplishment — users feel the session 'closing.'"
+            description="The progress ring completing its circle creates a powerful sense of accomplishment. Users feel the session 'closing.'"
             top="55%" left="3%"
           />
         </GestaltMockup>
@@ -69,7 +69,7 @@ export default function FocusFlowCaseStudy() {
         </p>
 
         <PullQuote>
-          The problem isn&apos;t willpower — it&apos;s infrastructure. People
+          The problem isn&apos;t willpower. It&apos;s infrastructure. People
           don&apos;t need another motivation app. They need a tool that works with
           their calendar, protects their time, and makes deep work the default.
         </PullQuote>
@@ -77,7 +77,7 @@ export default function FocusFlowCaseStudy() {
 
       <CaseSection title="Discovery">
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
-          Survey — 27 Remote Workers
+          Survey, 27 Remote Workers
         </h3>
         <div className="grid grid-cols-2 gap-3 my-4">
           <StatCard label="< 2hrs focus/day" before="" after="81%" change="Widespread" />
@@ -92,7 +92,7 @@ export default function FocusFlowCaseStudy() {
         </PullQuote>
 
         <p>
-          The retention data was critical — 44% had tried and quit. Top reasons:
+          The retention data was critical. 44% had tried and quit. Top reasons:
           &quot;felt like one more thing to manage&quot; (38%), &quot;didn&apos;t
           integrate with my workflow&quot; (29%).
         </p>
@@ -111,7 +111,7 @@ export default function FocusFlowCaseStudy() {
         <FocusFlowCompetitiveMockup />
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
-          User Interviews — 5 Remote Workers
+          User Interviews, 5 Remote Workers
         </h3>
         <p>Three patterns emerged:</p>
         <div className="mt-4 space-y-3">
@@ -139,11 +139,11 @@ export default function FocusFlowCaseStudy() {
 
       <CaseSection title="Define">
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
-          Journey Map — A Day in the Life
+          Journey Map, A Day in the Life
         </h3>
         <p>
           I mapped a developer&apos;s typical workday. Out of 4 morning hours,
-          only 65 minutes were actual focus time — and most of that was
+          only 65 minutes were actual focus time, and most of that was
           low-quality with interruption anxiety.
         </p>
 
@@ -184,11 +184,11 @@ export default function FocusFlowCaseStudy() {
         <div className="grid sm:grid-cols-2 gap-3 mt-4 mb-6">
           <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
             <h4 className="mb-2 text-xs font-semibold tracking-[0.1em] uppercase text-[var(--foreground)]">Mobile</h4>
-            <p className="text-sm">Starting and tracking — a focus companion at your desk.</p>
+            <p className="text-sm">Starting and tracking. A focus companion at your desk.</p>
           </div>
           <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
             <h4 className="mb-2 text-xs font-semibold tracking-[0.1em] uppercase text-[var(--foreground)]">Web</h4>
-            <p className="text-sm">Planning and reviewing — the full picture with analytics and calendar management.</p>
+            <p className="text-sm">Planning and reviewing. The full picture with analytics and calendar management.</p>
           </div>
         </div>
 
@@ -198,8 +198,8 @@ export default function FocusFlowCaseStudy() {
         <p>
           The centerpiece component. A circular progress ring that fills
           clockwise, pulses gently, changes color at milestones, and celebrates
-          completion with a bloom animation. I tested three timer styles —
-          numbers only, linear bar, circular ring — and the ring won every time.
+          completion with a bloom animation. I tested three timer styles:
+          numbers only, linear bar, circular ring. The ring won every time.
         </p>
 
         <GestaltMockup>

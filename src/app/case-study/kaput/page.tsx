@@ -10,7 +10,7 @@ import { KaputOwnerDashboardMockup, KaputMechanicDashboardMockup } from "@/compo
 import { KaputQuoteFlowMockup, KaputMechanicProfileMockup, KaputChatBookingMockup } from "@/components/mockups/kaput-extras";
 
 export const metadata = {
-  title: "Kaput — Case Study",
+  title: "Kaput | Case Study",
   description:
     "Designing and building a B2C auto service marketplace from scratch.",
 };
@@ -19,7 +19,7 @@ export default function KaputCaseStudy() {
   return (
     <CaseStudyLayout
       title="Kaput"
-      subtitle="B2C Marketplace — Auto Services"
+      subtitle="B2C Marketplace, Auto Services"
       color="#FFB162"
       meta={{
         role: "UX/UI Designer & Product Owner",
@@ -36,7 +36,7 @@ export default function KaputCaseStudy() {
           <strong className="text-[var(--foreground)]">
             I designed and built the entire product
           </strong>{" "}
-          — from initial concept and user flows to a working MVP with real-time
+          , from initial concept and user flows to a working MVP with real-time
           maps, guided quoting, Stripe payments, and in-app chat.
         </p>
         <p>This isn&apos;t a concept project. It&apos;s a live product.</p>
@@ -109,7 +109,7 @@ export default function KaputCaseStudy() {
           Market Research
         </h3>
         <p>
-          RepairSmith and YourMechanic employ their own mechanics — different
+          RepairSmith and YourMechanic employ their own mechanics. Different
           model, expensive, limited. AutoGuru (Australia) proved the marketplace
           model works but hasn&apos;t expanded to North America. Yelp and Google
           Reviews have no quoting, booking, or payment.
@@ -140,7 +140,7 @@ export default function KaputCaseStudy() {
         <p>
           The most critical design decision: Kaput&apos;s core experience is a
           full-screen map, not a search results list. Car repair is hyper-local.
-          A map communicates proximity instantly — &quot;there&apos;s a 4.8-star
+          A map communicates proximity instantly. &quot;There&apos;s a 4.8-star
           shop three blocks away&quot; is more compelling than a list sorted by
           rating.
         </p>
@@ -223,14 +223,14 @@ export default function KaputCaseStudy() {
           <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
             <h4 className="mb-2 text-xs font-semibold tracking-[0.1em] uppercase text-[var(--foreground)]">Car Owner</h4>
             <p className="text-sm">
-              Clean and simple — active bookings, upcoming appointments, quick
+              Clean and simple. Active bookings, upcoming appointments, quick
               actions. Priority: &quot;What&apos;s happening with my car?&quot;
             </p>
           </div>
           <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
             <h4 className="mb-2 text-xs font-semibold tracking-[0.1em] uppercase text-[var(--foreground)]">Mechanic</h4>
             <p className="text-sm">
-              Full command center — incoming requests, calendar, earnings,
+              Full command center. Incoming requests, calendar, earnings,
               customer history, reviews. Priority: process requests fast.
             </p>
           </div>
@@ -248,7 +248,7 @@ export default function KaputCaseStudy() {
             { title: "Mechanic portfolios", desc: "Photos of past work as visual proof" },
             { title: "Certification badges", desc: "Verified credentials displayed prominently" },
             { title: "Itemized quotes", desc: "Transparency kills suspicion" },
-            { title: "Work approval", desc: "Updated quote required for extra issues — no surprise charges" },
+            { title: "Work approval", desc: "Updated quote required for extra issues. No surprise charges" },
           ].map((item) => (
             <div key={item.title} className="flex items-start gap-3 rounded-lg bg-[var(--surface)] p-4">
               <span className="mt-0.5 h-2 w-2 rounded-full bg-[var(--accent)] shrink-0" />
@@ -266,7 +266,7 @@ export default function KaputCaseStudy() {
         <p>
           Every auto marketplace uses light themes. Kaput&apos;s dark theme
           signals premium and trust.
-          Users looking for mechanics are often stressed — dark is calmer.
+          Users looking for mechanics are often stressed, and dark is calmer.
         </p>
 
         <KaputMechanicProfileMockup />
@@ -275,7 +275,7 @@ export default function KaputCaseStudy() {
 
       <CaseSection title="Technical Implementation" accent>
         <p className="text-lg text-[var(--foreground)] font-medium">
-          This project is unique in my portfolio because I didn&apos;t just design it — I built it.
+          This project is unique in my portfolio because I didn&apos;t just design it. I built it.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {["Next.js 14", "Tailwind CSS", "Firebase", "Google Maps API", "Stripe Connect", "Vercel"].map((tech) => (
@@ -316,7 +316,7 @@ export default function KaputCaseStudy() {
           {[
             {
               title: "Two-sided marketplaces are exponentially harder.",
-              desc: "Every feature must work for both sides. The quote flow needs to be simple for owners but informative for mechanics — goals that often conflict.",
+              desc: "Every feature must work for both sides. The quote flow needs to be simple for owners but informative for mechanics, and those goals often conflict.",
             },
             {
               title: "Trust is the product, not the features.",

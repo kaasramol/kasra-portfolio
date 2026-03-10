@@ -3,8 +3,8 @@ import { StaggerContainer, StaggerItem } from "@/components/motion";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Contact — Kasra Molaei",
-  description: "Get in touch for UX design opportunities.",
+  title: "Contact | Kasra Molaei",
+  description: "Get in touch for UX/UI design opportunities.",
 };
 
 export default function ContactPage() {
@@ -14,14 +14,14 @@ export default function ContactPage() {
         <SectionHeading
           label="Contact"
           title="Let's connect"
-          description="Open to UX roles, freelance projects, and conversations about design."
+          description="Open to UX/UI roles, freelance projects, and conversations about design."
         />
 
         <StaggerContainer className="grid gap-4 sm:grid-cols-2">
           {[
-            { label: "Email", value: "hello@kasramolaei.com", href: "mailto:hello@kasramolaei.com" },
+            { label: "Email", value: "kasra_molaei@sfu.ca", href: "mailto:kasra_molaei@sfu.ca" },
             { label: "LinkedIn", value: "linkedin.com/in/kasramolaei", href: "https://linkedin.com/in/" },
-            { label: "Dribbble", value: "dribbble.com/kasramolaei", href: "https://dribbble.com/" },
+            { label: "GitHub", value: "github.com/kaasramol", href: "https://github.com/kaasramol" },
             { label: "Resume", value: "Download PDF", href: "https://read.cv/" },
           ].map((item) => (
             <StaggerItem key={item.label}>

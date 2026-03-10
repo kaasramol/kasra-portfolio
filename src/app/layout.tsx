@@ -23,9 +23,9 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Kasra Molaei — UX Designer",
+  title: "Kasra Molaei | UX/UI Designer",
   description:
-    "UX Designer with a business mindset. Designing end-to-end experiences for SaaS products.",
+    "UX/UI Designer with a business mindset. Designing end-to-end experiences for SaaS products.",
 };
 
 export default function RootLayout({

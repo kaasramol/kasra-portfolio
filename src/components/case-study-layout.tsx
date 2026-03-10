@@ -234,7 +234,7 @@ export function PullQuote({
         </p>
         {attribution && (
           <cite className="mt-3 block text-sm font-normal not-italic text-[var(--text-secondary)]">
-            — {attribution}
+            {attribution}
           </cite>
         )}
       </blockquote>

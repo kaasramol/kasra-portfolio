@@ -60,7 +60,7 @@ export default function Home() {
         <div className="w-full max-w-5xl mx-auto">
           <HeroReveal delay={0.1}>
             <p className="mb-6 text-sm tracking-[0.2em] text-[var(--text-secondary)]">
-              UX Designer
+              UX/UI Designer
             </p>
           </HeroReveal>
           <HeroReveal delay={0.25}>
@@ -151,8 +151,8 @@ export default function Home() {
                 desc: "Beautiful UI means nothing if it doesn\u2019t move the business. I design for impact.",
               },
             ].map((principle) => (
-              <StaggerItem key={principle.number}>
-                <div className="group rounded-xl border border-[var(--border)] p-6 transition-all duration-300 hover:border-[var(--accent)]/30 hover:-translate-y-0.5 hover:shadow-md">
+              <StaggerItem key={principle.number} className="h-full">
+                <div className="group h-full rounded-xl border border-[var(--border)] p-6 transition-all duration-300 hover:border-[var(--accent)]/30 hover:-translate-y-0.5 hover:shadow-md">
                   <span className="mb-3 block text-2xl font-bold text-[var(--accent)] opacity-40">
                     {principle.number}
                   </span>
@@ -191,7 +191,7 @@ export default function Home() {
               Let&apos;s work together
             </h2>
             <p className="mx-auto mb-8 max-w-sm text-[var(--text-secondary)]">
-              Open to UX roles where design drives business outcomes.
+              Open to UX/UI roles where design drives business outcomes.
             </p>
             <Link href="/contact" className="btn-primary">
               Get in touch

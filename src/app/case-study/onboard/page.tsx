@@ -9,7 +9,7 @@ import { OnboardBeforeMockup, OnboardAfterMockup, OnboardCelebrationMockup } fro
 import { CompetitiveAuditMockup, FunnelAnalysisMockup, JourneyMapMockup, WireframesMockup, UsabilityResultsMockup } from "@/components/mockups/onboard-extras";
 
 export const metadata = {
-  title: "Onboard — Case Study",
+  title: "Onboard | Case Study",
   description:
     "Redesigning SaaS onboarding to cut drop-off by 40% and reduce time-to-value.",
 };
@@ -18,10 +18,10 @@ export default function OnboardCaseStudy() {
   return (
     <CaseStudyLayout
       title="Onboard"
-      subtitle="Redesign — SaaS Onboarding"
+      subtitle="Redesign, SaaS Onboarding"
       color="#E8956A"
       meta={{
-        role: "UX Designer (E2E)",
+        role: "UX/UI Designer (E2E)",
         duration: "4 Weeks",
         tools: "Figma, Notion, Maze",
         type: "Redesign",
@@ -32,7 +32,7 @@ export default function OnboardCaseStudy() {
         <p>
           Taskly is a project management tool for mid-size teams. Despite strong
           acquisition, <strong className="text-[var(--foreground)]">40% of new users dropped off during
-          onboarding</strong> — never creating a project, never inviting a teammate,
+          onboarding</strong>. Never creating a project, never inviting a teammate,
           never experiencing the product&apos;s value.
         </p>
         <p>
@@ -68,10 +68,10 @@ export default function OnboardCaseStudy() {
           Competitive Audit
         </h3>
         <p>
-          I analyzed onboarding flows from five competitors — Asana, Monday.com,
+          I analyzed onboarding flows from five competitors: Asana, Monday.com,
           ClickUp, Notion, and Linear. The best flows shared three traits: they
           personalized early, showed value within 3 clicks, and used the real
-          product as the learning environment — not a separate tutorial.
+          product as the learning environment, not a separate tutorial.
         </p>
 
         <CompetitiveAuditMockup />
@@ -80,7 +80,7 @@ export default function OnboardCaseStudy() {
           User Interviews
         </h3>
         <p>
-          I interviewed 5 participants — 3 who recently adopted a new SaaS tool
+          I interviewed 5 participants, 3 who recently adopted a new SaaS tool
           and 2 who abandoned one mid-trial. Three key themes emerged:
         </p>
         <div className="mt-4 space-y-3">
@@ -150,7 +150,7 @@ export default function OnboardCaseStudy() {
           <OnboardAfterMockup />
           <GestaltTag
             principle="Closure"
-            description="Progress indicators and pre-populated templates let users feel completion momentum — the brain fills in 'I'm almost done.'"
+            description="Progress indicators and pre-populated templates let users feel completion momentum. The brain fills in 'I'm almost done.'"
             top="8%" right="3%"
           />
           <GestaltTag
@@ -163,7 +163,7 @@ export default function OnboardCaseStudy() {
           <OnboardCelebrationMockup />
           <GestaltTag
             principle="Hierarchy"
-            description="The celebration moment uses scale and color weight to make the success state unmissable — visual reward for completion."
+            description="The celebration moment uses scale and color weight to make the success state unmissable. A visual reward for completion."
             top="15%" right="4%"
           />
         </GestaltMockup>

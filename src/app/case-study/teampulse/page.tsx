@@ -9,19 +9,19 @@ import { TeamPulseDashboardMockup, TeamPulseInsightCardMockup, TeamPulseSurveyMo
 import { AffinityMapMockup, CompetitivePositioningMockup, IADiagramMockup, TeamPulseManagerViewMockup, DesignSystemMockup } from "@/components/mockups/teampulse-extras";
 
 export const metadata = {
-  title: "TeamPulse — Case Study",
+  title: "TeamPulse | Case Study",
   description:
-    "Designing an employee feedback dashboard from scratch — 0-to-1 product design.",
+    "Designing an employee feedback dashboard from scratch. 0-to-1 product design.",
 };
 
 export default function TeamPulseCaseStudy() {
   return (
     <CaseStudyLayout
       title="TeamPulse"
-      subtitle="0-to-1 — Employee Feedback Dashboard"
+      subtitle="0-to-1, Employee Feedback Dashboard"
       color="#A35139"
       meta={{
-        role: "UX Designer (E2E)",
+        role: "UX/UI Designer (E2E)",
         duration: "5 Weeks",
         tools: "Figma, Notion, Optimal Workshop",
         type: "0-to-1 Product",
@@ -32,7 +32,7 @@ export default function TeamPulseCaseStudy() {
         <p>
           HR teams at growing companies run engagement surveys, but the results
           take weeks to process, managers rarely see actionable insights, and
-          employees feel unheard. I designed TeamPulse — a pulse survey and
+          employees feel unheard. I designed TeamPulse, a pulse survey and
           feedback dashboard that{" "}
           <strong className="text-[var(--foreground)]">
             closes the loop between employee voice and manager action.
@@ -63,14 +63,14 @@ export default function TeamPulseCaseStudy() {
         </div>
 
         <PullQuote>
-          The problem isn&apos;t collecting feedback — it&apos;s turning it into
+          The problem isn&apos;t collecting feedback. It&apos;s turning it into
           action fast enough for people to feel heard.
         </PullQuote>
       </CaseSection>
 
       <CaseSection title="Discovery">
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
-          User Research — 8 Participants
+          User Research, 8 Participants
         </h3>
         <p>
           I interviewed people across all three roles in the feedback ecosystem:
@@ -91,7 +91,7 @@ export default function TeamPulseCaseStudy() {
         <AffinityMapMockup />
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
-          Survey — 27 Professionals
+          Survey, 27 Professionals
         </h3>
         <div className="grid grid-cols-2 gap-3 my-4">
           <StatCard label="Survey quarterly or less" before="" after="68%" change="Infrequent" />
@@ -140,7 +140,7 @@ export default function TeamPulseCaseStudy() {
           {[
             { num: "01", title: "Insight over data", desc: "Show what the numbers mean, not just the numbers." },
             { num: "02", title: "Action over analysis", desc: "Every screen should make it clear what to do next." },
-            { num: "03", title: "Trust by default", desc: "Anonymity isn't a feature — it's a foundation." },
+            { num: "03", title: "Trust by default", desc: "Anonymity isn't a feature. It's a foundation." },
             { num: "04", title: "Respect people's time", desc: "Short surveys. Scannable dashboards. Auto-generated reports." },
           ].map((item) => (
             <div key={item.num} className="flex items-start gap-3 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
@@ -156,12 +156,12 @@ export default function TeamPulseCaseStudy() {
 
       <CaseSection title="Design">
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
-          The Insight Card — Core Component
+          The Insight Card, Core Component
         </h3>
         <p>
           The most important component: a reusable block showing category, score
           with trend, AI-generated summary, anonymous quotes, and a &quot;Create
-          Action&quot; button. This card appears everywhere — dashboards, email
+          Action&quot; button. This card appears everywhere: dashboards, email
           reports, Slack notifications.
         </p>
 
@@ -169,7 +169,7 @@ export default function TeamPulseCaseStudy() {
           <TeamPulseInsightCardMockup />
           <GestaltTag
             principle="Similarity"
-            description="Every insight card follows the same structure — score, trend, summary, quotes. Consistent patterns let managers scan faster."
+            description="Every insight card follows the same structure: score, trend, summary, quotes. Consistent patterns let managers scan faster."
             top="8%" right="3%"
           />
           <GestaltTag
@@ -192,7 +192,7 @@ export default function TeamPulseCaseStudy() {
           <TeamPulseManagerViewMockup />
           <GestaltTag
             principle="Hierarchy"
-            description="Health score dominates visually, category cards are secondary, action items are tertiary — guiding managers from overview to action."
+            description="Health score dominates visually, category cards are secondary, action items are tertiary. This guides managers from overview to action."
             top="10%" left="3%"
           />
           <GestaltTag
@@ -208,7 +208,7 @@ export default function TeamPulseCaseStudy() {
         <p>
           Five questions, one at a time. 1-to-5 scale ratings, one open text
           field. Under 90 seconds. The completion screen shows actions taken
-          since the last survey — closing the loop.
+          since the last survey, closing the loop.
         </p>
 
         <TeamPulseSurveyMobileMockup />
@@ -242,7 +242,7 @@ export default function TeamPulseCaseStudy() {
         </h3>
         <div className="space-y-3">
           {[
-            { title: "Health score needed context", desc: "Added benchmarks — \"7.2 — Above company average (6.8)\" with color zones." },
+            { title: "Health score needed context", desc: "Added benchmarks like \"7.2, Above company average (6.8)\" with color zones." },
             { title: "Action items needed templates", desc: "Added suggested actions per category. Adoption jumped from 40% to 85%." },
             { title: "Slack notifications redesigned", desc: "Rich Block Kit messages with team score and \"last time your feedback led to...\"" },
             { title: "Added leadership export", desc: "One-click PDF report generator for executive summaries." },
@@ -271,12 +271,12 @@ export default function TeamPulseCaseStudy() {
         <div className="space-y-4">
           {[
             {
-              title: "Designing for three users is hard — and valuable.",
+              title: "Designing for three users is hard, and valuable.",
               desc: "The same data serves HR, managers, and employees differently. The Insight Card pattern solved this.",
             },
             {
               title: "Anonymity is a UX problem.",
-              desc: "Trust is designed through visual cues, copy, and structural choices — not just encryption.",
+              desc: "Trust is designed through visual cues, copy, and structural choices, not just encryption.",
             },
             {
               title: "Marketing background as an asset.",

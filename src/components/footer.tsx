@@ -11,10 +11,10 @@ export function Footer() {
           <Link href="https://linkedin.com" target="_blank" className="text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)]">
             LinkedIn
           </Link>
-          <Link href="https://dribbble.com" target="_blank" className="text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)]">
-            Dribbble
+          <Link href="https://github.com/kaasramol" target="_blank" className="text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)]">
+            GitHub
           </Link>
-          <Link href="mailto:hello@kasramolaei.com" className="text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)]">
+          <Link href="mailto:kasra_molaei@sfu.ca" className="text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)]">
             Email
           </Link>
         </div>

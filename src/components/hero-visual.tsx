@@ -9,7 +9,7 @@ interface SkillItem {
 }
 
 const disciplines: SkillItem[] = [
-  { name: "UX Design", detail: "End-to-end product experiences" },
+  { name: "UX/UI Design", detail: "End-to-end product experiences" },
   { name: "Product Design", detail: "From concept to shipped features" },
   { name: "User Research", detail: "Interviews, surveys, testing" },
   { name: "Design Systems", detail: "Scalable, consistent components" },
