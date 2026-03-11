@@ -136,8 +136,21 @@ export function CaseStudyLayout({
       </section>
 
       {/* ── Content ── */}
-      <section className="relative">
-        <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
+      <section className="relative overflow-hidden">
+        {/* Subtle background accents */}
+        <div
+          className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] opacity-[0.04] rounded-full blur-3xl"
+          style={{ background: color }}
+        />
+        <div
+          className="pointer-events-none absolute top-[40%] right-0 w-[500px] h-[500px] opacity-[0.03] rounded-full blur-3xl"
+          style={{ background: color }}
+        />
+        <div
+          className="pointer-events-none absolute bottom-[10%] left-0 w-[600px] h-[600px] opacity-[0.03] rounded-full blur-3xl"
+          style={{ background: color }}
+        />
+        <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20 relative z-10">
           <div className="prose-custom max-w-3xl mx-auto">{children}</div>
         </div>
       </section>

@@ -8,7 +8,7 @@ export function Footer() {
           Kasra Molaei
         </p>
         <div className="flex gap-6">
-          <Link href="https://linkedin.com/in/kasramolaei" target="_blank" className="text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)]">
+          <Link href="https://www.linkedin.com/in/kasra-molaei" target="_blank" className="text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)]">
             LinkedIn
           </Link>
           <Link href="https://github.com/kaasramol" target="_blank" className="text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)]">

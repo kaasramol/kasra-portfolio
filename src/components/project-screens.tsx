@@ -155,28 +155,28 @@ export function TeamPulseScreens() {
     <div className="space-y-4">
       {/* Main — dashboard */}
       <BrowserFrame url="teampulse.io/dashboard">
-        <div className="h-[260px] p-4">
+        <div className="h-[260px] bg-[#141B1F] p-4">
           <div className="mb-3 flex items-center justify-between">
-            <span className="text-xs font-bold text-[#1B2632]">Team<span className="text-[#A35139]">Pulse</span></span>
-            <span className="rounded-full bg-[#A35139]/10 px-2 py-0.5 text-[8px] text-[#A35139]">HR Admin</span>
+            <span className="text-xs font-bold text-[#E5F0EE]">Team<span className="text-[#2EC4B6]">Pulse</span></span>
+            <span className="rounded-full bg-[#2EC4B6]/10 px-2 py-0.5 text-[8px] text-[#2EC4B6]">HR Admin</span>
           </div>
           <div className="grid grid-cols-3 gap-3 mb-3">
             {/* Health score */}
-            <div className="rounded-xl bg-[#f5f3ee] p-3 text-center">
-              <p className="text-[8px] text-[#8a8275]">Health Score</p>
-              <p className="text-2xl font-bold text-[#1B2632]">7.4</p>
+            <div className="rounded-xl bg-[#1E2A2F] p-3 text-center">
+              <p className="text-[8px] text-[#7A9A95]">Health Score</p>
+              <p className="text-2xl font-bold text-[#E5F0EE]">7.4</p>
               <p className="text-[8px] text-[#22c55e]">+0.3</p>
             </div>
             {/* Response rate */}
-            <div className="rounded-xl bg-[#f5f3ee] p-3 text-center">
-              <p className="text-[8px] text-[#8a8275]">Response Rate</p>
-              <p className="text-2xl font-bold text-[#1B2632]">72%</p>
-              <p className="text-[8px] text-[#8a8275]">187/260</p>
+            <div className="rounded-xl bg-[#1E2A2F] p-3 text-center">
+              <p className="text-[8px] text-[#7A9A95]">Response Rate</p>
+              <p className="text-2xl font-bold text-[#E5F0EE]">72%</p>
+              <p className="text-[8px] text-[#7A9A95]">187/260</p>
             </div>
             {/* Alert */}
-            <div className="rounded-xl bg-[#fef2f2] p-3">
+            <div className="rounded-xl bg-[#ef4444]/10 p-3">
               <p className="text-[8px] font-medium text-[#ef4444]">Alert</p>
-              <p className="mt-1 text-[9px] text-[#991b1b]">Eng. workload dropped to 5.2</p>
+              <p className="mt-1 text-[9px] text-[#fca5a5]">Eng. workload dropped to 5.2</p>
               <div className="mt-1.5 flex items-center gap-0.5">
                 <TrendingDown size={8} className="text-[#ef4444]" />
                 <span className="text-[8px] text-[#ef4444]">1.8 pts</span>
@@ -191,10 +191,10 @@ export function TeamPulseScreens() {
               { name: "Culture", score: 8.1, color: "#22c55e" },
               { name: "Mgmt", score: 7.2, color: "#f59e0b" },
             ].map((c) => (
-              <div key={c.name} className="rounded-lg bg-[#f5f3ee] p-2">
-                <p className="text-[7px] text-[#8a8275]">{c.name}</p>
-                <p className="text-sm font-bold text-[#1B2632]">{c.score}</p>
-                <div className="mt-1 h-1 rounded-full bg-[#e8e3d9]">
+              <div key={c.name} className="rounded-lg bg-[#1E2A2F] p-2">
+                <p className="text-[7px] text-[#7A9A95]">{c.name}</p>
+                <p className="text-sm font-bold text-[#E5F0EE]">{c.score}</p>
+                <div className="mt-1 h-1 rounded-full bg-[#2F4048]">
                   <div className="h-1 rounded-full" style={{ width: `${c.score * 10}%`, backgroundColor: c.color }} />
                 </div>
               </div>
@@ -205,10 +205,10 @@ export function TeamPulseScreens() {
       {/* Secondary — manager view */}
       <div className="ml-8 md:ml-12">
         <BrowserFrame url="teampulse.io/team/engineering">
-          <div className="flex gap-3 p-4">
+          <div className="flex gap-3 bg-[#141B1F] p-4">
             <div className="flex-1">
-              <p className="text-[9px] font-medium text-[#8a8275]">Engineering Team</p>
-              <p className="text-lg font-bold text-[#1B2632]">6.2</p>
+              <p className="text-[9px] font-medium text-[#7A9A95]">Engineering Team</p>
+              <p className="text-lg font-bold text-[#E5F0EE]">6.2</p>
               <div className="flex items-center gap-0.5">
                 <TrendingDown size={10} className="text-[#ef4444]" />
                 <span className="text-[8px] text-[#ef4444]">0.8 from last month</span>
@@ -219,9 +219,9 @@ export function TeamPulseScreens() {
                 { action: "Redistribute sprint tasks", status: "In Progress" },
                 { action: "Cancel non-essential meetings", status: "Done" },
               ].map((a) => (
-                <div key={a.action} className="flex items-center justify-between rounded-md bg-[#f5f3ee] px-2 py-1.5">
-                  <span className="text-[8px] text-[#1B2632]">{a.action}</span>
-                  <span className={`rounded-full px-1.5 py-0.5 text-[7px] font-medium ${a.status === "Done" ? "bg-[#22c55e]/10 text-[#22c55e]" : "bg-[#FFB162]/10 text-[#FFB162]"}`}>{a.status}</span>
+                <div key={a.action} className="flex items-center justify-between rounded-md bg-[#1E2A2F] px-2 py-1.5">
+                  <span className="text-[8px] text-[#E5F0EE]">{a.action}</span>
+                  <span className={`rounded-full px-1.5 py-0.5 text-[7px] font-medium ${a.status === "Done" ? "bg-[#22c55e]/10 text-[#22c55e]" : "bg-[#2EC4B6]/10 text-[#2EC4B6]"}`}>{a.status}</span>
                 </div>
               ))}
             </div>
@@ -238,15 +238,15 @@ export function FocusFlowScreens() {
     <div className="space-y-4">
       {/* Main — dashboard */}
       <BrowserFrame url="focusflow.app/dashboard">
-        <div className="h-[260px] p-4">
+        <div className="h-[260px] bg-[#FAFBFE] p-4">
           <div className="mb-3 flex items-center justify-between">
             <div>
-              <p className="text-xs font-semibold text-[#1B2632]">Good morning, Kasra</p>
-              <p className="text-[9px] text-[#8a8275]">3 focus blocks scheduled today</p>
+              <p className="text-xs font-semibold text-[#1E1B4B]">Good morning, Kasra</p>
+              <p className="text-[9px] text-[#6B7094]">3 focus blocks scheduled today</p>
             </div>
-            <div className="flex items-center gap-2 rounded-full bg-[#f5f3ee] px-3 py-1.5">
-              <div className="h-2 w-2 rounded-full bg-[#FFB162]" />
-              <span className="text-[9px] font-medium text-[#1B2632]">Score: 82</span>
+            <div className="flex items-center gap-2 rounded-full bg-[#F0F1F8] px-3 py-1.5">
+              <div className="h-2 w-2 rounded-full bg-[#6366F1]" />
+              <span className="text-[9px] font-medium text-[#1E1B4B]">Score: 82</span>
             </div>
           </div>
           {/* Schedule */}
@@ -256,16 +256,16 @@ export function FocusFlowScreens() {
               { time: "9:30", label: "Deep Work", type: "focus", dur: "90m" },
               { time: "11:00", label: "Design Review", type: "meeting", dur: "30m" },
             ].map((s) => (
-              <div key={s.time} className={`rounded-lg p-2.5 ${s.type === "focus" ? "bg-[#FFB162]/10 border border-[#FFB162]/20" : s.type === "meeting" ? "bg-[#ef4444]/5 border border-[#ef4444]/10" : "bg-[#f5f3ee]"}`}>
-                <p className="text-[8px] text-[#8a8275]">{s.time}</p>
-                <p className="text-[9px] font-medium text-[#1B2632]">{s.label}</p>
-                <p className="text-[8px] text-[#8a8275]">{s.dur}</p>
+              <div key={s.time} className={`rounded-lg p-2.5 ${s.type === "focus" ? "bg-[#6366F1]/10 border border-[#6366F1]/20" : s.type === "meeting" ? "bg-[#ef4444]/5 border border-[#ef4444]/10" : "bg-[#F0F1F8]"}`}>
+                <p className="text-[8px] text-[#6B7094]">{s.time}</p>
+                <p className="text-[9px] font-medium text-[#1E1B4B]">{s.label}</p>
+                <p className="text-[8px] text-[#6B7094]">{s.dur}</p>
               </div>
             ))}
           </div>
           {/* Active session */}
-          <div className="flex items-center gap-4 rounded-xl bg-[#1B2632] p-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#FFB162]">
+          <div className="flex items-center gap-4 rounded-xl bg-[#1E1B4B] p-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#6366F1]">
               <span className="text-sm font-bold text-white">23:47</span>
             </div>
             <div className="flex-1">
@@ -276,8 +276,8 @@ export function FocusFlowScreens() {
               </div>
             </div>
             <div className="flex gap-1.5">
-              <div className="rounded-lg bg-[#3a5060] px-3 py-1.5 text-[8px] text-[#C9C1B1]">Pause</div>
-              <div className="rounded-lg bg-[#FFB162] px-3 py-1.5 text-[8px] font-medium text-[#1B2632]">End</div>
+              <div className="rounded-lg bg-[#312E81] px-3 py-1.5 text-[8px] text-[#A5B4FC]">Pause</div>
+              <div className="rounded-lg bg-[#6366F1] px-3 py-1.5 text-[8px] font-medium text-white">End</div>
             </div>
           </div>
         </div>
@@ -285,21 +285,21 @@ export function FocusFlowScreens() {
       {/* Secondary — weekly stats */}
       <div className="ml-8 md:ml-12">
         <BrowserFrame url="focusflow.app/insights">
-          <div className="flex gap-4 p-4">
+          <div className="flex gap-4 bg-[#FAFBFE] p-4">
             <div className="flex-1 text-center">
-              <p className="text-[8px] text-[#8a8275]">Focus Time</p>
-              <p className="text-lg font-bold text-[#1B2632]">18.5h</p>
+              <p className="text-[8px] text-[#6B7094]">Focus Time</p>
+              <p className="text-lg font-bold text-[#1E1B4B]">18.5h</p>
               <p className="text-[8px] text-[#22c55e]">+3.2h vs last week</p>
             </div>
             <div className="flex-1 text-center">
-              <p className="text-[8px] text-[#8a8275]">Sessions</p>
-              <p className="text-lg font-bold text-[#1B2632]">24</p>
-              <p className="text-[8px] text-[#8a8275]">avg 46 min</p>
+              <p className="text-[8px] text-[#6B7094]">Sessions</p>
+              <p className="text-lg font-bold text-[#1E1B4B]">24</p>
+              <p className="text-[8px] text-[#6B7094]">avg 46 min</p>
             </div>
             <div className="flex-1 text-center">
-              <p className="text-[8px] text-[#8a8275]">Streak</p>
-              <p className="text-lg font-bold text-[#FFB162]">5 days</p>
-              <p className="text-[8px] text-[#8a8275]">personal best</p>
+              <p className="text-[8px] text-[#6B7094]">Streak</p>
+              <p className="text-lg font-bold text-[#6366F1]">5 days</p>
+              <p className="text-[8px] text-[#6B7094]">personal best</p>
             </div>
           </div>
         </BrowserFrame>

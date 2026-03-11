@@ -149,6 +149,89 @@ export function KaputMechanicProfileMockup() {
   );
 }
 
+export function KaputWireframesMockup() {
+  return (
+    <div className="my-8 overflow-hidden rounded-2xl border border-[#3a5060] bg-[#1B2632] shadow-[0_8px_40px_rgba(0,0,0,0.15)]">
+      <div className="border-b border-[#3a5060] bg-[#2C3B4D] px-5 py-3 flex items-center gap-3">
+        <div className="flex gap-1.5">
+          <div className="h-2.5 w-2.5 rounded-full bg-[#3a5060]" />
+          <div className="h-2.5 w-2.5 rounded-full bg-[#3a5060]" />
+          <div className="h-2.5 w-2.5 rounded-full bg-[#3a5060]" />
+        </div>
+        <p className="text-xs font-medium text-[#FFB162] uppercase tracking-wider">Wireframes</p>
+        <p className="text-sm font-semibold text-[#EEE9DF]">Kaput — Core User Flows</p>
+      </div>
+      <div className="grid grid-cols-4 gap-4 p-5">
+        {[
+          {
+            step: "1",
+            title: "Map Discovery",
+            elements: [
+              { type: "block", label: "[Full-screen map]" },
+              { type: "text", label: "Search: \"Brake repair near me\"" },
+              { type: "block", label: "[Pin clusters]" },
+              { type: "block", label: "[Bottom sheet — mechanic cards]" },
+            ],
+          },
+          {
+            step: "2",
+            title: "Mechanic Profile",
+            elements: [
+              { type: "block", label: "[Header + photo]" },
+              { type: "text", label: "Pacific Auto Care ★ 4.9" },
+              { type: "block", label: "[Badges: ASE, 10yr]" },
+              { type: "block", label: "[Services + prices]" },
+              { type: "block", label: "[Request Quote btn]" },
+            ],
+          },
+          {
+            step: "3",
+            title: "Quote Request",
+            elements: [
+              { type: "text", label: "Step 2 of 4" },
+              { type: "block", label: "[Vehicle: 2019 Civic]" },
+              { type: "block", label: "[Category: Brakes]" },
+              { type: "block", label: "[Symptom checkboxes]" },
+              { type: "block", label: "[Continue btn]" },
+            ],
+          },
+          {
+            step: "4",
+            title: "Quote Compare",
+            elements: [
+              { type: "text", label: "2 quotes received" },
+              { type: "block", label: "[Quote card A — $348]" },
+              { type: "block", label: "[Quote card B — $410]" },
+              { type: "block", label: "[Parts / Labor / Tax]" },
+              { type: "block", label: "[Accept & Book btn]" },
+            ],
+          },
+        ].map((screen, i) => (
+          <div key={i} className="rounded-xl border border-[#3a5060] bg-[#2C3B4D] p-3">
+            <div className="mb-3 flex items-center gap-2">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#FFB162] text-[9px] font-bold text-[#1B2632]">{screen.step}</span>
+              <span className="text-[10px] font-semibold text-[#EEE9DF]">{screen.title}</span>
+            </div>
+            <div className="space-y-2">
+              {screen.elements.map((el, j) => (
+                <div
+                  key={j}
+                  className={`rounded-md px-2 py-1.5 text-[8px] ${el.type === "block" ? "bg-[#1B2632] text-[#8a8275] border border-dashed border-[#3a5060]" : "text-[#C9C1B1]"}`}
+                >
+                  {el.label}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="bg-[#FFB162]/5 px-5 py-3 border-t border-[#FFB162]/20">
+        <p className="text-[10px] text-[#FFB162] font-medium">Low-fidelity wireframes validated the map-first architecture and 4-step quote flow before visual design.</p>
+      </div>
+    </div>
+  );
+}
+
 export function KaputChatBookingMockup() {
   return (
     <div className="my-8 overflow-hidden rounded-xl border border-[#3a5060] bg-[#1B2632] shadow-2xl">

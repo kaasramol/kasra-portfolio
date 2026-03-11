@@ -6,7 +6,7 @@ import {
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { TeamPulseDashboardMockup, TeamPulseInsightCardMockup, TeamPulseSurveyMobileMockup } from "@/components/mockups/teampulse-screens";
-import { AffinityMapMockup, CompetitivePositioningMockup, IADiagramMockup, TeamPulseManagerViewMockup, DesignSystemMockup } from "@/components/mockups/teampulse-extras";
+import { AffinityMapMockup, CompetitivePositioningMockup, IADiagramMockup, TeamPulseManagerViewMockup, TeamPulseWireframesMockup, DesignSystemMockup } from "@/components/mockups/teampulse-extras";
 
 export const metadata = {
   title: "TeamPulse | Case Study",
@@ -159,6 +159,8 @@ export default function TeamPulseCaseStudy() {
       </CaseSection>
 
       <CaseSection title="Design">
+        <TeamPulseWireframesMockup />
+
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
           The Insight Card, Core Component
         </h3>

@@ -8,29 +8,29 @@ export function CompetitiveAuditMockup() {
   ];
 
   return (
-    <div className="my-8 overflow-hidden rounded-xl border border-[#d5cfc5] bg-[#EEE9DF] shadow-lg">
-      <div className="border-b border-[#d5cfc5] bg-[#E5DFD3] px-5 py-3">
-        <p className="text-xs font-medium text-[#FFB162] uppercase tracking-wider">Competitive Audit</p>
-        <p className="text-sm font-semibold text-[#1B2632]">Onboarding Flow Comparison</p>
+    <div className="my-8 overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white shadow-[0_8px_40px_rgba(0,0,0,0.06)]">
+      <div className="border-b border-[#E2E8F0] bg-[#F8FAFC] px-5 py-3">
+        <p className="text-xs font-medium text-[#10B981] uppercase tracking-wider">Competitive Audit</p>
+        <p className="text-sm font-semibold text-[#0F172A]">Onboarding Flow Comparison</p>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full text-xs">
           <thead>
-            <tr className="border-b border-[#d5cfc5] bg-[#E5DFD3]">
-              <th className="px-4 py-2.5 text-left font-medium text-[#8a8275]">Tool</th>
-              <th className="px-4 py-2.5 text-center font-medium text-[#8a8275]">Steps</th>
-              <th className="px-4 py-2.5 text-left font-medium text-[#8a8275]">Personalization</th>
-              <th className="px-4 py-2.5 text-center font-medium text-[#8a8275]">Templates</th>
-              <th className="px-4 py-2.5 text-center font-medium text-[#8a8275]">Progress</th>
-              <th className="px-4 py-2.5 text-center font-medium text-[#8a8275]">Score</th>
+            <tr className="border-b border-[#E2E8F0] bg-[#F8FAFC]">
+              <th className="px-4 py-2.5 text-left font-medium text-[#64748B]">Tool</th>
+              <th className="px-4 py-2.5 text-center font-medium text-[#64748B]">Steps</th>
+              <th className="px-4 py-2.5 text-left font-medium text-[#64748B]">Personalization</th>
+              <th className="px-4 py-2.5 text-center font-medium text-[#64748B]">Templates</th>
+              <th className="px-4 py-2.5 text-center font-medium text-[#64748B]">Progress</th>
+              <th className="px-4 py-2.5 text-center font-medium text-[#64748B]">Score</th>
             </tr>
           </thead>
           <tbody>
             {competitors.map((c, i) => (
-              <tr key={i} className="border-b border-[#E5DFD3]">
-                <td className="px-4 py-2.5 font-medium text-[#1B2632]">{c.name}</td>
-                <td className="px-4 py-2.5 text-center text-[#8a8275]">{c.steps}</td>
-                <td className="px-4 py-2.5 text-[#8a8275]">{c.personalization}</td>
+              <tr key={i} className="border-b border-[#F1F5F9]">
+                <td className="px-4 py-2.5 font-medium text-[#0F172A]">{c.name}</td>
+                <td className="px-4 py-2.5 text-center text-[#64748B]">{c.steps}</td>
+                <td className="px-4 py-2.5 text-[#64748B]">{c.personalization}</td>
                 <td className="px-4 py-2.5 text-center">{c.template ? <span className="text-[#22c55e]">Yes</span> : <span className="text-[#ef4444]">No</span>}</td>
                 <td className="px-4 py-2.5 text-center">{c.progress ? <span className="text-[#22c55e]">Yes</span> : <span className="text-[#ef4444]">No</span>}</td>
                 <td className="px-4 py-2.5 text-center">
@@ -43,8 +43,8 @@ export function CompetitiveAuditMockup() {
           </tbody>
         </table>
       </div>
-      <div className="bg-[#E5DFD3] px-5 py-3">
-        <p className="text-[10px] text-[#8a8275]">Key insight: Best onboarding flows personalize early, show value in 3 clicks, and teach inside the real product.</p>
+      <div className="bg-[#F0FDF4] px-5 py-3 border-t border-[#BBF7D0]">
+        <p className="text-[10px] text-[#166534]">Key insight: Best onboarding flows personalize early, show value in 3 clicks, and teach inside the real product.</p>
       </div>
     </div>
   );
@@ -61,25 +61,25 @@ export function FunnelAnalysisMockup() {
   ];
 
   return (
-    <div className="my-8 overflow-hidden rounded-xl border border-[#d5cfc5] bg-[#EEE9DF] shadow-lg">
-      <div className="border-b border-[#d5cfc5] bg-[#E5DFD3] px-5 py-3">
+    <div className="my-8 overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white shadow-[0_8px_40px_rgba(0,0,0,0.06)]">
+      <div className="border-b border-[#E2E8F0] bg-[#F8FAFC] px-5 py-3">
         <p className="text-xs font-medium text-[#ef4444] uppercase tracking-wider">Analytics</p>
-        <p className="text-sm font-semibold text-[#1B2632]">Current Onboarding Funnel — Drop-off Analysis</p>
+        <p className="text-sm font-semibold text-[#0F172A]">Current Onboarding Funnel — Drop-off Analysis</p>
       </div>
       <div className="p-5 space-y-2">
         {steps.map((step, i) => (
           <div key={i} className="flex items-center gap-3">
-            <span className="w-28 text-xs text-[#8a8275] truncate">{step.name}</span>
-            <div className="flex-1 h-7 bg-[#d5cfc5] rounded-md overflow-hidden relative">
+            <span className="w-28 text-xs text-[#64748B] truncate">{step.name}</span>
+            <div className="flex-1 h-7 bg-[#F1F5F9] rounded-md overflow-hidden relative">
               <div
-                className={`h-full rounded-md ${i <= 1 ? "bg-[#FFB162]" : i <= 3 ? "bg-[#f59e0b]" : "bg-[#ef4444]"}`}
+                className={`h-full rounded-md ${i <= 1 ? "bg-[#10B981]" : i <= 3 ? "bg-[#f59e0b]" : "bg-[#ef4444]"}`}
                 style={{ width: `${step.pct}%` }}
               />
-              <span className="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-medium text-[#2C3B4D]">
+              <span className="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-medium text-[#334155]">
                 {step.users}
               </span>
             </div>
-            <span className="w-10 text-xs text-right text-[#8a8275]">{step.pct}%</span>
+            <span className="w-10 text-xs text-right text-[#64748B]">{step.pct}%</span>
             {step.dropoff && (
               <span className="w-12 rounded-full bg-[#fef2f2] px-1.5 py-0.5 text-center text-[10px] font-medium text-[#ef4444]">
                 -{step.dropoff}
@@ -106,10 +106,10 @@ export function JourneyMapMockup() {
   ];
 
   return (
-    <div className="my-8 overflow-hidden rounded-xl border border-[#d5cfc5] bg-[#EEE9DF] shadow-lg">
-      <div className="border-b border-[#d5cfc5] bg-[#E5DFD3] px-5 py-3">
-        <p className="text-xs font-medium text-[#FFB162] uppercase tracking-wider">Journey Map</p>
-        <p className="text-sm font-semibold text-[#1B2632]">Current Onboarding — Emotional Journey</p>
+    <div className="my-8 overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white shadow-[0_8px_40px_rgba(0,0,0,0.06)]">
+      <div className="border-b border-[#E2E8F0] bg-[#F8FAFC] px-5 py-3">
+        <p className="text-xs font-medium text-[#10B981] uppercase tracking-wider">Journey Map</p>
+        <p className="text-sm font-semibold text-[#0F172A]">Current Onboarding — Emotional Journey</p>
       </div>
       <div className="p-5">
         {/* Emotion curve */}
@@ -135,7 +135,7 @@ export function JourneyMapMockup() {
                 cx={i * 120}
                 cy={120 - s.emotion * 1.1}
                 r="5"
-                fill="#EEE9DF"
+                fill="white"
                 stroke={s.emotion > 60 ? "#22c55e" : s.emotion > 30 ? "#f59e0b" : "#ef4444"}
                 strokeWidth="2"
               />
@@ -148,8 +148,8 @@ export function JourneyMapMockup() {
           {stages.map((s, i) => (
             <div key={i} className="text-center">
               <span className={`inline-flex h-8 w-8 items-center justify-center rounded-full text-[10px] font-bold ${s.emotion >= 70 ? "bg-[#22c55e]/15 text-[#22c55e]" : s.emotion >= 40 ? "bg-[#f59e0b]/15 text-[#f59e0b]" : "bg-[#ef4444]/15 text-[#ef4444]"}`}>{s.label}</span>
-              <p className="mt-1 text-[10px] font-medium text-[#1B2632]">{s.stage}</p>
-              <p className="mt-0.5 text-[9px] text-[#8a8275] italic">&ldquo;{s.thought}&rdquo;</p>
+              <p className="mt-1 text-[10px] font-medium text-[#0F172A]">{s.stage}</p>
+              <p className="mt-0.5 text-[9px] text-[#64748B] italic">&ldquo;{s.thought}&rdquo;</p>
               {s.pain && (
                 <span className="mt-1 inline-block rounded-full bg-[#fef2f2] px-1.5 py-0.5 text-[8px] text-[#ef4444]">
                   {s.pain}
@@ -165,10 +165,15 @@ export function JourneyMapMockup() {
 
 export function WireframesMockup() {
   return (
-    <div className="my-8 overflow-hidden rounded-xl border border-[#d5cfc5] bg-[#E5DFD3] shadow-lg">
-      <div className="border-b border-[#d5cfc5] bg-[#EEE9DF] px-5 py-3">
-        <p className="text-xs font-medium text-[#FFB162] uppercase tracking-wider">Wireframes</p>
-        <p className="text-sm font-semibold text-[#1B2632]">New Onboarding Flow — 5 Steps</p>
+    <div className="my-8 overflow-hidden rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] shadow-[0_8px_40px_rgba(0,0,0,0.06)]">
+      <div className="border-b border-[#E2E8F0] bg-white px-5 py-3 flex items-center gap-3">
+        <div className="flex gap-1.5">
+          <div className="h-2.5 w-2.5 rounded-full bg-[#ef4444]" />
+          <div className="h-2.5 w-2.5 rounded-full bg-[#f59e0b]" />
+          <div className="h-2.5 w-2.5 rounded-full bg-[#22c55e]" />
+        </div>
+        <p className="text-xs font-medium text-[#10B981] uppercase tracking-wider">Wireframes</p>
+        <p className="text-sm font-semibold text-[#0F172A]">New Onboarding Flow — 5 Steps</p>
       </div>
       <div className="grid grid-cols-5 gap-3 p-5">
         {[
@@ -178,14 +183,14 @@ export function WireframesMockup() {
           { step: "4", title: "Tutorial", elements: ["[Real project view]", "[Tooltip: Create task]", "[Highlight area]", "[Progress 1/3]"] },
           { step: "5", title: "Done!", elements: ["[Confetti]", "\"You're ready!\"", "[Invite team]", "[Go to dashboard]"] },
         ].map((screen, i) => (
-          <div key={i} className="rounded-lg border border-[#C9C1B1] bg-[#EEE9DF] p-3">
+          <div key={i} className="rounded-xl border border-[#E2E8F0] bg-white p-3">
             <div className="mb-2 flex items-center gap-1.5">
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#FFB162] text-[9px] font-bold text-[#1B2632]">{screen.step}</span>
-              <span className="text-[10px] font-medium text-[#1B2632]">{screen.title}</span>
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#10B981] text-[9px] font-bold text-white">{screen.step}</span>
+              <span className="text-[10px] font-medium text-[#0F172A]">{screen.title}</span>
             </div>
             <div className="space-y-1.5">
               {screen.elements.map((el, j) => (
-                <div key={j} className={`rounded px-1.5 py-1 text-[8px] ${el.startsWith("[") ? "bg-[#d5cfc5] text-[#8a8275] border border-dashed border-[#C9C1B1]" : "text-[#8a8275]"}`}>
+                <div key={j} className={`rounded px-1.5 py-1 text-[8px] ${el.startsWith("[") ? "bg-[#F1F5F9] text-[#64748B] border border-dashed border-[#CBD5E1]" : "text-[#64748B]"}`}>
                   {el}
                 </div>
               ))}
@@ -199,21 +204,21 @@ export function WireframesMockup() {
 
 export function UsabilityResultsMockup() {
   return (
-    <div className="my-8 overflow-hidden rounded-xl border border-[#d5cfc5] bg-[#EEE9DF] shadow-lg">
-      <div className="border-b border-[#d5cfc5] bg-[#E5DFD3] px-5 py-3">
-        <p className="text-xs font-medium text-[#22c55e] uppercase tracking-wider">Usability Testing</p>
-        <p className="text-sm font-semibold text-[#1B2632]">Test Results — 5 Participants</p>
+    <div className="my-8 overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white shadow-[0_8px_40px_rgba(0,0,0,0.06)]">
+      <div className="border-b border-[#E2E8F0] bg-[#F8FAFC] px-5 py-3">
+        <p className="text-xs font-medium text-[#10B981] uppercase tracking-wider">Usability Testing</p>
+        <p className="text-sm font-semibold text-[#0F172A]">Test Results — 5 Participants</p>
       </div>
       <div className="p-5">
         <div className="grid grid-cols-3 gap-3 mb-5">
           {[
-            { label: "Task Completion", value: "96%", color: "#22c55e" },
-            { label: "Avg. Time", value: "3.5 min", color: "#FFB162" },
-            { label: "SUS Score", value: "82/100", color: "#A35139" },
+            { label: "Task Completion", value: "96%", color: "#10B981" },
+            { label: "Avg. Time", value: "3.5 min", color: "#0EA5E9" },
+            { label: "SUS Score", value: "82/100", color: "#8B5CF6" },
           ].map((stat, i) => (
-            <div key={i} className="rounded-xl border border-[#d5cfc5] p-4 text-center">
+            <div key={i} className="rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-4 text-center">
               <p className="text-2xl font-bold" style={{ color: stat.color }}>{stat.value}</p>
-              <p className="text-[10px] text-[#8a8275] mt-1">{stat.label}</p>
+              <p className="text-[10px] text-[#64748B] mt-1">{stat.label}</p>
             </div>
           ))}
         </div>
@@ -223,10 +228,10 @@ export function UsabilityResultsMockup() {
             { task: "Create first project", success: 5, total: 5, avgTime: "0:38" },
             { task: "Invite a teammate", success: 4, total: 5, avgTime: "0:45" },
           ].map((t, i) => (
-            <div key={i} className="flex items-center justify-between rounded-lg bg-[#E5DFD3] px-4 py-2.5">
-              <span className="text-xs text-[#2C3B4D]">{t.task}</span>
+            <div key={i} className="flex items-center justify-between rounded-lg bg-[#F8FAFC] border border-[#E2E8F0] px-4 py-2.5">
+              <span className="text-xs text-[#334155]">{t.task}</span>
               <div className="flex items-center gap-4">
-                <span className="text-xs text-[#8a8275]">{t.avgTime}</span>
+                <span className="text-xs text-[#64748B]">{t.avgTime}</span>
                 <span className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${t.success === t.total ? "bg-[#22c55e]/10 text-[#22c55e]" : "bg-[#f59e0b]/10 text-[#f59e0b]"}`}>
                   {t.success}/{t.total} passed
                 </span>
@@ -234,8 +239,8 @@ export function UsabilityResultsMockup() {
             </div>
           ))}
         </div>
-        <div className="mt-4 rounded-lg bg-[#FFB162]/10 border border-[#FFB162]/30 p-3">
-          <p className="text-[10px] text-[#A35139] font-medium">3 iterations made based on findings: animated template previews, cursor-following tooltips, &quot;I&apos;ll do this later&quot; replacing &quot;Skip&quot;</p>
+        <div className="mt-4 rounded-lg bg-[#F0FDF4] border border-[#BBF7D0] p-3">
+          <p className="text-[10px] text-[#166534] font-medium">3 iterations made based on findings: animated template previews, cursor-following tooltips, &quot;I&apos;ll do this later&quot; replacing &quot;Skip&quot;</p>
         </div>
       </div>
     </div>

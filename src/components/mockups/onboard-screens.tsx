@@ -2,13 +2,18 @@ import { Users, FolderOpen, Settings, ClipboardList, Zap, ListChecks, Hand } fro
 
 export function OnboardBeforeMockup() {
   return (
-    <div className="my-8 overflow-hidden rounded-xl border border-[#d5cfc5] bg-[#EEE9DF] shadow-2xl">
-      <div className="border-b border-[#d5cfc5] bg-[#E5DFD3] px-5 py-3">
+    <div className="my-8 overflow-hidden rounded-2xl border border-[#E2E8F0] bg-gradient-to-b from-[#FFFFFF] to-[#F8FAFC] shadow-[0_8px_40px_rgba(0,0,0,0.06),0_2px_8px_rgba(0,0,0,0.03)]">
+      <div className="border-b border-[#E2E8F0] bg-gradient-to-r from-[#F1F5F9] to-[#F8FAFC] px-5 py-3 flex items-center gap-3">
+        <div className="flex gap-1.5">
+          <div className="h-2.5 w-2.5 rounded-full bg-[#ef4444]" />
+          <div className="h-2.5 w-2.5 rounded-full bg-[#f59e0b]" />
+          <div className="h-2.5 w-2.5 rounded-full bg-[#22c55e]" />
+        </div>
         <p className="text-xs font-medium text-red-500 uppercase tracking-wider">Before — Old Onboarding</p>
       </div>
       <div className="p-8">
-        <h3 className="mb-1 text-xl font-semibold text-[#1B2632]">Welcome to Taskly</h3>
-        <p className="mb-6 text-sm text-[#8a8275]">Complete your profile to get started</p>
+        <h3 className="mb-1 text-xl font-semibold text-[#0F172A]">Welcome to Taskly</h3>
+        <p className="mb-6 text-sm text-[#94A3B8]">Complete your profile to get started</p>
 
         {/* Long boring form */}
         <div className="space-y-4">
@@ -20,9 +25,9 @@ export function OnboardBeforeMockup() {
             { label: "How did you hear about us?", placeholder: "Select..." },
           ].map((field, i) => (
             <div key={i}>
-              <label className="mb-1 block text-xs font-medium text-[#2C3B4D]">{field.label}</label>
-              <div className="rounded-lg border border-[#C9C1B1] bg-[#E5DFD3] px-3 py-2">
-                <span className="text-sm text-[#8a8275]">{field.placeholder}</span>
+              <label className="mb-1 block text-xs font-medium text-[#334155]">{field.label}</label>
+              <div className="rounded-lg border border-[#E2E8F0] bg-[#F8FAFC] px-3 py-2">
+                <span className="text-sm text-[#94A3B8]">{field.placeholder}</span>
               </div>
             </div>
           ))}
@@ -30,10 +35,10 @@ export function OnboardBeforeMockup() {
 
         {/* Progress bar showing step 2 of 7 */}
         <div className="mt-6 flex items-center gap-2">
-          <div className="h-1.5 flex-1 rounded-full bg-[#d5cfc5]">
-            <div className="h-1.5 w-[28%] rounded-full bg-[#8a8275]" />
+          <div className="h-1.5 flex-1 rounded-full bg-[#E2E8F0]">
+            <div className="h-1.5 w-[28%] rounded-full bg-[#94A3B8]" />
           </div>
-          <span className="text-xs text-[#8a8275]">Step 2 of 7</span>
+          <span className="text-xs text-[#94A3B8]">Step 2 of 7</span>
         </div>
 
         {/* Annotation */}
@@ -47,38 +52,43 @@ export function OnboardBeforeMockup() {
 
 export function OnboardAfterMockup() {
   return (
-    <div className="my-8 overflow-hidden rounded-xl border border-[#d5cfc5] bg-[#EEE9DF] shadow-2xl">
-      <div className="border-b border-[#d5cfc5] bg-[#E5DFD3] px-5 py-3">
-        <p className="text-xs font-medium text-[#22c55e] uppercase tracking-wider">After — Redesigned Onboarding</p>
+    <div className="my-8 overflow-hidden rounded-2xl border border-[#E2E8F0] bg-gradient-to-b from-[#FFFFFF] to-[#F8FAFC] shadow-[0_8px_40px_rgba(0,0,0,0.06),0_2px_8px_rgba(0,0,0,0.03)]">
+      <div className="border-b border-[#E2E8F0] bg-gradient-to-r from-[#F1F5F9] to-[#F8FAFC] px-5 py-3 flex items-center gap-3">
+        <div className="flex gap-1.5">
+          <div className="h-2.5 w-2.5 rounded-full bg-[#ef4444]" />
+          <div className="h-2.5 w-2.5 rounded-full bg-[#f59e0b]" />
+          <div className="h-2.5 w-2.5 rounded-full bg-[#22c55e]" />
+        </div>
+        <p className="text-xs font-medium text-[#10B981] uppercase tracking-wider">After — Redesigned Onboarding</p>
       </div>
 
       {/* Step 1: Welcome */}
-      <div className="border-b border-[#d5cfc5] p-8 text-center">
-        <Hand size={40} className="mb-4 inline-block text-[#C9C1B1]" />
-        <h3 className="mb-2 text-2xl font-semibold text-[#1B2632]">Welcome to Taskly!</h3>
-        <p className="mb-6 text-[#8a8275]">What should we call you?</p>
+      <div className="border-b border-[#E2E8F0] p-8 text-center">
+        <Hand size={40} className="mb-4 inline-block text-[#94A3B8]" />
+        <h3 className="mb-2 text-2xl font-semibold text-[#0F172A]">Welcome to Taskly!</h3>
+        <p className="mb-6 text-[#64748B]">What should we call you?</p>
         <div className="mx-auto max-w-xs">
-          <div className="rounded-xl border-2 border-[#FFB162] bg-[#EEE9DF] px-4 py-3 text-center">
-            <span className="text-lg text-[#1B2632]">Kasra</span>
-            <span className="ml-0.5 animate-pulse text-[#FFB162]">|</span>
+          <div className="rounded-xl border-2 border-[#10B981] bg-white px-4 py-3 text-center">
+            <span className="text-lg text-[#0F172A]">Kasra</span>
+            <span className="ml-0.5 animate-pulse text-[#10B981]">|</span>
           </div>
-          <button className="mt-4 w-full rounded-xl bg-[#FFB162] py-3 font-medium text-[#1B2632]">
+          <button className="mt-4 w-full rounded-xl bg-[#10B981] py-3 font-medium text-white">
             Continue
           </button>
         </div>
         <div className="mt-4 flex justify-center gap-1.5">
-          <div className="h-2 w-2 rounded-full bg-[#FFB162]" />
-          <div className="h-2 w-2 rounded-full bg-[#d5cfc5]" />
-          <div className="h-2 w-2 rounded-full bg-[#d5cfc5]" />
+          <div className="h-2 w-2 rounded-full bg-[#10B981]" />
+          <div className="h-2 w-2 rounded-full bg-[#E2E8F0]" />
+          <div className="h-2 w-2 rounded-full bg-[#E2E8F0]" />
         </div>
       </div>
 
       {/* Step 2: Use case */}
       <div className="p-8">
-        <h3 className="mb-2 text-center text-xl font-semibold text-[#1B2632]">
+        <h3 className="mb-2 text-center text-xl font-semibold text-[#0F172A]">
           What brings you here, Kasra?
         </h3>
-        <p className="mb-6 text-center text-sm text-[#8a8275]">
+        <p className="mb-6 text-center text-sm text-[#64748B]">
           We&apos;ll customize your experience
         </p>
         <div className="mx-auto grid max-w-md gap-3">
@@ -89,28 +99,28 @@ export function OnboardAfterMockup() {
           ].map((opt, i) => (
             <div
               key={i}
-              className={`flex cursor-pointer items-center gap-4 rounded-xl border-2 p-4 transition-all ${opt.selected ? "border-[#FFB162] bg-[#FFB162]/5 ring-2 ring-[#FFB162]/20" : "border-[#d5cfc5] hover:border-[#C9C1B1]"}`}
+              className={`flex cursor-pointer items-center gap-4 rounded-xl border-2 p-4 transition-all ${opt.selected ? "border-[#10B981] bg-[#10B981]/5 ring-2 ring-[#10B981]/20" : "border-[#E2E8F0] hover:border-[#CBD5E1]"}`}
             >
-              <span className="text-[#8a8275]">{opt.icon}</span>
+              <span className="text-[#94A3B8]">{opt.icon}</span>
               <div>
-                <p className="font-medium text-[#1B2632]">{opt.label}</p>
-                <p className="text-xs text-[#8a8275]">{opt.desc}</p>
+                <p className="font-medium text-[#0F172A]">{opt.label}</p>
+                <p className="text-xs text-[#64748B]">{opt.desc}</p>
               </div>
               {opt.selected && (
-                <svg className="ml-auto h-5 w-5 text-[#FFB162]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                <svg className="ml-auto h-5 w-5 text-[#10B981]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
               )}
             </div>
           ))}
         </div>
         <div className="mt-4 flex justify-center gap-1.5">
-          <div className="h-2 w-2 rounded-full bg-[#FFB162]" />
-          <div className="h-2 w-2 rounded-full bg-[#FFB162]" />
-          <div className="h-2 w-2 rounded-full bg-[#d5cfc5]" />
+          <div className="h-2 w-2 rounded-full bg-[#10B981]" />
+          <div className="h-2 w-2 rounded-full bg-[#10B981]" />
+          <div className="h-2 w-2 rounded-full bg-[#E2E8F0]" />
         </div>
 
         {/* Annotation */}
-        <div className="mt-4 rounded-lg bg-green-50 border border-green-200 p-3">
-          <p className="text-xs text-green-700 font-medium">One tap replaces 5 form fields — personalizes the experience without friction</p>
+        <div className="mt-4 rounded-lg bg-emerald-50 border border-emerald-200 p-3">
+          <p className="text-xs text-emerald-700 font-medium">One tap replaces 5 form fields — personalizes the experience without friction</p>
         </div>
       </div>
     </div>
@@ -119,13 +129,13 @@ export function OnboardAfterMockup() {
 
 export function OnboardCelebrationMockup() {
   return (
-    <div className="my-8 overflow-hidden rounded-xl border border-[#d5cfc5] bg-[#EEE9DF] shadow-2xl">
+    <div className="my-8 overflow-hidden rounded-2xl border border-[#E2E8F0] bg-gradient-to-b from-[#FFFFFF] to-[#F8FAFC] shadow-[0_8px_40px_rgba(0,0,0,0.06),0_2px_8px_rgba(0,0,0,0.03)]">
       <div className="p-8 text-center">
         <div className="mb-4 text-5xl">🎉</div>
-        <h3 className="mb-2 text-2xl font-bold text-[#1B2632]">
+        <h3 className="mb-2 text-2xl font-bold text-[#0F172A]">
           You&apos;re all set, Kasra!
         </h3>
-        <p className="mb-8 text-[#8a8275]">
+        <p className="mb-8 text-[#64748B]">
           Your first project is ready. Here&apos;s what you can do next:
         </p>
         <div className="mx-auto grid max-w-sm gap-3">
@@ -136,24 +146,24 @@ export function OnboardCelebrationMockup() {
           ].map((action, i) => (
             <div
               key={i}
-              className="flex items-center gap-3 rounded-xl border border-[#d5cfc5] p-3 text-left transition-colors hover:bg-[#E5DFD3]"
+              className="flex items-center gap-3 rounded-xl border border-[#E2E8F0] p-3 text-left transition-colors hover:bg-[#F1F5F9]"
             >
-              <span className="text-xl text-[#8a8275]">{action.icon}</span>
+              <span className="text-xl text-[#94A3B8]">{action.icon}</span>
               <div>
-                <p className="text-sm font-medium text-[#1B2632]">{action.label}</p>
-                <p className="text-xs text-[#8a8275]">{action.desc}</p>
+                <p className="text-sm font-medium text-[#0F172A]">{action.label}</p>
+                <p className="text-xs text-[#64748B]">{action.desc}</p>
               </div>
-              <svg className="ml-auto h-4 w-4 text-[#C9C1B1]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+              <svg className="ml-auto h-4 w-4 text-[#CBD5E1]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
             </div>
           ))}
         </div>
-        <button className="mt-6 rounded-xl bg-[#FFB162] px-8 py-3 font-medium text-[#1B2632]">
+        <button className="mt-6 rounded-xl bg-[#10B981] px-8 py-3 font-medium text-white">
           Go to my dashboard
         </button>
 
         {/* Annotation */}
-        <div className="mt-6 rounded-lg bg-green-50 border border-green-200 p-3 text-left">
-          <p className="text-xs text-green-700 font-medium">No forced actions — team invite is optional. Completion rate went from 60% to 92%</p>
+        <div className="mt-6 rounded-lg bg-emerald-50 border border-emerald-200 p-3 text-left">
+          <p className="text-xs text-emerald-700 font-medium">No forced actions — team invite is optional. Completion rate went from 60% to 92%</p>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ import {
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { FocusFlowMobileHomeMockup, FocusFlowTimerMockup, FocusFlowWebDashboardMockup } from "@/components/mockups/focusflow-screens";
-import { FocusFlowCompetitiveMockup, FocusFlowJourneyMapMockup, FocusFlowDesignSystemMockup } from "@/components/mockups/focusflow-extras";
+import { FocusFlowCompetitiveMockup, FocusFlowJourneyMapMockup, FocusFlowWireframesMockup, FocusFlowDesignSystemMockup } from "@/components/mockups/focusflow-extras";
 
 export const metadata = {
   title: "FocusFlow | Case Study",
@@ -178,6 +178,8 @@ export default function FocusFlowCaseStudy() {
       </CaseSection>
 
       <CaseSection title="Design">
+        <FocusFlowWireframesMockup />
+
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
           Cross-Platform Strategy
         </h3>

@@ -7,7 +7,7 @@ import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { KaputMapMockup } from "@/components/mockups/kaput-map";
 import { KaputQuoteComparisonMockup } from "@/components/mockups/kaput-quote";
 import { KaputOwnerDashboardMockup, KaputMechanicDashboardMockup } from "@/components/mockups/kaput-dashboards";
-import { KaputQuoteFlowMockup, KaputMechanicProfileMockup, KaputChatBookingMockup } from "@/components/mockups/kaput-extras";
+import { KaputQuoteFlowMockup, KaputMechanicProfileMockup, KaputChatBookingMockup, KaputWireframesMockup } from "@/components/mockups/kaput-extras";
 
 export const metadata = {
   title: "Kaput | Case Study",
@@ -138,6 +138,8 @@ export default function KaputCaseStudy() {
       </CaseSection>
 
       <CaseSection title="Design">
+        <KaputWireframesMockup />
+
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
           Map-First Architecture
         </h3>
