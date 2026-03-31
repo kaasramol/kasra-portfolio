@@ -3,6 +3,7 @@ import {
   CaseSection,
   StatCard,
   PullQuote,
+  FigureCaption,
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { OnboardBeforeMockup, OnboardAfterMockup, OnboardCelebrationMockup } from "@/components/mockups/onboard-screens";
@@ -46,6 +47,7 @@ export default function OnboardCaseStudy() {
       </CaseSection>
 
       <OnboardBeforeMockup />
+      <FigureCaption>Fig 1 — Original onboarding flow with lengthy form fields and 7-step process</FigureCaption>
 
       <CaseSection title="The Problem">
         <p>
@@ -79,6 +81,7 @@ export default function OnboardCaseStudy() {
         </p>
 
         <CompetitiveAuditMockup />
+        <FigureCaption>Fig 2 — Competitive audit comparing onboarding flows across 5 SaaS tools</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
           User Interviews
@@ -112,6 +115,7 @@ export default function OnboardCaseStudy() {
         </p>
 
         <FunnelAnalysisMockup />
+        <FigureCaption>Fig 3 — Funnel analysis showing critical drop-off points in the existing onboarding</FigureCaption>
       </CaseSection>
 
       <CaseSection title="Define">
@@ -123,6 +127,7 @@ export default function OnboardCaseStudy() {
         </p>
 
         <JourneyMapMockup />
+        <FigureCaption>Fig 4 — User emotional journey map showing declining engagement through each step</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
           How Might We
@@ -149,6 +154,7 @@ export default function OnboardCaseStudy() {
         </p>
 
         <WireframesMockup />
+        <FigureCaption>Fig 5 — Low-fidelity wireframes mapping the redesigned 5-step onboarding flow</FigureCaption>
 
         <GestaltMockup>
           <OnboardAfterMockup />
@@ -163,6 +169,7 @@ export default function OnboardCaseStudy() {
             top="50%" left="3%"
           />
         </GestaltMockup>
+        <FigureCaption>Fig 6 — High-fidelity redesigned onboarding with personalized use-case selection</FigureCaption>
         <GestaltMockup className="mt-4">
           <OnboardCelebrationMockup />
           <GestaltTag
@@ -171,6 +178,7 @@ export default function OnboardCaseStudy() {
             top="15%" right="4%"
           />
         </GestaltMockup>
+        <FigureCaption>Fig 7 — Celebration screen with optional next actions replacing forced team invite</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
           Key Design Decisions
@@ -206,6 +214,7 @@ export default function OnboardCaseStudy() {
         </div>
 
         <UsabilityResultsMockup />
+        <FigureCaption>Fig 8 — Usability test results across 5 participants showing 96% task completion</FigureCaption>
       </CaseSection>
 
       <CaseSection title="Outcome & Learnings">

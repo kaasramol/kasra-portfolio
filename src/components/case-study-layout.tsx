@@ -286,6 +286,15 @@ export function PullQuote({
   );
 }
 
+/* ── Figure Caption ── */
+export function FigureCaption({ children }: { children: ReactNode }) {
+  return (
+    <p className="mt-2 mb-6 text-center text-xs italic text-[var(--text-secondary)]">
+      {children}
+    </p>
+  );
+}
+
 /* ── Image Placeholder ── */
 export function ImagePlaceholder({
   label,

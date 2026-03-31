@@ -2,6 +2,7 @@ import {
   CaseStudyLayout,
   CaseSection,
   PullQuote,
+  FigureCaption,
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { KaputMapMockup } from "@/components/mockups/kaput-map";
@@ -47,6 +48,7 @@ export default function KaputCaseStudy() {
       </CaseSection>
 
       <KaputMapMockup />
+      <FigureCaption>Fig 1 — Map-first interface showing nearby mechanics with ratings and availability</FigureCaption>
 
       <CaseSection title="The Problem">
         <p>
@@ -139,6 +141,7 @@ export default function KaputCaseStudy() {
 
       <CaseSection title="Design">
         <KaputWireframesMockup />
+        <FigureCaption>Fig 2 — Early wireframes exploring map layout, quote flow, and dashboard structures</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
           Map-First Architecture
@@ -190,6 +193,7 @@ export default function KaputCaseStudy() {
             top="55%" left="3%"
           />
         </GestaltMockup>
+        <FigureCaption>Fig 3 — Guided 5-step quote request flow replacing free-text problem descriptions</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
           Quote Comparison
@@ -218,6 +222,7 @@ export default function KaputCaseStudy() {
             top="10%" right="3%"
           />
         </GestaltMockup>
+        <FigureCaption>Fig 4 — Side-by-side quote comparison with itemized breakdown for transparency</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
           Two-Sided Dashboards
@@ -243,7 +248,9 @@ export default function KaputCaseStudy() {
         </div>
 
         <KaputOwnerDashboardMockup />
+        <FigureCaption>Fig 5 — Car owner dashboard with active bookings and upcoming appointments</FigureCaption>
         <KaputMechanicDashboardMockup />
+        <FigureCaption>Fig 6 — Mechanic command center with incoming requests, calendar, and earnings</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
           Trust by Design
@@ -276,7 +283,9 @@ export default function KaputCaseStudy() {
         </p>
 
         <KaputMechanicProfileMockup />
+        <FigureCaption>Fig 7 — Mechanic profile with verified credentials, portfolio, and review history</FigureCaption>
         <KaputChatBookingMockup />
+        <FigureCaption>Fig 8 — In-app chat and booking confirmation flow</FigureCaption>
       </CaseSection>
 
       <CaseSection title="Technical Implementation" accent>

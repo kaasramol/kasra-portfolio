@@ -22,6 +22,7 @@ export default function ContactPage() {
             { label: "Email", value: "kasra_molaei@sfu.ca", href: "mailto:kasra_molaei@sfu.ca" },
             { label: "LinkedIn", value: "linkedin.com/in/kasramolaei", href: "https://www.linkedin.com/in/kasra-molaei" },
             { label: "GitHub", value: "github.com/kaasramol", href: "https://github.com/kaasramol" },
+            { label: "Resume", value: "Download PDF", href: "/Kasra_Molaei_Resume.pdf" },
           ].map((item) => (
             <StaggerItem key={item.label}>
               <Link

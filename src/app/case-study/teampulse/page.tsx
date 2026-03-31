@@ -3,6 +3,7 @@ import {
   CaseSection,
   StatCard,
   PullQuote,
+  FigureCaption,
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { TeamPulseDashboardMockup, TeamPulseInsightCardMockup, TeamPulseSurveyMobileMockup } from "@/components/mockups/teampulse-screens";
@@ -45,6 +46,7 @@ export default function TeamPulseCaseStudy() {
       </CaseSection>
 
       <TeamPulseDashboardMockup />
+      <FigureCaption>Fig 1 — TeamPulse dashboard overview showing team health scores and actionable insights</FigureCaption>
 
       <CaseSection title="The Problem">
         <p>
@@ -93,6 +95,7 @@ export default function TeamPulseCaseStudy() {
         </div>
 
         <AffinityMapMockup />
+        <FigureCaption>Fig 2 — Affinity map synthesizing insights from 8 user interviews across 3 roles</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
           Survey, 27 Professionals
@@ -115,6 +118,7 @@ export default function TeamPulseCaseStudy() {
         </p>
 
         <CompetitivePositioningMockup />
+        <FigureCaption>Fig 3 — Competitive positioning map showing the opportunity for a simple, action-driven tool</FigureCaption>
       </CaseSection>
 
       <CaseSection title="Define">
@@ -136,6 +140,7 @@ export default function TeamPulseCaseStudy() {
         <p>This shaped the entire navigation.</p>
 
         <IADiagramMockup />
+        <FigureCaption>Fig 4 — Information architecture derived from card sorting with 8 participants</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
           Design Principles
@@ -160,6 +165,7 @@ export default function TeamPulseCaseStudy() {
 
       <CaseSection title="Design">
         <TeamPulseWireframesMockup />
+        <FigureCaption>Fig 5 — Mid-fidelity wireframes exploring dashboard layout and insight card patterns</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
           The Insight Card, Core Component
@@ -184,6 +190,7 @@ export default function TeamPulseCaseStudy() {
             top="55%" left="3%"
           />
         </GestaltMockup>
+        <FigureCaption>Fig 6 — High-fidelity insight card component with score, trend, and action button</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
           Manager Team View
@@ -207,6 +214,7 @@ export default function TeamPulseCaseStudy() {
             top="60%" right="3%"
           />
         </GestaltMockup>
+        <FigureCaption>Fig 7 — Manager team view designed for 5-minute check-ins between meetings</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
           Employee Survey (Mobile)
@@ -218,6 +226,7 @@ export default function TeamPulseCaseStudy() {
         </p>
 
         <TeamPulseSurveyMobileMockup />
+        <FigureCaption>Fig 8 — Mobile survey experience designed to complete in under 90 seconds</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
           Anonymity by Design
@@ -237,6 +246,7 @@ export default function TeamPulseCaseStudy() {
         </div>
 
         <DesignSystemMockup />
+        <FigureCaption>Fig 9 — Design system components including typography, colors, and reusable patterns</FigureCaption>
       </CaseSection>
 
       <CaseSection title="Testing & Iteration">

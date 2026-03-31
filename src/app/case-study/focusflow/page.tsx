@@ -3,6 +3,7 @@ import {
   CaseSection,
   StatCard,
   PullQuote,
+  FigureCaption,
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { FocusFlowMobileHomeMockup, FocusFlowTimerMockup, FocusFlowWebDashboardMockup } from "@/components/mockups/focusflow-screens";
@@ -65,6 +66,7 @@ export default function FocusFlowCaseStudy() {
           />
         </GestaltMockup>
       </div>
+      <FigureCaption>Fig 1 — FocusFlow mobile home screen and active timer session with progress ring</FigureCaption>
 
       <CaseSection title="The Problem">
         <p>
@@ -113,6 +115,7 @@ export default function FocusFlowCaseStudy() {
         </p>
 
         <FocusFlowCompetitiveMockup />
+        <FigureCaption>Fig 2 — Competitive landscape showing gap between distraction blockers and calendar tools</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
           User Interviews, 5 Remote Workers
@@ -152,6 +155,7 @@ export default function FocusFlowCaseStudy() {
         </p>
 
         <FocusFlowJourneyMapMockup />
+        <FigureCaption>Fig 3 — Day-in-the-life journey map revealing only 65 min of quality focus in 4 hours</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
           Feature Prioritization (MoSCoW)
@@ -179,6 +183,7 @@ export default function FocusFlowCaseStudy() {
 
       <CaseSection title="Design">
         <FocusFlowWireframesMockup />
+        <FigureCaption>Fig 4 — Low-fidelity wireframes exploring mobile and web layout options</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
           Cross-Platform Strategy
@@ -221,6 +226,7 @@ export default function FocusFlowCaseStudy() {
             top="45%" right="3%"
           />
         </GestaltMockup>
+        <FigureCaption>Fig 5 — Web dashboard with analytics, calendar integration, and focus session controls</FigureCaption>
 
         <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
           Smart Suggestions
@@ -232,6 +238,7 @@ export default function FocusFlowCaseStudy() {
         </p>
 
         <FocusFlowDesignSystemMockup />
+        <FigureCaption>Fig 6 — Design system with typography, color tokens, and component library</FigureCaption>
       </CaseSection>
 
       <CaseSection title="Testing & Iteration">
