@@ -236,9 +236,9 @@ export function CaseSection({
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
     >
       {/* Section title with accent line */}
-      <div className="flex items-center gap-4 mb-8">
-        <div className="h-[2px] w-6 bg-[var(--accent)] rounded-full" />
-        <h2 className="text-xs font-semibold tracking-[0.25em] uppercase text-[var(--text-secondary)] shrink-0">
+      <div className="flex items-center gap-5 mb-8">
+        <div className="h-[2px] w-8 bg-[var(--accent)] rounded-full" />
+        <h2 className="text-lg sm:text-xl font-bold tracking-tight text-[var(--foreground)] shrink-0" style={{ fontFamily: "var(--font-serif), Georgia, serif" }}>
           {title}
         </h2>
         <div className="h-px flex-1 bg-[var(--border)]" />
