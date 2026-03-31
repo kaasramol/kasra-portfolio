@@ -74,7 +74,7 @@ export function ProjectCard({
   );
 }
 
-/* Reusable phone frame */
+/* Reusable phone frame — realistic device */
 export function PhoneFrame({
   children,
   className = "",
@@ -83,20 +83,24 @@ export function PhoneFrame({
   className?: string;
 }) {
   return (
-    <div className={`relative mx-auto w-[180px] sm:w-[200px] ${className}`}>
-      {/* Phone body */}
-      <div className="overflow-hidden rounded-[28px] border-[3px] border-[#1a1a1a] bg-[#1a1a1a] shadow-2xl">
-        {/* Notch */}
-        <div className="relative z-10 flex justify-center bg-[#1a1a1a] py-1.5">
-          <div className="h-[5px] w-[60px] rounded-full bg-[#333]" />
+    <div className={`relative mx-auto w-[200px] sm:w-[220px] ${className}`}>
+      <div className="overflow-hidden rounded-[36px] border-[6px] border-[#1c1c1e] bg-[#1c1c1e] shadow-[0_20px_60px_rgba(0,0,0,0.3),0_0_0_1px_rgba(255,255,255,0.05)_inset]">
+        {/* Dynamic Island */}
+        <div className="relative z-10 flex justify-center bg-[#1c1c1e] pt-2.5 pb-1">
+          <div className="h-[7px] w-[72px] rounded-full bg-[#0a0a0a]" />
         </div>
         {/* Screen */}
-        <div className="bg-white">{children}</div>
-        {/* Bottom bar */}
-        <div className="flex justify-center bg-[#1a1a1a] py-2">
-          <div className="h-[4px] w-[80px] rounded-full bg-[#333]" />
+        <div className="overflow-hidden rounded-b-[2px]">{children}</div>
+        {/* Home indicator */}
+        <div className="flex justify-center bg-[#1c1c1e] pt-1.5 pb-2.5">
+          <div className="h-[5px] w-[100px] rounded-full bg-[#3a3a3c]" />
         </div>
       </div>
+      {/* Side button (power) */}
+      <div className="absolute right-[-2px] top-[25%] h-[40px] w-[3px] rounded-r-sm bg-[#2c2c2e]" />
+      {/* Volume buttons */}
+      <div className="absolute left-[-2px] top-[20%] h-[24px] w-[3px] rounded-l-sm bg-[#2c2c2e]" />
+      <div className="absolute left-[-2px] top-[28%] h-[24px] w-[3px] rounded-l-sm bg-[#2c2c2e]" />
     </div>
   );
 }

@@ -4,9 +4,9 @@ import { MapPin, Star, Clock, CheckCircle, Shield, TrendingUp, MessageSquare, Ba
 /* ── Kaput Hero ── */
 export function KaputHeroScreens() {
   return (
-    <div className="flex items-end justify-center gap-4 sm:gap-8">
+    <div className="flex items-center justify-center gap-6 sm:gap-10">
       {/* Phone 1 — Map */}
-      <PhoneFrame className="relative z-10">
+      <PhoneFrame>
         <div className="relative h-[280px] bg-[#e8e3d9]">
           {/* Grid */}
           <div className="absolute inset-0 opacity-[0.06]">
@@ -47,7 +47,7 @@ export function KaputHeroScreens() {
       </PhoneFrame>
 
       {/* Phone 2 — Quote */}
-      <PhoneFrame className="hidden sm:block relative z-0 translate-y-4">
+      <PhoneFrame className="hidden sm:block">
         <div className="h-[280px] bg-white p-3">
           <p className="text-[8px] font-semibold text-[#8a8275] uppercase tracking-wider mb-2">Quote Comparison</p>
           {[
@@ -73,7 +73,7 @@ export function KaputHeroScreens() {
       </PhoneFrame>
 
       {/* Phone 3 — Chat */}
-      <PhoneFrame className="hidden md:block relative z-0 translate-y-8">
+      <PhoneFrame className="hidden md:block">
         <div className="h-[280px] bg-white p-3">
           <div className="flex items-center gap-2 border-b border-[#e8e3d9] pb-2 mb-2">
             <div className="h-6 w-6 rounded-full bg-[#FFB162]/20 flex items-center justify-center">
@@ -104,9 +104,9 @@ export function KaputHeroScreens() {
 /* ── Onboard Hero ── */
 export function OnboardHeroScreens() {
   return (
-    <div className="flex items-end justify-center gap-4 sm:gap-8">
+    <div className="flex items-center justify-center gap-6 sm:gap-10">
       {/* Phone 1 — Welcome */}
-      <PhoneFrame className="relative z-10">
+      <PhoneFrame>
         <div className="h-[280px] bg-white p-4 text-center">
           <div className="mb-6 mt-4 text-3xl">👋</div>
           <h3 className="mb-1 text-sm font-bold text-[#0F172A]">Welcome to Taskly!</h3>
@@ -127,7 +127,7 @@ export function OnboardHeroScreens() {
       </PhoneFrame>
 
       {/* Phone 2 — Use Case */}
-      <PhoneFrame className="hidden sm:block relative z-0 translate-y-4">
+      <PhoneFrame className="hidden sm:block">
         <div className="h-[280px] bg-white p-4 text-center">
           <h3 className="mb-1 text-[11px] font-bold text-[#0F172A]">What brings you here?</h3>
           <p className="mb-4 text-[8px] text-[#64748B]">We&apos;ll customize your experience</p>
@@ -157,7 +157,7 @@ export function OnboardHeroScreens() {
       </PhoneFrame>
 
       {/* Phone 3 — Celebration */}
-      <PhoneFrame className="hidden md:block relative z-0 translate-y-8">
+      <PhoneFrame className="hidden md:block">
         <div className="h-[280px] bg-white p-4 text-center">
           <div className="mb-3 mt-4 text-3xl">🎉</div>
           <h3 className="mb-1 text-sm font-bold text-[#0F172A]">You&apos;re all set!</h3>
@@ -182,9 +182,9 @@ export function OnboardHeroScreens() {
 /* ── TeamPulse Hero ── */
 export function TeamPulseHeroScreens() {
   return (
-    <div className="flex items-end justify-center gap-4 sm:gap-8">
+    <div className="flex items-center justify-center gap-6 sm:gap-10">
       {/* Phone 1 — Dashboard */}
-      <PhoneFrame className="relative z-10">
+      <PhoneFrame>
         <div className="h-[280px] bg-[#141B1F] p-3">
           <div className="flex items-center justify-between mb-3">
             <span className="text-[10px] font-bold text-[#E5F0EE]">Team<span className="text-[#2EC4B6]">Pulse</span></span>
@@ -215,7 +215,7 @@ export function TeamPulseHeroScreens() {
       </PhoneFrame>
 
       {/* Phone 2 — Survey */}
-      <PhoneFrame className="hidden sm:block relative z-0 translate-y-4">
+      <PhoneFrame className="hidden sm:block">
         <div className="h-[280px] bg-white p-4 text-center">
           <div className="flex items-center gap-1.5 mb-4">
             <Shield size={10} className="text-[#2EC4B6]" />
@@ -238,7 +238,7 @@ export function TeamPulseHeroScreens() {
       </PhoneFrame>
 
       {/* Phone 3 — Insight Card */}
-      <PhoneFrame className="hidden md:block relative z-0 translate-y-8">
+      <PhoneFrame className="hidden md:block">
         <div className="h-[280px] bg-[#141B1F] p-3">
           <p className="text-[8px] text-[#7A9A95] mb-2 uppercase tracking-wider">Insight</p>
           <div className="rounded-xl bg-[#1E2A2F] p-3 mb-2">
@@ -269,9 +269,9 @@ export function TeamPulseHeroScreens() {
 /* ── FocusFlow Hero ── */
 export function FocusFlowHeroScreens() {
   return (
-    <div className="flex items-end justify-center gap-4 sm:gap-8">
+    <div className="flex items-center justify-center gap-6 sm:gap-10">
       {/* Phone 1 — Timer */}
-      <PhoneFrame className="relative z-10">
+      <PhoneFrame>
         <div className="h-[280px] bg-[#0F0E1A] p-4 text-center flex flex-col items-center justify-center">
           <p className="text-[8px] text-[#6B7094] mb-3">DEEP WORK SESSION</p>
           {/* Timer ring */}
@@ -299,7 +299,7 @@ export function FocusFlowHeroScreens() {
       </PhoneFrame>
 
       {/* Phone 2 — Schedule */}
-      <PhoneFrame className="hidden sm:block relative z-0 translate-y-4">
+      <PhoneFrame className="hidden sm:block">
         <div className="h-[280px] bg-[#FAFBFE] p-3">
           <p className="text-[9px] font-semibold text-[#1E1B4B] mb-0.5">Today</p>
           <p className="text-[7px] text-[#6B7094] mb-3">3 focus blocks</p>
@@ -323,7 +323,7 @@ export function FocusFlowHeroScreens() {
       </PhoneFrame>
 
       {/* Phone 3 — Stats */}
-      <PhoneFrame className="hidden md:block relative z-0 translate-y-8">
+      <PhoneFrame className="hidden md:block">
         <div className="h-[280px] bg-[#FAFBFE] p-3">
           <p className="text-[9px] font-semibold text-[#1E1B4B] mb-3">Weekly Insights</p>
           <div className="rounded-xl bg-[#1E1B4B] p-3 text-center mb-3">
