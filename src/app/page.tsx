@@ -2,6 +2,7 @@ import { ProjectCard } from "@/components/project-card";
 import { KaputScreens, OnboardScreens, TeamPulseScreens, FocusFlowScreens } from "@/components/project-screens";
 import { ScrollReveal, HeroReveal, StaggerContainer, StaggerItem, AnimatedDivider } from "@/components/motion";
 import { HeroVisual } from "@/components/hero-visual";
+import { ToolsStrip } from "@/components/tools-strip";
 import { HomeScrollSnap } from "@/components/home-scroll-snap";
 import Link from "next/link";
 
@@ -55,7 +56,7 @@ const projects = [
 export default function Home() {
   return (
     <HomeScrollSnap>
-      {/* Hero + skills (one full-height snap) */}
+      {/* Hero */}
       <section className="snap-home-section grain relative flex min-h-[100dvh] flex-col overflow-hidden px-6 pt-28 pb-10">
         <div className="relative z-[1] mx-auto flex w-full max-w-5xl flex-1 flex-col justify-between gap-10">
           <div>
@@ -94,6 +95,41 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Tools Strip */}
+      <section className="snap-home-section flex items-center px-6 py-16">
+        <div className="mx-auto w-full max-w-5xl">
+          <ScrollReveal>
+            <ToolsStrip />
+          </ScrollReveal>
+
+          {/* Quick bio + education */}
+          <ScrollReveal>
+            <div className="mt-12 grid gap-8 sm:grid-cols-3">
+              <div className="rounded-xl border border-[var(--border)] p-6 transition-all duration-300 hover:border-[var(--accent)]/30 hover:-translate-y-0.5 hover:shadow-md">
+                <p className="mb-2 text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--accent)]">Background</p>
+                <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
+                  Marketing &amp; business strategy turned UX/UI. I bring a conversion-minded approach to every design decision.
+                </p>
+              </div>
+              <div className="rounded-xl border border-[var(--border)] p-6 transition-all duration-300 hover:border-[var(--accent)]/30 hover:-translate-y-0.5 hover:shadow-md">
+                <p className="mb-2 text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--accent)]">Education</p>
+                <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
+                  Simon Fraser University — Interactive Arts &amp; Technology. Focused on user-centered design and research methods.
+                </p>
+              </div>
+              <div className="rounded-xl border border-[var(--border)] p-6 transition-all duration-300 hover:border-[var(--accent)]/30 hover:-translate-y-0.5 hover:shadow-md">
+                <p className="mb-2 text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--accent)]">Focus</p>
+                <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
+                  SaaS &amp; productivity products. End-to-end ownership from research through high-fidelity prototypes and testing.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <AnimatedDivider />
 
       {/* One section per project */}
       {projects.map((project, index) => (
@@ -169,18 +205,34 @@ export default function Home() {
       <AnimatedDivider />
 
       {/* CTA */}
-      <section className="px-6 py-20">
+      <section className="px-6 py-24">
         <ScrollReveal>
-          <div className="mx-auto w-full max-w-5xl text-center">
-            <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
-              Let&apos;s work together
-            </h2>
-            <p className="mx-auto mb-8 max-w-sm text-[var(--text-secondary)]">
-              Open to UX/UI roles where design drives business outcomes.
-            </p>
-            <Link href="/contact" className="btn-primary">
-              Get in touch
-            </Link>
+          <div className="mx-auto w-full max-w-5xl">
+            <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-10 sm:p-14 text-center">
+              <p className="mb-4 text-[10px] font-semibold tracking-[0.25em] uppercase text-[var(--accent)]">
+                Let&apos;s Collaborate
+              </p>
+              <h2 className="mb-4 text-3xl font-bold sm:text-5xl">
+                Have a project in mind?
+              </h2>
+              <p className="mx-auto mb-8 max-w-md text-[var(--text-secondary)] leading-relaxed">
+                I&apos;m open to UX/UI roles, freelance projects, and conversations about
+                design that drives real business outcomes.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link href="/contact" className="btn-primary">
+                  Get in touch
+                </Link>
+                <a
+                  href="/Kasra_Molaei_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline"
+                >
+                  Download Resume
+                </a>
+              </div>
+            </div>
           </div>
         </ScrollReveal>
       </section>

@@ -91,18 +91,23 @@ export function CaseStudyLayout({
           style={{ background: `linear-gradient(90deg, transparent, ${color}, transparent)` }}
         />
 
-        <div className="relative z-10 mx-auto max-w-5xl px-6 pb-16 pt-32 sm:pt-36">
-          <motion.p
-            className="mb-3 text-sm font-medium tracking-[0.25em] uppercase"
-            style={{ color }}
+        <div className="relative z-10 mx-auto max-w-5xl px-6 pb-16 pt-32 sm:pt-40">
+          <motion.div
+            className="mb-6 flex items-center gap-3"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            {subtitle}
-          </motion.p>
+            <div className="h-px w-8" style={{ background: color }} />
+            <p
+              className="text-sm font-medium tracking-[0.25em] uppercase"
+              style={{ color }}
+            >
+              {subtitle}
+            </p>
+          </motion.div>
           <motion.h1
-            className="mb-10 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl"
+            className="mb-4 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
@@ -112,7 +117,7 @@ export function CaseStudyLayout({
 
           {/* Meta grid with accent borders */}
           <motion.div
-            className="grid grid-cols-2 gap-0 sm:grid-cols-4 rounded-xl border border-[var(--border)] overflow-hidden"
+            className="mt-10 grid grid-cols-2 gap-0 sm:grid-cols-4 rounded-xl border border-[var(--border)] overflow-hidden"
             style={{ background: "var(--background)" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -231,9 +236,9 @@ export function CaseSection({
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
     >
       {/* Section title with accent line */}
-      <div className="flex items-center gap-4 mb-6">
-        <div className="h-px flex-1 bg-[var(--border)]" />
-        <h2 className="text-sm font-semibold tracking-[0.2em] uppercase text-[var(--text-secondary)] shrink-0">
+      <div className="flex items-center gap-4 mb-8">
+        <div className="h-[2px] w-6 bg-[var(--accent)] rounded-full" />
+        <h2 className="text-xs font-semibold tracking-[0.25em] uppercase text-[var(--text-secondary)] shrink-0">
           {title}
         </h2>
         <div className="h-px flex-1 bg-[var(--border)]" />
