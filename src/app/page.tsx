@@ -136,7 +136,7 @@ export default function Home() {
         <section
           key={project.title}
           id={index === 0 ? "work" : undefined}
-          className="snap-home-section flex min-h-[100dvh] flex-col justify-center px-6 py-12 md:py-16"
+          className="snap-home-section flex flex-col justify-center px-6 py-10 md:py-14"
         >
           <div className="mx-auto w-full max-w-5xl">
             {index === 0 && (
