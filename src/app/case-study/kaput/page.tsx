@@ -59,7 +59,7 @@ export default function KaputCaseStudy() {
         </p>
         <div className="grid gap-4 sm:grid-cols-2 my-6">
           <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
-            <h4 className="mb-3 text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)]">
+            <h4 className="mb-3 text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)]">
               Car Owners
             </h4>
             <ul className="space-y-2 text-sm">
@@ -82,7 +82,7 @@ export default function KaputCaseStudy() {
             </ul>
           </div>
           <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
-            <h4 className="mb-3 text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)]">
+            <h4 className="mb-3 text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)]">
               Mechanics
             </h4>
             <ul className="space-y-2 text-sm">
@@ -113,7 +113,7 @@ export default function KaputCaseStudy() {
       </CaseSection>
 
       <CaseSection title="Discovery">
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           Market Research
         </h3>
         <p>
@@ -123,7 +123,7 @@ export default function KaputCaseStudy() {
           Reviews have no quoting, booking, or payment.
         </p>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           User Insights
         </h3>
         <p>
@@ -145,7 +145,7 @@ export default function KaputCaseStudy() {
         <KaputWireframesMockup />
         <FigureCaption>Fig 2 — Early wireframes exploring map layout, quote flow, and dashboard structures</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           Map-First Architecture
         </h3>
         <p>
@@ -160,7 +160,7 @@ export default function KaputCaseStudy() {
           browse the list or tap pins. This feels native and fast.
         </p>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Guided Quote Request
         </h3>
         <p>
@@ -197,7 +197,7 @@ export default function KaputCaseStudy() {
         </GestaltMockup>
         <FigureCaption>Fig 3 — Guided 5-step quote request flow replacing free-text problem descriptions</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Quote Comparison
         </h3>
         <p>
@@ -226,7 +226,7 @@ export default function KaputCaseStudy() {
         </GestaltMockup>
         <FigureCaption>Fig 4 — Side-by-side quote comparison with itemized breakdown for transparency</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Two-Sided Dashboards
         </h3>
         <p>
@@ -254,7 +254,7 @@ export default function KaputCaseStudy() {
         <KaputMechanicDashboardMockup />
         <FigureCaption>Fig 6 — Mechanic command center with incoming requests, calendar, and earnings</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Trust by Design
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
@@ -275,7 +275,7 @@ export default function KaputCaseStudy() {
           ))}
         </div>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Premium Dark Theme
         </h3>
         <p>

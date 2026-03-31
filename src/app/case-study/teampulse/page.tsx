@@ -77,7 +77,7 @@ export default function TeamPulseCaseStudy() {
       </CaseSection>
 
       <CaseSection title="Discovery">
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           User Research, 8 Participants
         </h3>
         <p>
@@ -99,7 +99,7 @@ export default function TeamPulseCaseStudy() {
         <AffinityMapMockup />
         <FigureCaption>Fig 2 — Affinity map synthesizing insights from 8 user interviews across 3 roles</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Survey, 27 Professionals
         </h3>
         <div className="grid grid-cols-2 gap-3 my-4">
@@ -109,7 +109,7 @@ export default function TeamPulseCaseStudy() {
           <StatCard label="Would engage more with action" before="" after="89%" change="Opportunity" />
         </div>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Competitive Analysis
         </h3>
         <p>
@@ -124,7 +124,7 @@ export default function TeamPulseCaseStudy() {
       </CaseSection>
 
       <CaseSection title="Define">
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           Information Architecture
         </h3>
         <p>
@@ -144,7 +144,7 @@ export default function TeamPulseCaseStudy() {
         <IADiagramMockup />
         <FigureCaption>Fig 4 — Information architecture derived from card sorting with 8 participants</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Design Principles
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -169,7 +169,7 @@ export default function TeamPulseCaseStudy() {
         <TeamPulseWireframesMockup />
         <FigureCaption>Fig 5 — Mid-fidelity wireframes exploring dashboard layout and insight card patterns</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           The Insight Card, Core Component
         </h3>
         <p>
@@ -194,7 +194,7 @@ export default function TeamPulseCaseStudy() {
         </GestaltMockup>
         <FigureCaption>Fig 6 — High-fidelity insight card component with score, trend, and action button</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Manager Team View
         </h3>
         <p>
@@ -218,7 +218,7 @@ export default function TeamPulseCaseStudy() {
         </GestaltMockup>
         <FigureCaption>Fig 7 — Manager team view designed for 5-minute check-ins between meetings</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Employee Survey (Mobile)
         </h3>
         <p>
@@ -230,7 +230,7 @@ export default function TeamPulseCaseStudy() {
         <TeamPulseSurveyMobileMockup />
         <FigureCaption>Fig 8 — Mobile survey experience designed to complete in under 90 seconds</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Anonymity by Design
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
@@ -255,7 +255,7 @@ export default function TeamPulseCaseStudy() {
         <p>
           Tested with 5 participants across all three roles.
         </p>
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-6">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-6">
           Key Iterations
         </h3>
         <div className="space-y-3">
@@ -283,7 +283,7 @@ export default function TeamPulseCaseStudy() {
           <StatCard label="Manager action rate" before="15-20%" after="60%+" change="+3x" />
         </div>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           What I Learned
         </h3>
         <div className="space-y-4">

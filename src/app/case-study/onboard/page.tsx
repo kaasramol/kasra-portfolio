@@ -72,7 +72,7 @@ export default function OnboardCaseStudy() {
       </CaseSection>
 
       <CaseSection title="Discovery">
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           Competitive Audit
         </h3>
         <p>
@@ -85,7 +85,7 @@ export default function OnboardCaseStudy() {
         <CompetitiveAuditMockup />
         <FigureCaption>Fig 2 — Competitive audit comparing onboarding flows across 5 SaaS tools</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           User Interviews
         </h3>
         <p>
@@ -107,7 +107,7 @@ export default function OnboardCaseStudy() {
           </div>
         </div>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Funnel Analysis
         </h3>
         <p>
@@ -131,7 +131,7 @@ export default function OnboardCaseStudy() {
         <JourneyMapMockup />
         <FigureCaption>Fig 4 — User emotional journey map showing declining engagement through each step</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           How Might We
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -182,7 +182,7 @@ export default function OnboardCaseStudy() {
         </GestaltMockup>
         <FigureCaption>Fig 7 — Celebration screen with optional next actions replacing forced team invite</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Key Design Decisions
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -227,7 +227,7 @@ export default function OnboardCaseStudy() {
           <StatCard label="Support tickets" before="340/mo" after="~150/mo" change="-56%" />
         </div>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           What I Learned
         </h3>
         <div className="space-y-4">

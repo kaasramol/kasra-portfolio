@@ -84,7 +84,7 @@ export default function FocusFlowCaseStudy() {
       </CaseSection>
 
       <CaseSection title="Discovery">
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           Survey, 27 Remote Workers
         </h3>
         <div className="grid grid-cols-2 gap-3 my-4">
@@ -105,7 +105,7 @@ export default function FocusFlowCaseStudy() {
           integrate with my workflow&quot; (29%).
         </p>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Competitive Analysis
         </h3>
         <p>
@@ -119,7 +119,7 @@ export default function FocusFlowCaseStudy() {
         <FocusFlowCompetitiveMockup />
         <FigureCaption>Fig 2 — Competitive landscape showing gap between distraction blockers and calendar tools</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           User Interviews, 5 Remote Workers
         </h3>
         <p>Three patterns emerged:</p>
@@ -147,7 +147,7 @@ export default function FocusFlowCaseStudy() {
       </CaseSection>
 
       <CaseSection title="Define">
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           Journey Map, A Day in the Life
         </h3>
         <p>
@@ -159,7 +159,7 @@ export default function FocusFlowCaseStudy() {
         <FocusFlowJourneyMapMockup />
         <FigureCaption>Fig 3 — Day-in-the-life journey map revealing only 65 min of quality focus in 4 hours</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Feature Prioritization (MoSCoW)
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -187,7 +187,7 @@ export default function FocusFlowCaseStudy() {
         <FocusFlowWireframesMockup />
         <FigureCaption>Fig 4 — Low-fidelity wireframes exploring mobile and web layout options</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           Cross-Platform Strategy
         </h3>
         <p>
@@ -205,7 +205,7 @@ export default function FocusFlowCaseStudy() {
           </div>
         </div>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           The Timer Ring
         </h3>
         <p>
@@ -230,7 +230,7 @@ export default function FocusFlowCaseStudy() {
         </GestaltMockup>
         <FigureCaption>Fig 5 — Web dashboard with analytics, calendar integration, and focus session controls</FigureCaption>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-10">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
           Smart Suggestions
         </h3>
         <p>
@@ -252,7 +252,7 @@ export default function FocusFlowCaseStudy() {
           <StatCard label="Would use both platforms" before="—" after="60%" change="3/5 testers" />
         </div>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3 mt-6">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-6">
           Key Iterations
         </h3>
         <div className="space-y-3">
@@ -297,7 +297,7 @@ export default function FocusFlowCaseStudy() {
       </CaseSection>
 
       <CaseSection title="Outcome & Learnings">
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           Deliverables
         </h3>
         <div className="flex flex-wrap gap-2 mb-6">
@@ -308,7 +308,7 @@ export default function FocusFlowCaseStudy() {
           ))}
         </div>
 
-        <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent)] mb-3">
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           What I Learned
         </h3>
         <div className="space-y-4">
