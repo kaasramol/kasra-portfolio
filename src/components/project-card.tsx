@@ -27,25 +27,21 @@ export function ProjectCard({
         className="overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
         style={{ background: bg }}
       >
-        {/* Browser preview — large, dominant */}
-        <div className="relative px-8 pt-8 md:px-10 md:pt-10">
-          {screens}
-        </div>
-
-        {/* Text */}
-        <div className="p-8 md:p-10">
-          <div className="mb-2 flex items-baseline gap-3">
-            <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">{title}</h3>
-            <span className="text-sm text-[var(--text-secondary)]">{year}</span>
-          </div>
-          <p className="mb-3 text-sm text-[var(--text-secondary)]">
-            {subtitle}
-          </p>
-          <p className="mb-5 max-w-lg leading-relaxed text-[var(--text-secondary)]">
-            {description}
-          </p>
-          <div className="flex items-center justify-between gap-4">
-            <div className="flex flex-wrap gap-2">
+        {/* Side-by-side layout on desktop */}
+        <div className="flex flex-col md:flex-row md:items-center">
+          {/* Text — left side */}
+          <div className="p-6 md:p-8 md:w-[45%] md:shrink-0">
+            <div className="mb-2 flex items-baseline gap-3">
+              <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">{title}</h3>
+              <span className="text-sm text-[var(--text-secondary)]">{year}</span>
+            </div>
+            <p className="mb-2 text-sm text-[var(--text-secondary)]">
+              {subtitle}
+            </p>
+            <p className="mb-4 max-w-lg text-sm leading-relaxed text-[var(--text-secondary)]">
+              {description}
+            </p>
+            <div className="mb-4 flex flex-wrap gap-2">
               {tags.map((tag) => (
                 <span
                   key={tag}
@@ -67,6 +63,13 @@ export function ProjectCard({
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </span>
+          </div>
+
+          {/* Screens — right side */}
+          <div className="relative px-6 pb-6 md:px-6 md:py-6 md:flex-1 md:min-h-0">
+            <div className="md:max-h-[340px] md:overflow-hidden">
+              {screens}
+            </div>
           </div>
         </div>
       </article>
