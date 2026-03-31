@@ -7,6 +7,7 @@ import {
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { FocusFlowMobileHomeMockup, FocusFlowTimerMockup, FocusFlowWebDashboardMockup } from "@/components/mockups/focusflow-screens";
+import { FocusFlowHeroScreens } from "@/components/mockups/hero-devices";
 import { FocusFlowCompetitiveMockup, FocusFlowJourneyMapMockup, FocusFlowWireframesMockup, FocusFlowDesignSystemMockup } from "@/components/mockups/focusflow-extras";
 
 export const metadata = {
@@ -30,6 +31,7 @@ export default function FocusFlowCaseStudy() {
         date: "2024",
         team: "Solo",
       }}
+      heroScreens={<FocusFlowHeroScreens />}
       prevProject={{ title: "TeamPulse", href: "/case-study/teampulse" }}
       nextProject={{ title: "Kaput", href: "/case-study/kaput" }}
     >

@@ -7,6 +7,7 @@ import {
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { OnboardBeforeMockup, OnboardAfterMockup, OnboardCelebrationMockup } from "@/components/mockups/onboard-screens";
+import { OnboardHeroScreens } from "@/components/mockups/hero-devices";
 import { CompetitiveAuditMockup, FunnelAnalysisMockup, JourneyMapMockup, WireframesMockup, UsabilityResultsMockup } from "@/components/mockups/onboard-extras";
 
 export const metadata = {
@@ -30,6 +31,7 @@ export default function OnboardCaseStudy() {
         date: "2024",
         team: "Solo",
       }}
+      heroScreens={<OnboardHeroScreens />}
       prevProject={{ title: "Kaput", href: "/case-study/kaput" }}
       nextProject={{ title: "TeamPulse", href: "/case-study/teampulse" }}
     >

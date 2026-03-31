@@ -20,6 +20,7 @@ interface CaseStudyLayoutProps {
   color: string;
   meta: CaseStudyMeta;
   children: ReactNode;
+  heroScreens?: ReactNode;
   nextProject?: {
     title: string;
     href: string;
@@ -63,6 +64,7 @@ export function CaseStudyLayout({
   color,
   meta,
   children,
+  heroScreens,
   nextProject,
   prevProject,
 }: CaseStudyLayoutProps) {
@@ -137,6 +139,18 @@ export function CaseStudyLayout({
               </div>
             ))}
           </motion.div>
+
+          {/* Hero device showcase */}
+          {heroScreens && (
+            <motion.div
+              className="mt-12"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            >
+              {heroScreens}
+            </motion.div>
+          )}
         </div>
       </section>
 

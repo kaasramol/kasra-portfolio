@@ -6,6 +6,7 @@ import {
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { KaputMapMockup } from "@/components/mockups/kaput-map";
+import { KaputHeroScreens } from "@/components/mockups/hero-devices";
 import { KaputQuoteComparisonMockup } from "@/components/mockups/kaput-quote";
 import { KaputOwnerDashboardMockup, KaputMechanicDashboardMockup } from "@/components/mockups/kaput-dashboards";
 import { KaputQuoteFlowMockup, KaputMechanicProfileMockup, KaputChatBookingMockup, KaputWireframesMockup } from "@/components/mockups/kaput-extras";
@@ -31,6 +32,7 @@ export default function KaputCaseStudy() {
         date: "2024 - Present",
         team: "Kasra Molaei, Pooria Arab, Sara Dehghani",
       }}
+      heroScreens={<KaputHeroScreens />}
       nextProject={{ title: "Onboard", href: "/case-study/onboard" }}
       prevProject={{ title: "FocusFlow", href: "/case-study/focusflow" }}
     >

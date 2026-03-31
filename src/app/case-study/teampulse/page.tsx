@@ -7,6 +7,7 @@ import {
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { TeamPulseDashboardMockup, TeamPulseInsightCardMockup, TeamPulseSurveyMobileMockup } from "@/components/mockups/teampulse-screens";
+import { TeamPulseHeroScreens } from "@/components/mockups/hero-devices";
 import { AffinityMapMockup, CompetitivePositioningMockup, IADiagramMockup, TeamPulseManagerViewMockup, TeamPulseWireframesMockup, DesignSystemMockup } from "@/components/mockups/teampulse-extras";
 
 export const metadata = {
@@ -30,6 +31,7 @@ export default function TeamPulseCaseStudy() {
         date: "2024",
         team: "Solo",
       }}
+      heroScreens={<TeamPulseHeroScreens />}
       prevProject={{ title: "Onboard", href: "/case-study/onboard" }}
       nextProject={{ title: "FocusFlow", href: "/case-study/focusflow" }}
     >

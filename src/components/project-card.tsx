@@ -74,6 +74,33 @@ export function ProjectCard({
   );
 }
 
+/* Reusable phone frame */
+export function PhoneFrame({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div className={`relative mx-auto w-[180px] sm:w-[200px] ${className}`}>
+      {/* Phone body */}
+      <div className="overflow-hidden rounded-[28px] border-[3px] border-[#1a1a1a] bg-[#1a1a1a] shadow-2xl">
+        {/* Notch */}
+        <div className="relative z-10 flex justify-center bg-[#1a1a1a] py-1.5">
+          <div className="h-[5px] w-[60px] rounded-full bg-[#333]" />
+        </div>
+        {/* Screen */}
+        <div className="bg-white">{children}</div>
+        {/* Bottom bar */}
+        <div className="flex justify-center bg-[#1a1a1a] py-2">
+          <div className="h-[4px] w-[80px] rounded-full bg-[#333]" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* Reusable browser frame */
 export function BrowserFrame({
   children,
