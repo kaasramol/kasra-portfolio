@@ -290,6 +290,34 @@ export default function KaputCaseStudy() {
         <FigureCaption>Fig 8 — In-app chat and booking confirmation flow</FigureCaption>
       </CaseSection>
 
+      <CaseSection title="Testing & Iteration">
+        <p>
+          I tested the core flows with 5 car owners and 3 mechanics in Vancouver,
+          focusing on quote request completion, quote comparison clarity, and
+          mechanic onboarding.
+        </p>
+
+        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-6">
+          Key Iterations
+        </h3>
+        <div className="space-y-3">
+          {[
+            { title: "Simplified quote request from 7 to 5 steps", desc: "Users abandoned at vehicle details. I merged two steps and added photo upload earlier, reducing completion time by 40%." },
+            { title: "Redesigned quote comparison cards", desc: "Users struggled to compare quotes side-by-side. I added itemized breakdowns (parts, labor, tax) and a \"Best Value\" badge. 4/5 testers said they felt confident choosing." },
+            { title: "Added real-time mechanic availability", desc: "Car owners wanted to know wait times before requesting quotes. I added availability indicators to map pins and profile cards." },
+            { title: "Streamlined mechanic dashboard", desc: "Mechanics found the original dashboard overwhelming. I reduced the default view to incoming requests and today's schedule, moving analytics to a separate tab." },
+          ].map((item) => (
+            <div key={item.title} className="flex items-start gap-3 rounded-lg bg-[var(--surface)] p-4">
+              <span className="mt-0.5 h-2 w-2 rounded-full bg-[var(--accent)] shrink-0" />
+              <div>
+                <p className="text-sm font-medium text-[var(--foreground)]">{item.title}</p>
+                <p className="text-xs text-[var(--text-secondary)] mt-1">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </CaseSection>
+
       <CaseSection title="Technical Implementation" accent>
         <p className="text-lg text-[var(--foreground)] font-medium">
           This project is unique in my portfolio because I didn&apos;t just design it. I built it.
