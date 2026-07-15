@@ -7,7 +7,7 @@ import {
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { OnboardBeforeMockup, OnboardAfterMockup, OnboardCelebrationMockup } from "@/components/mockups/onboard-screens";
-import { OnboardHeroScreens } from "@/components/mockups/hero-devices";
+import { IPhoneOverview } from "@/components/mockups/iphone-overview";
 import { CompetitiveAuditMockup, FunnelAnalysisMockup, JourneyMapMockup, WireframesMockup, UsabilityResultsMockup } from "@/components/mockups/onboard-extras";
 
 export const metadata = {
@@ -31,7 +31,19 @@ export default function OnboardCaseStudy() {
         date: "2024",
         team: "Solo",
       }}
-      heroScreens={<OnboardHeroScreens />}
+      heroScreens={
+        <IPhoneOverview
+          eyebrow="Project Overview"
+          title="Cutting onboarding drop-off by 40%."
+          summary="Taskly lost 40% of new users during onboarding. I redesigned the flow end-to-end — progressive profiling, contextual product tour, and a celebration moment — to get users to their aha moment 3× faster."
+          highlights={[
+            { label: "Role", value: "UX/UI Designer (E2E)" },
+            { label: "Type", value: "SaaS onboarding redesign" },
+            { label: "Outcome", value: "12 min → < 4 min time-to-value" },
+          ]}
+          accent="#E8956A"
+        />
+      }
       prevProject={{ title: "Kaput", href: "/case-study/kaput" }}
       nextProject={{ title: "TeamPulse", href: "/case-study/teampulse" }}
     >

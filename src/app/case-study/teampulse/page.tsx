@@ -7,7 +7,7 @@ import {
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { TeamPulseDashboardMockup, TeamPulseInsightCardMockup, TeamPulseSurveyMobileMockup } from "@/components/mockups/teampulse-screens";
-import { TeamPulseHeroScreens } from "@/components/mockups/hero-devices";
+import { IPhoneOverview } from "@/components/mockups/iphone-overview";
 import { AffinityMapMockup, CompetitivePositioningMockup, IADiagramMockup, TeamPulseManagerViewMockup, TeamPulseWireframesMockup, DesignSystemMockup } from "@/components/mockups/teampulse-extras";
 
 export const metadata = {
@@ -31,7 +31,19 @@ export default function TeamPulseCaseStudy() {
         date: "2024",
         team: "Solo",
       }}
-      heroScreens={<TeamPulseHeroScreens />}
+      heroScreens={
+        <IPhoneOverview
+          eyebrow="Project Overview"
+          title="Turning employee voice into manager action."
+          summary="A 0-to-1 pulse survey and feedback dashboard for HR and managers. Closes the loop between anonymous employee input and concrete next steps in under 24 hours — not weeks."
+          highlights={[
+            { label: "Role", value: "UX/UI Designer (E2E)" },
+            { label: "Type", value: "B2B SaaS · Data viz" },
+            { label: "Outcome", value: "Insight → action in < 24 hrs" },
+          ]}
+          accent="#A35139"
+        />
+      }
       prevProject={{ title: "Onboard", href: "/case-study/onboard" }}
       nextProject={{ title: "FocusFlow", href: "/case-study/focusflow" }}
     >

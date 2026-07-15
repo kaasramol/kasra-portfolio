@@ -7,7 +7,7 @@ import {
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { FocusFlowMobileHomeMockup, FocusFlowTimerMockup, FocusFlowWebDashboardMockup } from "@/components/mockups/focusflow-screens";
-import { FocusFlowHeroScreens } from "@/components/mockups/hero-devices";
+import { IPhoneOverview } from "@/components/mockups/iphone-overview";
 import { FocusFlowCompetitiveMockup, FocusFlowJourneyMapMockup, FocusFlowWireframesMockup, FocusFlowDesignSystemMockup } from "@/components/mockups/focusflow-extras";
 
 export const metadata = {
@@ -31,7 +31,19 @@ export default function FocusFlowCaseStudy() {
         date: "2024",
         team: "Solo",
       }}
-      heroScreens={<FocusFlowHeroScreens />}
+      heroScreens={
+        <IPhoneOverview
+          eyebrow="Project Overview"
+          title="Reclaiming 2.5 hours of deep work a day."
+          summary="A cross-platform productivity concept combining focus sessions, calendar integration, and habit tracking. Designed end-to-end from research to high-fidelity prototype across mobile and web."
+          highlights={[
+            { label: "Role", value: "UX/UI Designer (E2E)" },
+            { label: "Type", value: "Concept · Mobile + Web" },
+            { label: "Strategy", value: "Calendar-aware focus sessions" },
+          ]}
+          accent="#C97B4B"
+        />
+      }
       prevProject={{ title: "TeamPulse", href: "/case-study/teampulse" }}
       nextProject={{ title: "Kaput", href: "/case-study/kaput" }}
     >

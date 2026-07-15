@@ -6,7 +6,20 @@ import {
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { KaputMapMockup } from "@/components/mockups/kaput-map";
-import { KaputHeroScreens } from "@/components/mockups/hero-devices";
+import { IPhoneOverview } from "@/components/mockups/iphone-overview";
+import { CaseStudyNav } from "@/components/case-study-nav";
+
+const kaputSections = [
+  { id: "overview", label: "Overview" },
+  { id: "problem", label: "Problem" },
+  { id: "discovery", label: "Discovery" },
+  { id: "design", label: "Design" },
+  { id: "testing", label: "Testing" },
+  { id: "tools", label: "Tools" },
+  { id: "business", label: "Business" },
+  { id: "learnings", label: "Learnings" },
+  { id: "reflection", label: "Reflection" },
+];
 import { KaputQuoteComparisonMockup } from "@/components/mockups/kaput-quote";
 import { KaputOwnerDashboardMockup, KaputMechanicDashboardMockup } from "@/components/mockups/kaput-dashboards";
 import { KaputQuoteFlowMockup, KaputMechanicProfileMockup, KaputChatBookingMockup, KaputWireframesMockup } from "@/components/mockups/kaput-extras";
@@ -32,11 +45,25 @@ export default function KaputCaseStudy() {
         date: "2024 - Present",
         team: "Kasra Molaei, Pooria Arab, Sara Dehghani",
       }}
-      heroScreens={<KaputHeroScreens />}
+      heroScreens={
+        <IPhoneOverview
+          eyebrow="Project Overview"
+          title="A map-first marketplace for car repair."
+          summary="Kaput connects Vancouver car owners with trusted local mechanics through real-time maps, guided quoting, Stripe payments, and in-app chat — designed and built end-to-end."
+          highlights={[
+            { label: "Role", value: "UX/UI Designer & Product Owner" },
+            { label: "Type", value: "Live B2C marketplace MVP" },
+            { label: "Stack", value: "Figma · Next.js · Firebase · Stripe" },
+          ]}
+          accent="#FFB162"
+          footer="Live product →"
+        />
+      }
       nextProject={{ title: "Onboard", href: "/case-study/onboard" }}
       prevProject={{ title: "FocusFlow", href: "/case-study/focusflow" }}
     >
-      <CaseSection title="Overview">
+      <CaseStudyNav items={kaputSections} />
+      <CaseSection id="overview" title="Overview">
         <p>
           Kaput is a map-based marketplace connecting car owners with trusted
           mechanics in Vancouver.{" "}
@@ -52,7 +79,7 @@ export default function KaputCaseStudy() {
       <KaputMapMockup />
       <FigureCaption>Fig 1 — Map-first interface showing nearby mechanics with ratings and availability</FigureCaption>
 
-      <CaseSection title="The Problem">
+      <CaseSection id="problem" title="The Problem">
         <p>
           Finding a trustworthy mechanic is universally dreaded. The problems
           are systemic on both sides:
@@ -112,7 +139,7 @@ export default function KaputCaseStudy() {
         </PullQuote>
       </CaseSection>
 
-      <CaseSection title="Discovery">
+      <CaseSection id="discovery" title="Discovery">
         <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           Market Research
         </h3>
@@ -141,7 +168,7 @@ export default function KaputCaseStudy() {
         </div>
       </CaseSection>
 
-      <CaseSection title="Design">
+      <CaseSection id="design" title="Design">
         <KaputWireframesMockup />
         <FigureCaption>Fig 2 — Early wireframes exploring map layout, quote flow, and dashboard structures</FigureCaption>
 
@@ -290,53 +317,108 @@ export default function KaputCaseStudy() {
         <FigureCaption>Fig 8 — In-app chat and booking confirmation flow</FigureCaption>
       </CaseSection>
 
-      <CaseSection title="Testing & Iteration">
+      <CaseSection id="testing" title="Testing & Iteration">
         <p>
           I tested the core flows with 5 car owners and 3 mechanics in Vancouver,
           focusing on quote request completion, quote comparison clarity, and
           mechanic onboarding.
         </p>
 
-        <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-6">
+        <h3 className="text-base sm:text-lg font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-4 mt-8">
           Key Iterations
         </h3>
-        <div className="space-y-3">
+        <div className="space-y-4">
           {[
             { title: "Simplified quote request from 7 to 5 steps", desc: "Users abandoned at vehicle details. I merged two steps and added photo upload earlier, reducing completion time by 40%." },
             { title: "Redesigned quote comparison cards", desc: "Users struggled to compare quotes side-by-side. I added itemized breakdowns (parts, labor, tax) and a \"Best Value\" badge. 4/5 testers said they felt confident choosing." },
             { title: "Added real-time mechanic availability", desc: "Car owners wanted to know wait times before requesting quotes. I added availability indicators to map pins and profile cards." },
             { title: "Streamlined mechanic dashboard", desc: "Mechanics found the original dashboard overwhelming. I reduced the default view to incoming requests and today's schedule, moving analytics to a separate tab." },
           ].map((item) => (
-            <div key={item.title} className="flex items-start gap-3 rounded-lg bg-[var(--surface)] p-4">
-              <span className="mt-0.5 h-2 w-2 rounded-full bg-[var(--accent)] shrink-0" />
+            <div key={item.title} className="flex items-start gap-4 rounded-lg bg-[var(--surface)] p-5">
+              <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[var(--accent)] shrink-0" />
               <div>
-                <p className="text-sm font-medium text-[var(--foreground)]">{item.title}</p>
-                <p className="text-xs text-[var(--text-secondary)] mt-1">{item.desc}</p>
+                <p className="text-base sm:text-lg font-semibold text-[var(--foreground)]">{item.title}</p>
+                <p className="text-sm sm:text-base leading-relaxed text-[var(--text-secondary)] mt-1.5">{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
       </CaseSection>
 
-      <CaseSection title="Technical Implementation" accent>
+      <CaseSection id="tools" title="Tools & How I Used Them" accent>
         <p className="text-lg text-[var(--foreground)] font-medium">
           This project is unique in my portfolio because I didn&apos;t just design it. I built it.
         </p>
-        <div className="flex flex-wrap gap-2 mt-4">
-          {["Next.js 14", "Tailwind CSS", "Firebase", "Google Maps API", "Stripe Connect", "Vercel"].map((tech) => (
-            <span key={tech} className="rounded-full border border-[var(--border)] bg-[var(--background)] px-3 py-1.5 text-xs font-medium text-[var(--foreground)]">
-              {tech}
-            </span>
+        <p className="mt-3">
+          Each tool below played a specific role across research, design, and engineering — here&apos;s how:
+        </p>
+        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+          {[
+            {
+              tool: "Figma",
+              stage: "Design",
+              use: "Wireframed all flows, built the component library and dark-theme design system, ran clickable prototypes in usability sessions with 5 owners and 3 mechanics.",
+            },
+            {
+              tool: "Miro",
+              stage: "Research",
+              use: "Mapped user journeys, affinity-grouped interview quotes, and ran competitive teardowns of RepairSmith, AutoGuru, and YourMechanic.",
+            },
+            {
+              tool: "Next.js 14",
+              stage: "Build",
+              use: "Implemented the production app from my own designs — App Router pages, server components for the map, and shared layouts across the two-sided dashboard.",
+            },
+            {
+              tool: "Tailwind CSS",
+              stage: "Build",
+              use: "Translated the Figma tokens (color, type, spacing) into a single source of truth so design and code stayed in sync.",
+            },
+            {
+              tool: "Firebase",
+              stage: "Build",
+              use: "Auth, Firestore for quotes/bookings, and real-time chat. Designing against a real schema kept flows realistic, not aspirational.",
+            },
+            {
+              tool: "Google Maps API",
+              stage: "Build",
+              use: "Powered the map-first interface — pin clustering, distance calculations, and the bottom-sheet card pattern.",
+            },
+            {
+              tool: "Stripe Connect",
+              stage: "Build",
+              use: "Two-sided payments: car owners pay through the app, mechanics receive payouts. Shaped the checkout and earnings dashboard UX.",
+            },
+            {
+              tool: "Vercel",
+              stage: "Ship",
+              use: "Continuous deploys with preview URLs let me share working flows with testers instead of static prototypes.",
+            },
+          ].map((item) => (
+            <div
+              key={item.tool}
+              className="rounded-xl border border-[var(--border)] bg-[var(--background)] p-4"
+            >
+              <div className="mb-2 flex items-center justify-between gap-2">
+                <p className="text-sm font-semibold text-[var(--foreground)]">{item.tool}</p>
+                <span className="rounded-full bg-[var(--accent)]/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-[var(--accent)]">
+                  {item.stage}
+                </span>
+              </div>
+              <p className="text-xs leading-relaxed text-[var(--text-secondary)]">
+                {item.use}
+              </p>
+            </div>
           ))}
         </div>
-        <p className="mt-4">
-          This technical involvement shaped better design decisions: I
-          understood feasibility constraints, prototyped real interactions, and
-          designed with actual data structures in mind.
+        <p className="mt-6">
+          Building what I designed shaped better decisions: I understood
+          feasibility constraints, prototyped real interactions, and designed
+          with actual data structures in mind.
         </p>
       </CaseSection>
 
-      <CaseSection title="Business Model">
+      <CaseSection id="business" title="Business Model">
         <div className="grid gap-3 sm:grid-cols-2 my-4">
           {[
             { label: "Revenue", value: "Mechanic monthly subscription" },
@@ -356,7 +438,7 @@ export default function KaputCaseStudy() {
         </div>
       </CaseSection>
 
-      <CaseSection title="What I Learned">
+      <CaseSection id="learnings" title="What I Learned">
         <div className="space-y-4">
           {[
             {
@@ -389,7 +471,7 @@ export default function KaputCaseStudy() {
         </div>
       </CaseSection>
 
-      <CaseSection title="What I'd Do Differently">
+      <CaseSection id="reflection" title="What I'd Do Differently">
         <div className="space-y-4">
           {[
             {

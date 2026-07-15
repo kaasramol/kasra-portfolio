@@ -233,10 +233,12 @@ export function CaseSection({
   title,
   children,
   accent = false,
+  id,
 }: {
   title: string;
   children: ReactNode;
   accent?: boolean;
+  id?: string;
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
@@ -244,7 +246,8 @@ export function CaseSection({
   return (
     <motion.div
       ref={ref}
-      className={`mb-20 ${accent ? "rounded-2xl bg-[var(--surface)] p-8 sm:p-10 -mx-4 sm:-mx-6" : ""}`}
+      id={id}
+      className={`mb-20 scroll-mt-24 ${accent ? "rounded-2xl bg-[var(--surface)] p-8 sm:p-10 -mx-4 sm:-mx-6" : ""}`}
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}

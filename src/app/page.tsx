@@ -2,7 +2,6 @@ import { ProjectCard } from "@/components/project-card";
 import { KaputScreens, OnboardScreens, TeamPulseScreens, FocusFlowScreens } from "@/components/project-screens";
 import { ScrollReveal, HeroReveal, StaggerContainer, StaggerItem, AnimatedDivider } from "@/components/motion";
 import { HeroVisual } from "@/components/hero-visual";
-import { ToolsStrip } from "@/components/tools-strip";
 import { HomeScrollSnap } from "@/components/home-scroll-snap";
 import Link from "next/link";
 
@@ -96,16 +95,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tools Strip */}
+      {/* Quick bio + education */}
       <section className="snap-home-section flex items-center px-6 py-16">
         <div className="mx-auto w-full max-w-5xl">
           <ScrollReveal>
-            <ToolsStrip />
-          </ScrollReveal>
-
-          {/* Quick bio + education */}
-          <ScrollReveal>
-            <div className="mt-12 grid gap-8 sm:grid-cols-3">
+            <div className="grid gap-8 sm:grid-cols-3">
               <div className="rounded-xl border border-[var(--border)] p-6 transition-all duration-300 hover:border-[var(--accent)]/30 hover:-translate-y-0.5 hover:shadow-md">
                 <p className="mb-2 text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--accent)]">Background</p>
                 <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
@@ -210,13 +204,13 @@ export default function Home() {
           <div className="mx-auto w-full max-w-5xl">
             <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-10 sm:p-14 text-center">
               <p className="mb-4 text-[10px] font-semibold tracking-[0.25em] uppercase text-[var(--accent)]">
-                Let&apos;s Collaborate
+                Open to Co-op Opportunities
               </p>
               <h2 className="mb-4 text-3xl font-bold sm:text-5xl">
-                Have a project in mind?
+                Looking for my next co-op.
               </h2>
               <p className="mx-auto mb-8 max-w-md text-[var(--text-secondary)] leading-relaxed">
-                I&apos;m open to UX/UI roles, freelance projects, and conversations about
+                Seeking a UX/UI co-op where I can contribute to product teams shipping
                 design that drives real business outcomes.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
