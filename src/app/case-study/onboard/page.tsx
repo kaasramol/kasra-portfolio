@@ -13,7 +13,7 @@ import { CompetitiveAuditMockup, FunnelAnalysisMockup, JourneyMapMockup, Wirefra
 export const metadata = {
   title: "Onboard | Case Study",
   description:
-    "Redesigning SaaS onboarding to cut drop-off by 40% and reduce time-to-value.",
+    "A self-initiated SaaS onboarding redesign, usability-tested to cut time-to-value 3×.",
 };
 
 export default function OnboardCaseStudy() {
@@ -35,7 +35,7 @@ export default function OnboardCaseStudy() {
         <IPhoneOverview
           eyebrow="Project Overview"
           title="Cutting onboarding drop-off by 40%."
-          summary="Taskly lost 40% of new users during onboarding. I redesigned the flow end-to-end — progressive profiling, contextual product tour, and a celebration moment — to get users to their aha moment 3× faster."
+          summary="Taskly is a fictional PM tool I created as a design brief: strong acquisition, but 40% of new users never finish onboarding. I redesigned the flow end-to-end — progressive profiling, contextual product tour, and a celebration moment — and usability-tested it to get users to their aha moment 3× faster."
           highlights={[
             { label: "Role", value: "UX/UI Designer (E2E)" },
             { label: "Type", value: "SaaS onboarding redesign" },
@@ -49,14 +49,17 @@ export default function OnboardCaseStudy() {
     >
       <CaseSection title="Overview">
         <p>
-          Taskly is a project management tool for mid-size teams. Despite strong
-          acquisition, <strong className="text-[var(--foreground)]">40% of new users dropped off during
+          Taskly is a fictional project management tool for mid-size teams, a
+          brief I wrote to practice a realistic redesign end-to-end. In the
+          scenario: despite strong acquisition, <strong className="text-[var(--foreground)]">40% of new users dropped off during
           onboarding</strong>. Never creating a project, never inviting a teammate,
           never experiencing the product&apos;s value.
         </p>
         <p>
-          I was tasked with redesigning the onboarding experience to get users
-          to their &quot;aha moment&quot; faster.
+          My challenge: redesign the onboarding experience to get users to
+          their &quot;aha moment&quot; faster. The baseline numbers below are
+          part of the constructed brief; the results at the end come from
+          usability tests I ran with real participants.
         </p>
       </CaseSection>
 

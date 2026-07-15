@@ -58,7 +58,7 @@ export function Footer() {
             Designed &amp; built by Kasra Molaei
           </p>
           <p className="text-xs text-[var(--text-secondary)]">
-            2025
+            {new Date().getFullYear()}
           </p>
         </div>
       </div>

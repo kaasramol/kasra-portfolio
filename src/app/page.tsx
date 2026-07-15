@@ -21,7 +21,7 @@ const projects = [
     title: "Onboard",
     subtitle: "SaaS Onboarding Redesign",
     description:
-      "Redesigned the onboarding flow for a PM tool, reducing drop-off by 40% and cutting time-to-value from 12 min to under 4.",
+      "Self-initiated redesign of a SaaS onboarding flow. In usability tests, time-to-value dropped from 12 minutes to under 4.",
     tags: ["User Research", "Interaction Design", "SaaS"],
     href: "/case-study/onboard",
     bg: "#D4DDD5",
