@@ -23,57 +23,54 @@ export function IPhoneOverview({
   footer,
 }: IPhoneOverviewProps) {
   return (
-    <div className="relative mx-auto w-full max-w-[320px] sm:max-w-[360px]">
-      {/* Device frame */}
-      <div className="relative aspect-[9/19] rounded-[13%/6.2%] bg-[#17171a] p-[3%] shadow-[0_30px_60px_-18px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,255,255,0.06)_inset]">
-        {/* Side buttons */}
-        <div className="absolute -left-[1.5px] top-[22%] h-[7%] w-[3px] rounded-l-sm bg-[#17171a]" />
-        <div className="absolute -left-[1.5px] top-[31%] h-[7%] w-[3px] rounded-l-sm bg-[#17171a]" />
-        <div className="absolute -right-[1.5px] top-[25%] h-[10%] w-[3px] rounded-r-sm bg-[#17171a]" />
+    <div className="mx-auto w-full max-w-4xl">
+      <div className="grain relative overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--background)] shadow-[0_24px_50px_-24px_rgba(0,0,0,0.18)]">
+        {/* Accent top bar */}
+        <div
+          className="h-[3px] w-full"
+          style={{ background: `linear-gradient(90deg, transparent, ${accent}, transparent)` }}
+        />
 
-        {/* Screen */}
-        <div className="relative h-full w-full overflow-hidden rounded-[11%/5.2%] bg-[var(--background)]">
-          {/* Dynamic island */}
-          <div className="absolute left-1/2 top-[2.2%] z-10 h-[3%] w-[28%] -translate-x-1/2 rounded-full bg-[#17171a]" />
-
-          <div className="flex h-full flex-col gap-3 px-5 pt-14 pb-6">
+        <div className="grid gap-8 p-8 sm:p-10 md:grid-cols-[1.4fr_1fr] md:items-center">
+          {/* Left — narrative */}
+          <div>
             <p
-              className="text-[9px] font-semibold tracking-[0.25em] uppercase"
+              className="mb-3 text-[10px] font-semibold tracking-[0.25em] uppercase"
               style={{ color: accent }}
             >
               {eyebrow}
             </p>
             <h3
-              className="text-lg font-bold leading-tight tracking-tight text-[var(--foreground)]"
+              className="mb-4 text-2xl font-bold leading-tight tracking-tight text-[var(--foreground)] sm:text-3xl"
               style={{ fontFamily: "var(--font-serif), Georgia, serif" }}
             >
               {title}
             </h3>
-            <p className="text-[11px] leading-relaxed text-[var(--text-secondary)]">
+            <p className="text-sm leading-relaxed text-[var(--text-secondary)] sm:text-base">
               {summary}
             </p>
-            <div className="mt-auto space-y-2">
-              {highlights.map((item) => (
-                <div
-                  key={item.label}
-                  className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-3 py-2"
-                >
-                  <p
-                    className="text-[8px] font-semibold tracking-[0.2em] uppercase text-[var(--text-secondary)]"
-                  >
-                    {item.label}
-                  </p>
-                  <p className="text-[11px] font-medium text-[var(--foreground)]">
-                    {item.value}
-                  </p>
-                </div>
-              ))}
-            </div>
             {footer && (
-              <div className="pt-1 text-center text-[10px] font-medium" style={{ color: accent }}>
+              <div className="mt-5 text-sm font-medium" style={{ color: accent }}>
                 {footer}
               </div>
             )}
+          </div>
+
+          {/* Right — key facts */}
+          <div className="space-y-3">
+            {highlights.map((item) => (
+              <div
+                key={item.label}
+                className="rounded-xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3"
+              >
+                <p className="mb-0.5 text-[9px] font-semibold tracking-[0.2em] uppercase text-[var(--text-secondary)]">
+                  {item.label}
+                </p>
+                <p className="text-sm font-medium text-[var(--foreground)]">
+                  {item.value}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
