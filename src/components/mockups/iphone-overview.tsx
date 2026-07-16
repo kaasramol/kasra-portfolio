@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { ReactNode } from "react";
 
 interface OverviewItem {
@@ -25,20 +24,19 @@ export function IPhoneOverview({
 }: IPhoneOverviewProps) {
   return (
     <div className="relative mx-auto w-full max-w-[320px] sm:max-w-[360px]">
-      <div className="relative aspect-[9/19]">
-        <Image
-          src="/images/iphone-mockup.png"
-          alt=""
-          fill
-          priority
-          sizes="(max-width: 640px) 320px, 360px"
-          className="pointer-events-none select-none object-contain"
-        />
-        {/* Screen content — positioned within the device's screen area */}
-        <div
-          className="absolute inset-x-[7%] top-[3.5%] bottom-[3.5%] overflow-hidden rounded-[10%/4.5%] bg-[var(--background)]"
-        >
-          <div className="flex h-full flex-col gap-3 px-5 pt-10 pb-6">
+      {/* Device frame */}
+      <div className="relative aspect-[9/19] rounded-[13%/6.2%] bg-[#17171a] p-[3%] shadow-[0_30px_60px_-18px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,255,255,0.06)_inset]">
+        {/* Side buttons */}
+        <div className="absolute -left-[1.5px] top-[22%] h-[7%] w-[3px] rounded-l-sm bg-[#17171a]" />
+        <div className="absolute -left-[1.5px] top-[31%] h-[7%] w-[3px] rounded-l-sm bg-[#17171a]" />
+        <div className="absolute -right-[1.5px] top-[25%] h-[10%] w-[3px] rounded-r-sm bg-[#17171a]" />
+
+        {/* Screen */}
+        <div className="relative h-full w-full overflow-hidden rounded-[11%/5.2%] bg-[var(--background)]">
+          {/* Dynamic island */}
+          <div className="absolute left-1/2 top-[2.2%] z-10 h-[3%] w-[28%] -translate-x-1/2 rounded-full bg-[#17171a]" />
+
+          <div className="flex h-full flex-col gap-3 px-5 pt-14 pb-6">
             <p
               className="text-[9px] font-semibold tracking-[0.25em] uppercase"
               style={{ color: accent }}
