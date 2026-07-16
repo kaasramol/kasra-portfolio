@@ -6,6 +6,7 @@ import {
   FigureCaption,
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
+import { CaseStudyNav } from "@/components/case-study-nav";
 import { OnboardBeforeMockup, OnboardAfterMockup, OnboardCelebrationMockup } from "@/components/mockups/onboard-screens";
 import { IPhoneOverview } from "@/components/mockups/iphone-overview";
 import { CompetitiveAuditMockup, FunnelAnalysisMockup, JourneyMapMockup, WireframesMockup, UsabilityResultsMockup } from "@/components/mockups/onboard-extras";
@@ -15,6 +16,17 @@ export const metadata = {
   description:
     "A self-initiated SaaS onboarding redesign, usability-tested to cut time-to-value 3×.",
 };
+
+const onboardSections = [
+  { id: "overview", label: "Overview" },
+  { id: "problem", label: "Problem" },
+  { id: "discovery", label: "Discovery" },
+  { id: "define", label: "Define" },
+  { id: "design", label: "Design" },
+  { id: "testing", label: "Testing" },
+  { id: "learnings", label: "Learnings" },
+  { id: "reflection", label: "Reflection" },
+];
 
 export default function OnboardCaseStudy() {
   return (
@@ -47,7 +59,8 @@ export default function OnboardCaseStudy() {
       prevProject={{ title: "Kaput", href: "/case-study/kaput" }}
       nextProject={{ title: "TeamPulse", href: "/case-study/teampulse" }}
     >
-      <CaseSection title="Overview">
+      <CaseStudyNav items={onboardSections} />
+      <CaseSection id="overview" title="Overview">
         <p>
           Taskly is a fictional project management tool for mid-size teams, a
           brief I wrote to practice a realistic redesign end-to-end. In the
@@ -66,7 +79,7 @@ export default function OnboardCaseStudy() {
       <OnboardBeforeMockup />
       <FigureCaption>Fig 1 — Original onboarding flow with lengthy form fields and 7-step process</FigureCaption>
 
-      <CaseSection title="The Problem">
+      <CaseSection id="problem" title="The Problem">
         <p>
           Taskly&apos;s onboarding was built by engineers during the company&apos;s
           early days. It asked for too much information upfront, showed too many
@@ -86,7 +99,7 @@ export default function OnboardCaseStudy() {
         </PullQuote>
       </CaseSection>
 
-      <CaseSection title="Discovery">
+      <CaseSection id="discovery" title="Discovery">
         <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           Competitive Audit
         </h3>
@@ -135,7 +148,7 @@ export default function OnboardCaseStudy() {
         <FigureCaption>Fig 3 — Funnel analysis showing critical drop-off points in the existing onboarding</FigureCaption>
       </CaseSection>
 
-      <CaseSection title="Define">
+      <CaseSection id="define" title="Define">
         <p>
           I created a journey map tracking a new user&apos;s emotional state.
           The key finding: the emotional peak was at signup, and every
@@ -164,7 +177,7 @@ export default function OnboardCaseStudy() {
         </div>
       </CaseSection>
 
-      <CaseSection title="Design">
+      <CaseSection id="design" title="Design">
         <p>
           I replaced the linear, form-heavy onboarding with an interactive,
           value-first experience in 5 steps:
@@ -218,7 +231,7 @@ export default function OnboardCaseStudy() {
         </div>
       </CaseSection>
 
-      <CaseSection title="Testing & Iteration">
+      <CaseSection id="testing" title="Testing & Iteration">
         <p>
           I ran unmoderated usability tests with 5 participants using Maze.
         </p>
@@ -234,7 +247,7 @@ export default function OnboardCaseStudy() {
         <FigureCaption>Fig 8 — Usability test results across 5 participants showing 96% task completion</FigureCaption>
       </CaseSection>
 
-      <CaseSection title="Outcome & Learnings">
+      <CaseSection id="learnings" title="Outcome & Learnings">
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 my-4">
           <StatCard label="Completion" before="60%" after="85%+" change="Projected" />
           <StatCard label="Time to value" before="12 min" after="4 min" change="-67%" />
@@ -273,7 +286,7 @@ export default function OnboardCaseStudy() {
         </div>
       </CaseSection>
 
-      <CaseSection title="What I'd Do Differently">
+      <CaseSection id="reflection" title="What I'd Do Differently">
         <div className="space-y-4">
           {[
             {

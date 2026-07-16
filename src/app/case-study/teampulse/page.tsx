@@ -6,6 +6,7 @@ import {
   FigureCaption,
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
+import { CaseStudyNav } from "@/components/case-study-nav";
 import { TeamPulseDashboardMockup, TeamPulseInsightCardMockup, TeamPulseSurveyMobileMockup } from "@/components/mockups/teampulse-screens";
 import { IPhoneOverview } from "@/components/mockups/iphone-overview";
 import { AffinityMapMockup, CompetitivePositioningMockup, IADiagramMockup, TeamPulseManagerViewMockup, TeamPulseWireframesMockup, DesignSystemMockup } from "@/components/mockups/teampulse-extras";
@@ -15,6 +16,17 @@ export const metadata = {
   description:
     "Designing an employee feedback dashboard from scratch. 0-to-1 product design.",
 };
+
+const teampulseSections = [
+  { id: "overview", label: "Overview" },
+  { id: "problem", label: "Problem" },
+  { id: "discovery", label: "Discovery" },
+  { id: "define", label: "Define" },
+  { id: "design", label: "Design" },
+  { id: "testing", label: "Testing" },
+  { id: "learnings", label: "Learnings" },
+  { id: "reflection", label: "Reflection" },
+];
 
 export default function TeamPulseCaseStudy() {
   return (
@@ -47,7 +59,8 @@ export default function TeamPulseCaseStudy() {
       prevProject={{ title: "Onboard", href: "/case-study/onboard" }}
       nextProject={{ title: "FocusFlow", href: "/case-study/focusflow" }}
     >
-      <CaseSection title="Overview">
+      <CaseStudyNav items={teampulseSections} />
+      <CaseSection id="overview" title="Overview">
         <p>
           HR teams at growing companies run engagement surveys, but the results
           take weeks to process, managers rarely see actionable insights, and
@@ -62,7 +75,7 @@ export default function TeamPulseCaseStudy() {
       <TeamPulseDashboardMockup />
       <FigureCaption>Fig 1 — TeamPulse dashboard overview showing team health scores and actionable insights</FigureCaption>
 
-      <CaseSection title="The Problem">
+      <CaseSection id="problem" title="The Problem">
         <p>
           Through desk research and early conversations, three systemic problems
           emerged:
@@ -88,7 +101,7 @@ export default function TeamPulseCaseStudy() {
         </PullQuote>
       </CaseSection>
 
-      <CaseSection title="Discovery">
+      <CaseSection id="discovery" title="Discovery">
         <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           User Research, 8 Participants
         </h3>
@@ -135,7 +148,7 @@ export default function TeamPulseCaseStudy() {
         <FigureCaption>Fig 3 — Competitive positioning map showing the opportunity for a simple, action-driven tool</FigureCaption>
       </CaseSection>
 
-      <CaseSection title="Define">
+      <CaseSection id="define" title="Define">
         <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           Information Architecture
         </h3>
@@ -177,7 +190,7 @@ export default function TeamPulseCaseStudy() {
         </div>
       </CaseSection>
 
-      <CaseSection title="Design">
+      <CaseSection id="design" title="Design">
         <TeamPulseWireframesMockup />
         <FigureCaption>Fig 5 — Mid-fidelity wireframes exploring dashboard layout and insight card patterns</FigureCaption>
 
@@ -263,7 +276,7 @@ export default function TeamPulseCaseStudy() {
         <FigureCaption>Fig 9 — Design system components including typography, colors, and reusable patterns</FigureCaption>
       </CaseSection>
 
-      <CaseSection title="Testing & Iteration">
+      <CaseSection id="testing" title="Testing & Iteration">
         <p>
           Tested with 5 participants across all three roles.
         </p>
@@ -288,7 +301,7 @@ export default function TeamPulseCaseStudy() {
         </div>
       </CaseSection>
 
-      <CaseSection title="Outcome & Learnings">
+      <CaseSection id="learnings" title="Outcome & Learnings">
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 my-4">
           <StatCard label="Response rate" before="50-60%" after="80%+" change="Target" />
           <StatCard label="Survey to insight" before="2-3 weeks" after="< 24 hrs" change="-95%" />
@@ -326,7 +339,7 @@ export default function TeamPulseCaseStudy() {
         </div>
       </CaseSection>
 
-      <CaseSection title="What I'd Do Differently">
+      <CaseSection id="reflection" title="What I'd Do Differently">
         <div className="space-y-4">
           {[
             {

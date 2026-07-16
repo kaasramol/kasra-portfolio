@@ -6,6 +6,7 @@ import {
   FigureCaption,
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
+import { CaseStudyNav } from "@/components/case-study-nav";
 import { FocusFlowMobileHomeMockup, FocusFlowTimerMockup, FocusFlowWebDashboardMockup } from "@/components/mockups/focusflow-screens";
 import { IPhoneOverview } from "@/components/mockups/iphone-overview";
 import { FocusFlowCompetitiveMockup, FocusFlowJourneyMapMockup, FocusFlowWireframesMockup, FocusFlowDesignSystemMockup } from "@/components/mockups/focusflow-extras";
@@ -15,6 +16,18 @@ export const metadata = {
   description:
     "Designing a cross-platform productivity app from concept to prototype.",
 };
+
+const focusflowSections = [
+  { id: "overview", label: "Overview" },
+  { id: "problem", label: "Problem" },
+  { id: "discovery", label: "Discovery" },
+  { id: "define", label: "Define" },
+  { id: "design", label: "Design" },
+  { id: "testing", label: "Testing" },
+  { id: "gtm", label: "Go-to-Market" },
+  { id: "learnings", label: "Learnings" },
+  { id: "reflection", label: "Reflection" },
+];
 
 export default function FocusFlowCaseStudy() {
   return (
@@ -47,7 +60,8 @@ export default function FocusFlowCaseStudy() {
       prevProject={{ title: "TeamPulse", href: "/case-study/teampulse" }}
       nextProject={{ title: "Kaput", href: "/case-study/kaput" }}
     >
-      <CaseSection title="Overview">
+      <CaseStudyNav items={focusflowSections} />
+      <CaseSection id="overview" title="Overview">
         <p>
           Remote workers lose an average of 2.5 hours per day to context
           switching, unnecessary meetings, and digital distractions. I designed
@@ -82,7 +96,7 @@ export default function FocusFlowCaseStudy() {
       </div>
       <FigureCaption>Fig 1 — FocusFlow mobile home screen and active timer session with progress ring</FigureCaption>
 
-      <CaseSection title="The Problem">
+      <CaseSection id="problem" title="The Problem">
         <p>
           The shift to remote work created a paradox: more flexibility but less
           focus. I started with a hypothesis:
@@ -95,7 +109,7 @@ export default function FocusFlowCaseStudy() {
         </PullQuote>
       </CaseSection>
 
-      <CaseSection title="Discovery">
+      <CaseSection id="discovery" title="Discovery">
         <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           Survey, 27 Remote Workers
         </h3>
@@ -158,7 +172,7 @@ export default function FocusFlowCaseStudy() {
         </div>
       </CaseSection>
 
-      <CaseSection title="Define">
+      <CaseSection id="define" title="Define">
         <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           Journey Map, A Day in the Life
         </h3>
@@ -195,7 +209,7 @@ export default function FocusFlowCaseStudy() {
         </p>
       </CaseSection>
 
-      <CaseSection title="Design">
+      <CaseSection id="design" title="Design">
         <FocusFlowWireframesMockup />
         <FigureCaption>Fig 4 — Low-fidelity wireframes exploring mobile and web layout options</FigureCaption>
 
@@ -255,7 +269,7 @@ export default function FocusFlowCaseStudy() {
         <FigureCaption>Fig 6 — Design system with typography, color tokens, and component library</FigureCaption>
       </CaseSection>
 
-      <CaseSection title="Testing & Iteration">
+      <CaseSection id="testing" title="Testing & Iteration">
         <p>Tested with 5 remote workers on both mobile and web.</p>
 
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 my-6">
@@ -285,7 +299,7 @@ export default function FocusFlowCaseStudy() {
         </div>
       </CaseSection>
 
-      <CaseSection title="Go-to-Market Thinking" accent>
+      <CaseSection id="gtm" title="Go-to-Market Thinking" accent>
         <p>
           To demonstrate product awareness, I outlined a launch strategy:
         </p>
@@ -308,7 +322,7 @@ export default function FocusFlowCaseStudy() {
         </div>
       </CaseSection>
 
-      <CaseSection title="Outcome & Learnings">
+      <CaseSection id="learnings" title="Outcome & Learnings">
         <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
           Deliverables
         </h3>
@@ -351,7 +365,7 @@ export default function FocusFlowCaseStudy() {
         </div>
       </CaseSection>
 
-      <CaseSection title="What I'd Do Differently">
+      <CaseSection id="reflection" title="What I'd Do Differently">
         <div className="space-y-4">
           {[
             {
