@@ -7,40 +7,40 @@ export function KaputHeroScreens() {
     <div className="flex items-center justify-center gap-6 sm:gap-10">
       {/* Phone 1 — Map */}
       <PhoneFrame>
-        <div className="relative h-[280px] bg-[#e8e3d9]">
+        <div className="relative h-[280px] bg-[#12121a]">
           {/* Grid */}
-          <div className="absolute inset-0 opacity-[0.06]">
+          <div className="absolute inset-0 opacity-10">
             {[...Array(6)].map((_, i) => (
-              <div key={`h-${i}`} className="absolute h-px w-full bg-[#1B2632]" style={{ top: `${(i + 1) * 15}%` }} />
+              <div key={`h-${i}`} className="absolute h-px w-full bg-[#60a5fa]" style={{ top: `${(i + 1) * 15}%` }} />
             ))}
           </div>
           {/* Search */}
-          <div className="absolute top-2 left-2 right-2 flex items-center gap-1.5 rounded-lg bg-white/90 px-2.5 py-2 shadow-sm">
-            <MapPin size={10} className="text-[#FFB162]" />
-            <span className="text-[8px] text-[#8a8275]">Vancouver, BC</span>
+          <div className="absolute top-2 left-2 right-2 flex items-center gap-1.5 rounded-lg bg-[#1a1a2e]/95 px-2.5 py-2 shadow-sm border border-[#2d2d44]">
+            <MapPin size={10} className="text-[#3b82f6]" />
+            <span className="text-[8px] text-[#94a3b8]">Vancouver, BC</span>
           </div>
           {/* Pins */}
-          <div className="absolute top-[35%] left-[40%] flex h-7 w-7 items-center justify-center rounded-full bg-[#FFB162] shadow-lg ring-3 ring-[#FFB162]/20">
+          <div className="absolute top-[35%] left-[40%] flex h-7 w-7 items-center justify-center rounded-full bg-[#3b82f6] shadow-lg ring-3 ring-[#3b82f6]/25">
             <MapPin size={12} className="text-white" />
           </div>
-          <div className="absolute top-[50%] left-[65%] flex h-5 w-5 items-center justify-center rounded-full bg-[#8a8275]/70 shadow">
-            <MapPin size={8} className="text-white" />
+          <div className="absolute top-[50%] left-[65%] flex h-5 w-5 items-center justify-center rounded-full bg-[#222238] shadow border border-[#2d2d44]">
+            <MapPin size={8} className="text-[#94a3b8]" />
           </div>
-          <div className="absolute top-[25%] left-[60%] flex h-5 w-5 items-center justify-center rounded-full bg-[#8a8275]/70 shadow">
-            <MapPin size={8} className="text-white" />
+          <div className="absolute top-[25%] left-[60%] flex h-5 w-5 items-center justify-center rounded-full bg-[#222238] shadow border border-[#2d2d44]">
+            <MapPin size={8} className="text-[#94a3b8]" />
           </div>
           {/* Bottom card */}
-          <div className="absolute bottom-2 left-2 right-2 rounded-xl bg-white p-3 shadow-lg">
+          <div className="absolute bottom-2 left-2 right-2 rounded-xl bg-[#1a1a2e] border border-[#2d2d44] p-3 shadow-lg">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-[9px] font-semibold text-[#1B2632]">Pacific Auto Care</p>
+                <p className="text-[9px] font-semibold text-[#f1f5f9]">Pacific Auto Care</p>
                 <div className="flex items-center gap-1 mt-0.5">
                   <Star size={8} className="fill-[#f59e0b] text-[#f59e0b]" />
-                  <span className="text-[8px] text-[#1B2632]">4.9</span>
-                  <span className="text-[7px] text-[#8a8275]">(127)</span>
+                  <span className="text-[8px] text-[#f1f5f9]">4.9</span>
+                  <span className="text-[7px] text-[#64748b]">(127)</span>
                 </div>
               </div>
-              <span className="rounded-full bg-[#FFB162] px-2 py-1 text-[7px] font-medium text-white">Get Quote</span>
+              <span className="rounded-full bg-[#3b82f6] px-2 py-1 text-[7px] font-medium text-white">Get Quote</span>
             </div>
           </div>
         </div>
@@ -48,25 +48,25 @@ export function KaputHeroScreens() {
 
       {/* Phone 2 — Quote */}
       <PhoneFrame className="hidden sm:block">
-        <div className="h-[280px] bg-white p-3">
-          <p className="text-[8px] font-semibold text-[#8a8275] uppercase tracking-wider mb-2">Quote Comparison</p>
+        <div className="h-[280px] bg-[#0a0a0f] p-3">
+          <p className="text-[8px] font-semibold text-[#94a3b8] uppercase tracking-wider mb-2">Quote Comparison</p>
           {[
             { name: "Pacific Auto", price: "$348", time: "2-3 hrs", best: true },
             { name: "East Van Motors", price: "$410", time: "3-4 hrs", best: false },
           ].map((q) => (
-            <div key={q.name} className={`mb-2 rounded-xl border p-3 ${q.best ? "border-[#FFB162] bg-[#FFB162]/5" : "border-[#e8e3d9]"}`}>
+            <div key={q.name} className={`mb-2 rounded-xl border p-3 ${q.best ? "border-[#3b82f6] bg-[#3b82f6]/10" : "border-[#2d2d44] bg-[#1a1a2e]"}`}>
               <div className="flex items-center justify-between mb-1">
-                <p className="text-[9px] font-medium text-[#1B2632]">{q.name}</p>
-                {q.best && <span className="rounded-full bg-[#FFB162] px-1.5 py-0.5 text-[6px] font-bold text-white">BEST</span>}
+                <p className="text-[9px] font-medium text-[#f1f5f9]">{q.name}</p>
+                {q.best && <span className="rounded-full bg-[#3b82f6] px-1.5 py-0.5 text-[6px] font-bold text-white">BEST</span>}
               </div>
-              <p className="text-xl font-bold text-[#1B2632]">{q.price}</p>
+              <p className="text-xl font-bold text-[#f1f5f9]">{q.price}</p>
               <div className="flex items-center gap-1 mt-1">
-                <Clock size={8} className="text-[#8a8275]" />
-                <span className="text-[7px] text-[#8a8275]">{q.time}</span>
+                <Clock size={8} className="text-[#94a3b8]" />
+                <span className="text-[7px] text-[#94a3b8]">{q.time}</span>
               </div>
             </div>
           ))}
-          <div className="rounded-xl bg-[#FFB162] py-2.5 text-center text-[9px] font-semibold text-white mt-2">
+          <div className="rounded-xl bg-[#3b82f6] py-2.5 text-center text-[9px] font-semibold text-white mt-2">
             Accept Quote
           </div>
         </div>
@@ -74,25 +74,25 @@ export function KaputHeroScreens() {
 
       {/* Phone 3 — Chat */}
       <PhoneFrame className="hidden md:block">
-        <div className="h-[280px] bg-white p-3">
-          <div className="flex items-center gap-2 border-b border-[#e8e3d9] pb-2 mb-2">
-            <div className="h-6 w-6 rounded-full bg-[#FFB162]/20 flex items-center justify-center">
-              <MessageSquare size={10} className="text-[#FFB162]" />
+        <div className="h-[280px] bg-[#0a0a0f] p-3">
+          <div className="flex items-center gap-2 border-b border-[#2d2d44] pb-2 mb-2">
+            <div className="h-6 w-6 rounded-full bg-[#3b82f6]/20 flex items-center justify-center">
+              <MessageSquare size={10} className="text-[#60a5fa]" />
             </div>
             <div>
-              <p className="text-[9px] font-medium text-[#1B2632]">Pacific Auto Care</p>
+              <p className="text-[9px] font-medium text-[#f1f5f9]">Pacific Auto Care</p>
               <p className="text-[7px] text-[#22c55e]">Online</p>
             </div>
           </div>
           <div className="space-y-2">
-            <div className="rounded-xl rounded-bl-none bg-[#f1f5f9] px-3 py-2 max-w-[85%]">
-              <p className="text-[8px] text-[#1B2632]">Your brake inspection is confirmed for tomorrow at 10 AM.</p>
+            <div className="rounded-xl rounded-bl-none bg-[#1a1a2e] px-3 py-2 max-w-[85%]">
+              <p className="text-[8px] text-[#f1f5f9]">Your brake inspection is confirmed for tomorrow at 10 AM.</p>
             </div>
-            <div className="rounded-xl rounded-br-none bg-[#FFB162] px-3 py-2 max-w-[85%] ml-auto">
+            <div className="rounded-xl rounded-br-none bg-[#3b82f6] px-3 py-2 max-w-[85%] ml-auto">
               <p className="text-[8px] text-white">Sounds good, thanks!</p>
             </div>
-            <div className="rounded-xl rounded-bl-none bg-[#f1f5f9] px-3 py-2 max-w-[85%]">
-              <p className="text-[8px] text-[#1B2632]">We'll send you updates as we work on your car.</p>
+            <div className="rounded-xl rounded-bl-none bg-[#1a1a2e] px-3 py-2 max-w-[85%]">
+              <p className="text-[8px] text-[#f1f5f9]">We&apos;ll send you updates as we work on your car.</p>
             </div>
           </div>
         </div>

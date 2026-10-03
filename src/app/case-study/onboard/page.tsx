@@ -51,7 +51,7 @@ export default function OnboardCaseStudy() {
           highlights={[
             { label: "Role", value: "UX/UI Designer (E2E)" },
             { label: "Type", value: "SaaS onboarding redesign" },
-            { label: "Outcome", value: "12 min → < 4 min time-to-value" },
+            { label: "Tested Outcome", value: "12 min → < 4 min time-to-value" },
           ]}
           accent="#E8956A"
         />
@@ -191,12 +191,12 @@ export default function OnboardCaseStudy() {
           <GestaltTag
             principle="Closure"
             description="Progress indicators and pre-populated templates let users feel completion momentum. The brain fills in 'I'm almost done.'"
-            top="8%" right="3%"
+            top="-12px" right="24px"
           />
           <GestaltTag
             principle="Figure/Ground"
             description="Active step is highlighted while remaining steps recede, creating clear focus on the current task."
-            top="50%" left="3%"
+            bottom="-12px" left="24px"
           />
         </GestaltMockup>
         <FigureCaption>Fig 6 — High-fidelity redesigned onboarding with personalized use-case selection</FigureCaption>
@@ -205,7 +205,7 @@ export default function OnboardCaseStudy() {
           <GestaltTag
             principle="Hierarchy"
             description="The celebration moment uses scale and color weight to make the success state unmissable. A visual reward for completion."
-            top="15%" right="4%"
+            top="-12px" right="24px"
           />
         </GestaltMockup>
         <FigureCaption>Fig 7 — Celebration screen with optional next actions replacing forced team invite</FigureCaption>
@@ -247,12 +247,17 @@ export default function OnboardCaseStudy() {
         <FigureCaption>Fig 8 — Usability test results across 5 participants showing 96% task completion</FigureCaption>
       </CaseSection>
 
-      <CaseSection id="learnings" title="Outcome & Learnings">
+      <CaseSection id="learnings" title="Projected Impact & Learnings">
+        <p>
+          The usability-test results above are measured with real participants.
+          The business metrics below are projections — they extrapolate those
+          test results onto the brief&apos;s baseline funnel.
+        </p>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 my-4">
           <StatCard label="Completion" before="60%" after="85%+" change="Projected" />
-          <StatCard label="Time to value" before="12 min" after="4 min" change="-67%" />
-          <StatCard label="Team invite" before="22%" after="40%+" change="+82%" />
-          <StatCard label="Support tickets" before="340/mo" after="~150/mo" change="-56%" />
+          <StatCard label="Time to value" before="12 min" after="4 min" change="Projected" />
+          <StatCard label="Team invite" before="22%" after="40%+" change="Projected" />
+          <StatCard label="Support tickets" before="340/mo" after="~150/mo" change="Projected" />
         </div>
 
         <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">

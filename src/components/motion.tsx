@@ -16,7 +16,7 @@ export function ScrollReveal({
   y?: number;
 }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const isInView = useInView(ref, { once: true, margin: "0px 0px 15% 0px" });
 
   return (
     <motion.div
@@ -24,7 +24,7 @@ export function ScrollReveal({
       className={className}
       initial={{ opacity: 0, y }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y }}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>
@@ -42,7 +42,7 @@ export function StaggerContainer({
   staggerDelay?: number;
 }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-60px" });
+  const isInView = useInView(ref, { once: true, margin: "0px 0px 15% 0px" });
 
   return (
     <motion.div
@@ -76,11 +76,11 @@ export function StaggerItem({
     <motion.div
       className={className}
       variants={{
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 20 },
         visible: {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+          transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
         },
       }}
     >
@@ -92,7 +92,7 @@ export function StaggerItem({
 // Animated divider line
 export function AnimatedDivider({ className = "" }: { className?: string }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-40px" });
+  const isInView = useInView(ref, { once: true, margin: "0px" });
 
   return (
     <div ref={ref} className={`w-full max-w-5xl mx-auto px-6 ${className}`}>

@@ -1,8 +1,11 @@
-import { ProjectCard } from "@/components/project-card";
+import { StickyCaseStudy } from "@/components/sticky-case-study";
 import { KaputScreens, OnboardScreens, TeamPulseScreens, FocusFlowScreens } from "@/components/project-screens";
-import { ScrollReveal, HeroReveal, StaggerContainer, StaggerItem, AnimatedDivider } from "@/components/motion";
-import { HeroVisual } from "@/components/hero-visual";
-import { HomeScrollSnap } from "@/components/home-scroll-snap";
+import { ScrollReveal, AnimatedDivider } from "@/components/motion";
+import { WordReveal } from "@/components/word-reveal";
+import { WorkMosaic } from "@/components/work-mosaic";
+import { Hero } from "@/components/hero";
+import { SkillsMarquee } from "@/components/skills-marquee";
+import { Magnetic } from "@/components/magnetic";
 import Link from "next/link";
 
 const projects = [
@@ -13,8 +16,8 @@ const projects = [
       "Map-based marketplace connecting car owners with trusted mechanics. Real-time maps, guided quoting, Stripe payments, in-app chat.",
     tags: ["Product Design", "Map UX", "Two-Sided Platform"],
     href: "/case-study/kaput",
-    bg: "#DDD5C7",
-    year: "2025",
+    glow: "#c98b5e",
+    year: "2024–Present",
     screens: <KaputScreens />,
   },
   {
@@ -24,8 +27,8 @@ const projects = [
       "Self-initiated redesign of a SaaS onboarding flow. In usability tests, time-to-value dropped from 12 minutes to under 4.",
     tags: ["User Research", "Interaction Design", "SaaS"],
     href: "/case-study/onboard",
-    bg: "#D4DDD5",
-    year: "2025",
+    glow: "#7fae87",
+    year: "2024",
     screens: <OnboardScreens />,
   },
   {
@@ -35,8 +38,8 @@ const projects = [
       "Pulse survey platform that turns employee feedback into manager action in under 24 hours.",
     tags: ["0-to-1 Design", "Data Visualization", "B2B SaaS"],
     href: "/case-study/teampulse",
-    bg: "#D4DDDB",
-    year: "2025",
+    glow: "#6f9bae",
+    year: "2024",
     screens: <TeamPulseScreens />,
   },
   {
@@ -46,153 +49,76 @@ const projects = [
       "Cross-platform focus management app integrating with calendars and Slack to protect deep work time.",
     tags: ["Mobile + Web", "Product Strategy", "Cross-Platform"],
     href: "/case-study/focusflow",
-    bg: "#DDDAE8",
-    year: "2025",
+    glow: "#9a8ac9",
+    year: "2024",
     screens: <FocusFlowScreens />,
   },
 ];
 
 export default function Home() {
   return (
-    <HomeScrollSnap>
-      {/* Hero */}
-      <section className="snap-home-section grain relative flex min-h-[100dvh] flex-col overflow-hidden px-6 pt-28 pb-10">
-        <div className="relative z-[1] mx-auto flex w-full max-w-5xl flex-1 flex-col justify-between gap-10">
-          <div>
-            <HeroReveal delay={0.1}>
-              <p className="mb-6 text-sm tracking-[0.2em] text-[var(--text-secondary)]">
-                UX/UI Designer
-              </p>
-            </HeroReveal>
-            <HeroReveal delay={0.25}>
-              <h1 className="mb-6 text-6xl font-bold leading-[1.05] tracking-tight sm:text-7xl md:text-8xl lg:text-9xl">
-                Kasra
-                <br />
-                Molaei<span className="text-[var(--accent)]">.</span>
-              </h1>
-            </HeroReveal>
-            <HeroReveal delay={0.45}>
-              <p className="mb-10 max-w-md text-lg leading-relaxed text-[var(--text-secondary)]">
-                Designing end-to-end experiences for SaaS products
-                that users love and companies profit from.
-              </p>
-            </HeroReveal>
-            <HeroReveal delay={0.6}>
-              <div className="flex flex-wrap gap-4">
-                <Link href="#work" className="btn-primary">
-                  View my work
-                </Link>
-                <Link href="/about" className="btn-outline">
-                  About me
-                </Link>
-              </div>
-            </HeroReveal>
-          </div>
+    <>
+      <Hero />
 
-          <div className="min-h-0 shrink-0">
-            <HeroVisual />
-          </div>
-        </div>
-      </section>
+      <WordReveal
+        label="[ WHAT I DO ]"
+        text="**Thoughtful websites and SaaS products,** crafted for companies that care about every detail."
+        className="text-[clamp(2rem,6vw,4.5rem)] font-bold leading-[1.1] tracking-tight"
+        height="h-[130vh]"
+      />
 
-      {/* Quick bio + education */}
-      <section className="snap-home-section flex items-center px-6 py-16">
-        <div className="mx-auto w-full max-w-5xl">
-          <ScrollReveal>
-            <div className="grid gap-8 sm:grid-cols-3">
-              <div className="rounded-xl border border-[var(--border)] p-6 transition-all duration-300 hover:border-[var(--accent)]/30 hover:-translate-y-0.5 hover:shadow-md">
-                <p className="mb-2 text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--accent)]">Background</p>
-                <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
-                  Marketing &amp; business strategy turned UX/UI. I bring a conversion-minded approach to every design decision.
-                </p>
-              </div>
-              <div className="rounded-xl border border-[var(--border)] p-6 transition-all duration-300 hover:border-[var(--accent)]/30 hover:-translate-y-0.5 hover:shadow-md">
-                <p className="mb-2 text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--accent)]">Education</p>
-                <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
-                  Simon Fraser University — Interactive Arts &amp; Technology. Focused on user-centered design and research methods.
-                </p>
-              </div>
-              <div className="rounded-xl border border-[var(--border)] p-6 transition-all duration-300 hover:border-[var(--accent)]/30 hover:-translate-y-0.5 hover:shadow-md">
-                <p className="mb-2 text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--accent)]">Focus</p>
-                <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
-                  SaaS &amp; productivity products. End-to-end ownership from research through high-fidelity prototypes and testing.
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <WorkMosaic />
+
+      {/* One pinned section per project */}
+      <div id="work" className="relative">
+        <ScrollReveal>
+          <p className="mx-auto max-w-5xl px-6 pt-10 text-sm tracking-[0.2em] text-[var(--text-secondary)]">
+            [ SELECTED WORK ]
+          </p>
+        </ScrollReveal>
+        {projects.map((project, index) => (
+          <StickyCaseStudy key={project.title} index={index + 1} {...project} />
+        ))}
+      </div>
 
       <AnimatedDivider />
 
-      {/* One section per project */}
-      {projects.map((project, index) => (
-        <section
-          key={project.title}
-          id={index === 0 ? "work" : undefined}
-          className="snap-home-section flex flex-col justify-center px-6 py-10 md:py-14"
-        >
-          <div className="mx-auto w-full max-w-5xl">
-            {index === 0 && (
-              <ScrollReveal>
-                <p className="mb-10 text-sm tracking-[0.2em] text-[var(--text-secondary)]">
-                  Selected Work
-                </p>
-              </ScrollReveal>
-            )}
-            <ScrollReveal>
-              <ProjectCard {...project} />
-            </ScrollReveal>
-          </div>
-        </section>
-      ))}
-
-      <AnimatedDivider />
-
-      {/* Design Principles */}
+      {/* Skills marquee */}
       <section className="px-6 py-20">
-        <div className="mx-auto w-full max-w-5xl">
+        <ScrollReveal>
+          <p className="mb-8 text-center text-sm tracking-[0.2em] text-[var(--text-secondary)]">
+            [ WHAT I BRING ]
+          </p>
+        </ScrollReveal>
+        <SkillsMarquee />
+      </section>
+
+      <AnimatedDivider />
+
+      {/* About teaser */}
+      <WordReveal
+        label="[ ABOUT ]"
+        text="**I'm Kasra,** a product designer with a business mindset, designing SaaS experiences **that convert, simplify, and scale.**"
+        className="text-[clamp(1.75rem,5vw,3.5rem)] font-bold leading-[1.15] tracking-tight"
+        height="h-[120vh]"
+      />
+
+      <section className="px-6 pb-24">
+        <div className="mx-auto max-w-5xl">
           <ScrollReveal>
-            <p className="mb-12 text-sm tracking-[0.2em] text-[var(--text-secondary)]">
-              How I Design
+            <p className="mb-3 text-sm tracking-[0.2em] text-[var(--text-secondary)]">
+              [ WHAT I DO BEST ]
             </p>
+            <p className="mb-10 max-w-2xl leading-relaxed text-[var(--text-secondary)]">
+              UI/UX, Product Design, Design Systems, User Research, Prototyping,
+              SaaS Onboarding, Dashboards, Visual Design.
+            </p>
+            <Magnetic strength={0.3} range={60}>
+              <Link href="/about" className="btn-outline">
+                More about me
+              </Link>
+            </Magnetic>
           </ScrollReveal>
-          <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                number: "01",
-                title: "Users first, always",
-                desc: "Every decision starts with understanding real people. Research isn\u2019t a phase \u2014 it\u2019s the foundation.",
-              },
-              {
-                number: "02",
-                title: "Data over opinions",
-                desc: "I validate with metrics, not assumptions. Testing reveals what interviews can\u2019t.",
-              },
-              {
-                number: "03",
-                title: "Simple beats clever",
-                desc: "The best interface is the one users don\u2019t have to think about. Clarity always wins.",
-              },
-              {
-                number: "04",
-                title: "Design for outcomes",
-                desc: "Beautiful UI means nothing if it doesn\u2019t move the business. I design for impact.",
-              },
-            ].map((principle) => (
-              <StaggerItem key={principle.number} className="h-full">
-                <div className="group h-full rounded-xl border border-[var(--border)] p-6 transition-all duration-300 hover:border-[var(--accent)]/30 hover:-translate-y-0.5 hover:shadow-md">
-                  <span className="mb-3 block text-2xl font-bold text-[var(--accent)] opacity-40">
-                    {principle.number}
-                  </span>
-                  <h3 className="mb-2 text-base font-semibold">{principle.title}</h3>
-                  <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
-                    {principle.desc}
-                  </p>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
         </div>
       </section>
 
@@ -202,34 +128,38 @@ export default function Home() {
       <section className="px-6 py-24">
         <ScrollReveal>
           <div className="mx-auto w-full max-w-5xl">
-            <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-10 sm:p-14 text-center">
-              <p className="mb-4 text-[10px] font-semibold tracking-[0.25em] uppercase text-[var(--accent)]">
+            <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-10 text-center sm:p-14">
+              <p className="mb-4 text-[10px] font-semibold tracking-[0.25em] text-[var(--accent)] uppercase">
                 Open to Co-op Opportunities
               </p>
               <h2 className="mb-4 text-3xl font-bold sm:text-5xl">
                 Looking for my next co-op.
               </h2>
-              <p className="mx-auto mb-8 max-w-md text-[var(--text-secondary)] leading-relaxed">
+              <p className="mx-auto mb-8 max-w-md leading-relaxed text-[var(--text-secondary)]">
                 Seeking a UX/UI co-op where I can contribute to product teams shipping
                 design that drives real business outcomes.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="btn-primary">
-                  Get in touch
-                </Link>
-                <a
-                  href="/Kasra_Molaei_Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-outline"
-                >
-                  Download Resume
-                </a>
+                <Magnetic strength={0.3} range={60}>
+                  <Link href="/contact" className="btn-primary">
+                    Get in touch
+                  </Link>
+                </Magnetic>
+                <Magnetic strength={0.3} range={60}>
+                  <a
+                    href="/Kasra_Molaei_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-outline"
+                  >
+                    Download Resume
+                  </a>
+                </Magnetic>
               </div>
             </div>
           </div>
         </ScrollReveal>
       </section>
-    </HomeScrollSnap>
+    </>
   );
 }

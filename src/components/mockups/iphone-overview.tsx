@@ -19,7 +19,7 @@ export function IPhoneOverview({
   title,
   summary,
   highlights,
-  accent = "#FFB162",
+  accent = "#3b82f6",
   footer,
 }: IPhoneOverviewProps) {
   return (

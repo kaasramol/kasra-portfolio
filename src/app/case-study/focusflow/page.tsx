@@ -85,12 +85,12 @@ export default function FocusFlowCaseStudy() {
           <GestaltTag
             principle="Figure/Ground"
             description="The circular timer ring commands attention as the figure, while surrounding UI elements recede. One clear focal point."
-            top="10%" right="3%"
+            top="-12px" right="24px"
           />
           <GestaltTag
             principle="Closure"
             description="The progress ring completing its circle creates a powerful sense of accomplishment. Users feel the session 'closing.'"
-            top="55%" left="3%"
+            bottom="-12px" left="24px"
           />
         </GestaltMockup>
       </div>
@@ -246,12 +246,12 @@ export default function FocusFlowCaseStudy() {
           <GestaltTag
             principle="Hierarchy"
             description="Analytics and calendar use size, weight, and position to guide the eye from daily schedule to weekly insights to suggestions."
-            top="8%" left="3%"
+            top="-12px" left="24px"
           />
           <GestaltTag
             principle="Proximity"
             description="Related controls (timer + session info) and related data (charts + stats) are spatially grouped to reduce scanning effort."
-            top="45%" right="3%"
+            bottom="-12px" right="24px"
           />
         </GestaltMockup>
         <FigureCaption>Fig 5 — Web dashboard with analytics, calendar integration, and focus session controls</FigureCaption>

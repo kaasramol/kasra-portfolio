@@ -35,7 +35,7 @@ export default function KaputCaseStudy() {
     <CaseStudyLayout
       title="Kaput"
       subtitle="B2C Marketplace, Auto Services"
-      color="#FFB162"
+      color="#3b82f6"
       meta={{
         role: "UX/UI Designer & Product Owner",
         duration: "Ongoing (MVP)",
@@ -55,8 +55,17 @@ export default function KaputCaseStudy() {
             { label: "Type", value: "Live B2C marketplace MVP" },
             { label: "Stack", value: "Figma · Next.js · Firebase · Stripe" },
           ]}
-          accent="#FFB162"
-          footer="Live product →"
+          accent="#3b82f6"
+          footer={
+            <a
+              href="https://kaput-app.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 transition-opacity hover:opacity-70"
+            >
+              Live product →
+            </a>
+          }
         />
       }
       nextProject={{ title: "Onboard", href: "/case-study/onboard" }}
@@ -73,7 +82,18 @@ export default function KaputCaseStudy() {
           , from initial concept and user flows to a working MVP with real-time
           maps, guided quoting, Stripe payments, and in-app chat.
         </p>
-        <p>This isn&apos;t a concept project. It&apos;s a live product.</p>
+        <p>
+          This isn&apos;t a concept project. It&apos;s a{" "}
+          <a
+            href="https://kaput-app.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent)] underline underline-offset-4 transition-opacity hover:opacity-70"
+          >
+            live product
+          </a>
+          .
+        </p>
       </CaseSection>
 
       <KaputMapMockup />
@@ -214,12 +234,12 @@ export default function KaputCaseStudy() {
           <GestaltTag
             principle="Continuity"
             description="The guided 5-step flow creates a clear visual path, leading users naturally from vehicle selection to submission."
-            top="12%" right="4%"
+            top="-12px" right="24px"
           />
           <GestaltTag
             principle="Common Region"
             description="Each step is contained in its own visual region, making it clear where one task ends and the next begins."
-            top="55%" left="3%"
+            bottom="-12px" left="24px"
           />
         </GestaltMockup>
         <FigureCaption>Fig 3 — Guided 5-step quote request flow replacing free-text problem descriptions</FigureCaption>
@@ -243,12 +263,12 @@ export default function KaputCaseStudy() {
           <GestaltTag
             principle="Proximity"
             description="Related quote details (parts, labor, tax) are grouped together, making each mechanic's offer scannable at a glance."
-            top="10%" left="3%"
+            top="-12px" left="24px"
           />
           <GestaltTag
             principle="Similarity"
             description="Both quotes use identical card structures so users compare content, not layout. Consistent patterns reduce cognitive load."
-            top="10%" right="3%"
+            top="-12px" right="24px"
           />
         </GestaltMockup>
         <FigureCaption>Fig 4 — Side-by-side quote comparison with itemized breakdown for transparency</FigureCaption>

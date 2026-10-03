@@ -51,7 +51,7 @@ export default function TeamPulseCaseStudy() {
           highlights={[
             { label: "Role", value: "UX/UI Designer (E2E)" },
             { label: "Type", value: "B2B SaaS · Data viz" },
-            { label: "Outcome", value: "Insight → action in < 24 hrs" },
+            { label: "Design Goal", value: "Insight → action in < 24 hrs" },
           ]}
           accent="#A35139"
         />
@@ -209,12 +209,12 @@ export default function TeamPulseCaseStudy() {
           <GestaltTag
             principle="Similarity"
             description="Every insight card follows the same structure: score, trend, summary, quotes. Consistent patterns let managers scan faster."
-            top="8%" right="3%"
+            top="-12px" right="24px"
           />
           <GestaltTag
             principle="Common Region"
             description="Each insight is contained in its own card boundary, grouping related data (score + trend + quotes) as one unit."
-            top="55%" left="3%"
+            bottom="-12px" left="24px"
           />
         </GestaltMockup>
         <FigureCaption>Fig 6 — High-fidelity insight card component with score, trend, and action button</FigureCaption>
@@ -233,12 +233,12 @@ export default function TeamPulseCaseStudy() {
           <GestaltTag
             principle="Hierarchy"
             description="Health score dominates visually, category cards are secondary, action items are tertiary. This guides managers from overview to action."
-            top="10%" left="3%"
+            top="-12px" left="24px"
           />
           <GestaltTag
             principle="Proximity"
             description="Action items are grouped directly below their related insight category, connecting problems to solutions spatially."
-            top="60%" right="3%"
+            bottom="-12px" right="24px"
           />
         </GestaltMockup>
         <FigureCaption>Fig 7 — Manager team view designed for 5-minute check-ins between meetings</FigureCaption>
@@ -301,11 +301,16 @@ export default function TeamPulseCaseStudy() {
         </div>
       </CaseSection>
 
-      <CaseSection id="learnings" title="Outcome & Learnings">
+      <CaseSection id="learnings" title="Design Targets & Learnings">
+        <p>
+          TeamPulse is a self-initiated concept, so the numbers below are
+          design targets grounded in my research baselines — not measured
+          product results.
+        </p>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 my-4">
           <StatCard label="Response rate" before="50-60%" after="80%+" change="Target" />
-          <StatCard label="Survey to insight" before="2-3 weeks" after="< 24 hrs" change="-95%" />
-          <StatCard label="Manager action rate" before="15-20%" after="60%+" change="+3x" />
+          <StatCard label="Survey to insight" before="2-3 weeks" after="< 24 hrs" change="Target" />
+          <StatCard label="Manager action rate" before="15-20%" after="60%+" change="Target" />
         </div>
 
         <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">

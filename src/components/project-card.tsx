@@ -119,7 +119,7 @@ export function BrowserFrame({
   className?: string;
 }) {
   return (
-    <div className={`overflow-hidden rounded-xl border border-white/20 bg-white shadow-lg transition-transform duration-500 group-hover:scale-[1.01] ${className}`}>
+    <div className={`overflow-hidden rounded-xl border border-white/[0.15] bg-white shadow-[0_24px_60px_-12px_rgba(0,0,0,0.6)] transition-transform duration-500 group-hover:scale-[1.01] ${className}`}>
       {/* Title bar */}
       <div className="flex items-center gap-3 border-b border-[var(--border)] bg-[var(--surface)] px-4 py-2.5">
         <div className="flex gap-1.5">

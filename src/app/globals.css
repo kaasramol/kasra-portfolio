@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  /* 60% — Dominant (background, surfaces) */
-  --background: #EEE9DF;
-  --surface: #E5DFD3;
-  --surface-hover: #DBD5C9;
-  --border: #D5CFC5;
+  /* 60% — Dominant (background, surfaces) — near-black, warm undertone */
+  --background: #0f0e0b;
+  --surface: #17160f;
+  --surface-hover: #1e1c15;
+  --border: rgba(207, 196, 170, 0.14);
 
-  /* 30% — Secondary (text, headings, structural) */
-  --foreground: #111B24;
-  --text-secondary: #5C5549;
+  /* 30% — Secondary (text, headings, structural) — warm beige on black */
+  --foreground: #d9d0ba;
+  --text-secondary: rgba(217, 208, 186, 0.6);
+  --text-dim: rgba(217, 208, 186, 0.25);
 
-  /* 10% — Accent (CTAs, links, highlights only) */
-  --accent: #A35139;
-  --accent-hover: #8B4430;
+  /* 10% — Accent (CTAs, links, highlights) — same warm beige, used deliberately */
+  --accent: #cfc4aa;
+  --accent-hover: #e3dac4;
 }
 
 @theme inline {
@@ -23,30 +24,22 @@
   --color-surface-hover: var(--surface-hover);
   --color-border: var(--border);
   --color-text-secondary: var(--text-secondary);
+  --color-text-dim: var(--text-dim);
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-serif);
 }
 
 html {
   scroll-behavior: auto;
 }
 
-/* Full-page scroll snap on home (Lenis disabled on `/` so native snap works) */
-html.snap-home {
-  scroll-snap-type: y proximity;
-  scroll-padding-top: 6rem;
-}
-
-.snap-home-section {
-  scroll-snap-align: start;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  html.snap-home {
-    scroll-snap-type: none;
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
@@ -58,74 +51,62 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: #EEE9DF;
-}
-
-h1, h2, h3 {
-  font-family: var(--font-serif), Georgia, serif;
+  color: var(--background);
 }
 
 /* ── Buttons ── */
 
-/* 10% accent — used sparingly for primary CTAs */
 .btn-primary {
   display: inline-block;
-  border-radius: 9999px;
+  border-radius: 8px;
   background: var(--accent);
   padding: 0.75rem 1.75rem;
-  font-weight: 500;
-  color: #EEE9DF;
+  font-weight: 600;
+  color: var(--background);
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .btn-primary:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(163, 81, 57, 0.2);
+  box-shadow: 0 8px 24px rgba(207, 196, 170, 0.15);
 }
 .btn-primary:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(163, 81, 57, 0.15);
+  box-shadow: 0 2px 8px rgba(207, 196, 170, 0.12);
 }
 
-/* 30% secondary — outline style */
 .btn-outline {
   display: inline-block;
-  border-radius: 9999px;
+  border-radius: 8px;
   border: 1px solid var(--border);
   padding: 0.75rem 1.75rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--foreground);
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .btn-outline:hover {
-  border-color: var(--foreground);
+  border-color: var(--accent);
+  color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(27, 38, 50, 0.1);
 }
 .btn-outline:active {
   transform: translateY(0);
 }
 
-/* Nav button — subtle, becomes accent on hover */
+/* Nav link — used inside the floating pill nav */
 .btn-nav {
   display: inline-block;
   border-radius: 9999px;
-  border: 1px solid var(--border);
-  padding: 0.5rem 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--text-secondary);
-  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: color 0.25s ease;
 }
 .btn-nav:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #EEE9DF;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(163, 81, 57, 0.15);
-}
-.btn-nav:active {
-  transform: translateY(0);
+  color: var(--accent);
 }
 
 /* ── Grain texture ── */
@@ -133,7 +114,7 @@ h1, h2, h3 {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.4;
+  opacity: 0.5;
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
   background-repeat: repeat;
@@ -151,6 +132,14 @@ h1, h2, h3 {
 }
 .divider-line.visible {
   transform: scaleX(1);
+}
+
+/* ── Floating bottom nav pill ── */
+.floating-nav {
+  background: rgba(23, 22, 15, 0.85);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 @keyframes marquee {
