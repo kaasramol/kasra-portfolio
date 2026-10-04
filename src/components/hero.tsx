@@ -2,8 +2,29 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { HeroReveal } from "@/components/motion";
+import { Logo } from "@/components/logo";
+import { Magnetic } from "@/components/magnetic";
+
+const EMAIL = "kasra_molaei@sfu.ca";
+
+function EmailChip() {
+  return (
+    <Magnetic strength={0.3} range={70}>
+      <a
+        href={`mailto:${EMAIL}`}
+        className="group hidden items-center gap-1.5 text-sm text-[var(--text-secondary)] transition-colors duration-300 hover:text-[var(--accent)] sm:inline-flex"
+      >
+        <span className="relative">
+          {EMAIL}
+          <span className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 bg-current transition-transform duration-300 ease-out group-hover:scale-x-100" />
+        </span>
+        <ArrowUpRight size={13} className="shrink-0 -translate-x-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100" />
+      </a>
+    </Magnetic>
+  );
+}
 
 export function Hero() {
   const [photoBroken, setPhotoBroken] = useState(false);
@@ -38,17 +59,8 @@ export function Hero() {
         {/* Top row */}
         <HeroReveal delay={0.1}>
           <div className="flex items-start justify-between">
-            <p className="text-sm font-bold leading-tight tracking-[0.15em]">
-              KASRA
-              <br />
-              MOLAEI
-            </p>
-            <a
-              href="mailto:k.molaei.k@gmail.com"
-              className="hidden text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)] sm:block"
-            >
-              k.molaei.k@gmail.com
-            </a>
+            <Logo className="text-lg sm:text-xl" />
+            <EmailChip />
           </div>
         </HeroReveal>
 
