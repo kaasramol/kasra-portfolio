@@ -58,7 +58,7 @@ export default function KaputCaseStudy() {
           accent="#3b82f6"
           footer={
             <a
-              href="https://kaput-app.vercel.app"
+              href="https://kaput-vancouver.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-4 transition-opacity hover:opacity-70"
@@ -85,7 +85,7 @@ export default function KaputCaseStudy() {
         <p>
           This isn&apos;t a concept project. It&apos;s a{" "}
           <a
-            href="https://kaput-app.vercel.app"
+            href="https://kaput-vancouver.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--accent)] underline underline-offset-4 transition-opacity hover:opacity-70"
