@@ -260,7 +260,7 @@ export function CaseSection({
         </h2>
         <div className="h-px flex-1 bg-[var(--border)]" />
       </div>
-      <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
+      <div className="space-y-4 text-[var(--text-body)] leading-relaxed">
         {children}
       </div>
     </motion.div>

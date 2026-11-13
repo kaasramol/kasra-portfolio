@@ -46,7 +46,7 @@ export function IPhoneOverview({
             >
               {title}
             </h3>
-            <p className="text-sm leading-relaxed text-[var(--text-secondary)] sm:text-base">
+            <p className="text-sm leading-relaxed text-[var(--text-body)] sm:text-base">
               {summary}
             </p>
             {footer && (

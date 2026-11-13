@@ -9,7 +9,8 @@
 
   /* 30% — Secondary (text, headings, structural) — warm beige on black */
   --foreground: #d9d0ba;
-  --text-secondary: rgba(217, 208, 186, 0.6);
+  --text-secondary: rgba(217, 208, 186, 0.68);
+  --text-body: rgba(217, 208, 186, 0.86);
   --text-dim: rgba(217, 208, 186, 0.25);
 
   /* 10% — Accent (CTAs, links, highlights) — same warm beige, used deliberately */
@@ -24,6 +25,7 @@
   --color-surface-hover: var(--surface-hover);
   --color-border: var(--border);
   --color-text-secondary: var(--text-secondary);
+  --color-text-body: var(--text-body);
   --color-text-dim: var(--text-dim);
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
