@@ -5,7 +5,6 @@ import {
   FigureCaption,
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
-import { KaputMapMockup } from "@/components/mockups/kaput-map";
 import { IPhoneOverview } from "@/components/mockups/iphone-overview";
 import { CaseStudyNav } from "@/components/case-study-nav";
 
@@ -20,9 +19,17 @@ const kaputSections = [
   { id: "learnings", label: "Learnings" },
   { id: "reflection", label: "Reflection" },
 ];
-import { KaputQuoteComparisonMockup } from "@/components/mockups/kaput-quote";
-import { KaputOwnerDashboardMockup, KaputMechanicDashboardMockup } from "@/components/mockups/kaput-dashboards";
-import { KaputQuoteFlowMockup, KaputMechanicProfileMockup, KaputChatBookingMockup, KaputWireframesMockup } from "@/components/mockups/kaput-extras";
+import { KaputExplore } from "@/components/scenes/kaput";
+import { Fit } from "@/components/figures/fit";
+import {
+  KaputWireframes,
+  KaputQuoteFlow,
+  KaputQuoteComparison,
+  KaputOwnerDashboard,
+  KaputMechanicDashboard,
+  KaputMechanicProfile,
+  KaputChatBooking,
+} from "@/components/figures/kaput";
 
 export const metadata = {
   title: "Kaput | Case Study",
@@ -96,7 +103,7 @@ export default function KaputCaseStudy() {
         </p>
       </CaseSection>
 
-      <KaputMapMockup />
+      <Fit><KaputExplore /></Fit>
       <FigureCaption>Fig 1 — Map-first interface showing nearby mechanics with ratings and availability</FigureCaption>
 
       <CaseSection id="problem" title="The Problem">
@@ -189,7 +196,7 @@ export default function KaputCaseStudy() {
       </CaseSection>
 
       <CaseSection id="design" title="Design">
-        <KaputWireframesMockup />
+        <KaputWireframes />
         <FigureCaption>Fig 2 — Early wireframes exploring map layout, quote flow, and dashboard structures</FigureCaption>
 
         <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
@@ -230,7 +237,7 @@ export default function KaputCaseStudy() {
         </p>
 
         <GestaltMockup>
-          <KaputQuoteFlowMockup />
+          <KaputQuoteFlow />
           <GestaltTag
             principle="Continuity"
             description="The guided 5-step flow creates a clear visual path, leading users naturally from vehicle selection to submission."
@@ -259,7 +266,7 @@ export default function KaputCaseStudy() {
         </PullQuote>
 
         <GestaltMockup>
-          <KaputQuoteComparisonMockup />
+          <KaputQuoteComparison />
           <GestaltTag
             principle="Proximity"
             description="Related quote details (parts, labor, tax) are grouped together, making each mechanic's offer scannable at a glance."
@@ -296,9 +303,9 @@ export default function KaputCaseStudy() {
           </div>
         </div>
 
-        <KaputOwnerDashboardMockup />
+        <KaputOwnerDashboard />
         <FigureCaption>Fig 5 — Car owner dashboard with active bookings and upcoming appointments</FigureCaption>
-        <KaputMechanicDashboardMockup />
+        <KaputMechanicDashboard />
         <FigureCaption>Fig 6 — Mechanic command center with incoming requests, calendar, and earnings</FigureCaption>
 
         <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">
@@ -331,9 +338,9 @@ export default function KaputCaseStudy() {
           Users looking for mechanics are often stressed, and dark is calmer.
         </p>
 
-        <KaputMechanicProfileMockup />
+        <KaputMechanicProfile />
         <FigureCaption>Fig 7 — Mechanic profile with verified credentials, portfolio, and review history</FigureCaption>
-        <KaputChatBookingMockup />
+        <KaputChatBooking />
         <FigureCaption>Fig 8 — In-app chat and booking confirmation flow</FigureCaption>
       </CaseSection>
 

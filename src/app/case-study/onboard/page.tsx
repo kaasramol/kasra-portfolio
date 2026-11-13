@@ -7,9 +7,11 @@ import {
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { CaseStudyNav } from "@/components/case-study-nav";
-import { OnboardBeforeMockup, OnboardAfterMockup, OnboardCelebrationMockup } from "@/components/mockups/onboard-screens";
+import { TasklySetup } from "@/components/scenes/onboard";
+import { Fit } from "@/components/figures/fit";
+import { OnboardWireframes, OnboardBefore, OnboardCelebration } from "@/components/figures/onboard";
 import { IPhoneOverview } from "@/components/mockups/iphone-overview";
-import { CompetitiveAuditMockup, FunnelAnalysisMockup, JourneyMapMockup, WireframesMockup, UsabilityResultsMockup } from "@/components/mockups/onboard-extras";
+import { CompetitiveAuditMockup, FunnelAnalysisMockup, JourneyMapMockup, UsabilityResultsMockup } from "@/components/mockups/onboard-extras";
 
 export const metadata = {
   title: "Onboard | Case Study",
@@ -76,7 +78,7 @@ export default function OnboardCaseStudy() {
         </p>
       </CaseSection>
 
-      <OnboardBeforeMockup />
+      <OnboardBefore />
       <FigureCaption>Fig 1 — Original onboarding flow with lengthy form fields and 7-step process</FigureCaption>
 
       <CaseSection id="problem" title="The Problem">
@@ -183,11 +185,11 @@ export default function OnboardCaseStudy() {
           value-first experience in 5 steps:
         </p>
 
-        <WireframesMockup />
+        <OnboardWireframes />
         <FigureCaption>Fig 5 — Low-fidelity wireframes mapping the redesigned 5-step onboarding flow</FigureCaption>
 
         <GestaltMockup>
-          <OnboardAfterMockup />
+          <Fit><TasklySetup /></Fit>
           <GestaltTag
             principle="Closure"
             description="Progress indicators and pre-populated templates let users feel completion momentum. The brain fills in 'I'm almost done.'"
@@ -201,7 +203,7 @@ export default function OnboardCaseStudy() {
         </GestaltMockup>
         <FigureCaption>Fig 6 — High-fidelity redesigned onboarding with personalized use-case selection</FigureCaption>
         <GestaltMockup className="mt-4">
-          <OnboardCelebrationMockup />
+          <OnboardCelebration />
           <GestaltTag
             principle="Hierarchy"
             description="The celebration moment uses scale and color weight to make the success state unmissable. A visual reward for completion."

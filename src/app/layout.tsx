@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { Caveat, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { FloatingNav } from "@/components/floating-nav";
 import { Footer } from "@/components/footer";
@@ -17,6 +17,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const caveat = Caveat({
+  variable: "--font-hand",
+  subsets: ["latin"],
+  weight: ["500", "600"],
+});
+
 export const metadata: Metadata = {
   title: "Kasra Molaei | UX/UI Designer",
   description:
@@ -31,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${plusJakarta.variable} ${geistMono.variable} antialiased`}
+        className={`${plusJakarta.variable} ${geistMono.variable} ${caveat.variable} antialiased`}
       >
         <MotionProvider>
           <SmoothScroll />

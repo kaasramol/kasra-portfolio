@@ -7,9 +7,11 @@ import {
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { CaseStudyNav } from "@/components/case-study-nav";
-import { TeamPulseDashboardMockup, TeamPulseInsightCardMockup, TeamPulseSurveyMobileMockup } from "@/components/mockups/teampulse-screens";
+import { PulseDashboard, PulseInsight } from "@/components/scenes/teampulse";
+import { Fit } from "@/components/figures/fit";
+import { TeamPulseWireframes, TeamPulseManagerView, TeamPulseSurveyMobile } from "@/components/figures/teampulse";
 import { IPhoneOverview } from "@/components/mockups/iphone-overview";
-import { AffinityMapMockup, CompetitivePositioningMockup, IADiagramMockup, TeamPulseManagerViewMockup, TeamPulseWireframesMockup, DesignSystemMockup } from "@/components/mockups/teampulse-extras";
+import { AffinityMapMockup, CompetitivePositioningMockup, IADiagramMockup, DesignSystemMockup } from "@/components/mockups/teampulse-extras";
 
 export const metadata = {
   title: "TeamPulse | Case Study",
@@ -72,7 +74,7 @@ export default function TeamPulseCaseStudy() {
         </p>
       </CaseSection>
 
-      <TeamPulseDashboardMockup />
+      <Fit><PulseDashboard /></Fit>
       <FigureCaption>Fig 1 — TeamPulse dashboard overview showing team health scores and actionable insights</FigureCaption>
 
       <CaseSection id="problem" title="The Problem">
@@ -191,7 +193,7 @@ export default function TeamPulseCaseStudy() {
       </CaseSection>
 
       <CaseSection id="design" title="Design">
-        <TeamPulseWireframesMockup />
+        <TeamPulseWireframes />
         <FigureCaption>Fig 5 — Mid-fidelity wireframes exploring dashboard layout and insight card patterns</FigureCaption>
 
         <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
@@ -205,7 +207,7 @@ export default function TeamPulseCaseStudy() {
         </p>
 
         <GestaltMockup>
-          <TeamPulseInsightCardMockup />
+          <Fit><PulseInsight /></Fit>
           <GestaltTag
             principle="Similarity"
             description="Every insight card follows the same structure: score, trend, summary, quotes. Consistent patterns let managers scan faster."
@@ -229,7 +231,7 @@ export default function TeamPulseCaseStudy() {
         </p>
 
         <GestaltMockup>
-          <TeamPulseManagerViewMockup />
+          <TeamPulseManagerView />
           <GestaltTag
             principle="Hierarchy"
             description="Health score dominates visually, category cards are secondary, action items are tertiary. This guides managers from overview to action."
@@ -252,7 +254,7 @@ export default function TeamPulseCaseStudy() {
           since the last survey, closing the loop.
         </p>
 
-        <TeamPulseSurveyMobileMockup />
+        <TeamPulseSurveyMobile />
         <FigureCaption>Fig 8 — Mobile survey experience designed to complete in under 90 seconds</FigureCaption>
 
         <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3 mt-10">

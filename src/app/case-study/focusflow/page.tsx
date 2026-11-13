@@ -7,9 +7,11 @@ import {
 } from "@/components/case-study-layout";
 import { GestaltTag, GestaltMockup } from "@/components/gestalt-tag";
 import { CaseStudyNav } from "@/components/case-study-nav";
-import { FocusFlowMobileHomeMockup, FocusFlowTimerMockup, FocusFlowWebDashboardMockup } from "@/components/mockups/focusflow-screens";
+import { FlowToday } from "@/components/scenes/focusflow";
+import { Fit } from "@/components/figures/fit";
+import { FocusFlowWireframes, FocusFlowPhones } from "@/components/figures/focusflow";
 import { IPhoneOverview } from "@/components/mockups/iphone-overview";
-import { FocusFlowCompetitiveMockup, FocusFlowJourneyMapMockup, FocusFlowWireframesMockup, FocusFlowDesignSystemMockup } from "@/components/mockups/focusflow-extras";
+import { FocusFlowCompetitiveMockup, FocusFlowJourneyMapMockup, FocusFlowDesignSystemMockup } from "@/components/mockups/focusflow-extras";
 
 export const metadata = {
   title: "FocusFlow | Case Study",
@@ -78,22 +80,19 @@ export default function FocusFlowCaseStudy() {
         </p>
       </CaseSection>
 
-      <div className="my-8 grid gap-6 md:grid-cols-2 items-start">
-        <FocusFlowMobileHomeMockup />
-        <GestaltMockup>
-          <FocusFlowTimerMockup />
-          <GestaltTag
-            principle="Figure/Ground"
-            description="The circular timer ring commands attention as the figure, while surrounding UI elements recede. One clear focal point."
-            top="-12px" right="24px"
-          />
-          <GestaltTag
-            principle="Closure"
-            description="The progress ring completing its circle creates a powerful sense of accomplishment. Users feel the session 'closing.'"
-            bottom="-12px" left="24px"
-          />
-        </GestaltMockup>
-      </div>
+      <GestaltMockup>
+        <FocusFlowPhones />
+        <GestaltTag
+          principle="Figure/Ground"
+          description="The circular timer ring commands attention as the figure, while surrounding UI elements recede. One clear focal point."
+          top="-12px" right="24px"
+        />
+        <GestaltTag
+          principle="Closure"
+          description="The progress ring completing its circle creates a powerful sense of accomplishment. Users feel the session 'closing.'"
+          bottom="-12px" left="24px"
+        />
+      </GestaltMockup>
       <FigureCaption>Fig 1 — FocusFlow mobile home screen and active timer session with progress ring</FigureCaption>
 
       <CaseSection id="problem" title="The Problem">
@@ -210,7 +209,7 @@ export default function FocusFlowCaseStudy() {
       </CaseSection>
 
       <CaseSection id="design" title="Design">
-        <FocusFlowWireframesMockup />
+        <FocusFlowWireframes />
         <FigureCaption>Fig 4 — Low-fidelity wireframes exploring mobile and web layout options</FigureCaption>
 
         <h3 className="text-sm sm:text-base font-semibold tracking-[0.08em] uppercase text-[var(--accent)] mb-3">
@@ -242,7 +241,7 @@ export default function FocusFlowCaseStudy() {
         </p>
 
         <GestaltMockup>
-          <FocusFlowWebDashboardMockup />
+          <Fit><FlowToday /></Fit>
           <GestaltTag
             principle="Hierarchy"
             description="Analytics and calendar use size, weight, and position to guide the eye from daily schedule to weekly insights to suggestions."
