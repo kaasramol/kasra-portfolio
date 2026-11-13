@@ -4,14 +4,14 @@ import type { ReactNode } from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
-  KaputMap,
-  KaputQuoteBattle,
-  OnboardChecklist,
-  OnboardCompare,
-  TeamPulseDashboard,
-  TeamPulseInsight,
-  FocusFlowTimeline,
-  FocusFlowInsights,
+  KaputExplore,
+  KaputQuotes,
+  TasklySetup,
+  TasklyCompare,
+  PulseDashboard,
+  PulseInsight,
+  FlowToday,
+  FlowInsights,
 } from "./project-screens";
 
 interface Cell {
@@ -21,14 +21,14 @@ interface Cell {
 }
 
 const cells: Cell[] = [
-  { node: <TeamPulseDashboard />, vivid: false, lift: "sm:translate-y-6" },
-  { node: <KaputQuoteBattle />, vivid: true, lift: "" },
-  { node: <OnboardCompare />, vivid: false, lift: "sm:translate-y-10" },
-  { node: <FocusFlowTimeline />, vivid: true, lift: "sm:-translate-y-4" },
-  { node: <TeamPulseInsight />, vivid: true, lift: "sm:translate-y-2" },
-  { node: <KaputMap />, vivid: false, lift: "sm:translate-y-8" },
-  { node: <OnboardChecklist />, vivid: true, lift: "sm:-translate-y-6" },
-  { node: <FocusFlowInsights />, vivid: false, lift: "sm:translate-y-4" },
+  { node: <PulseDashboard />, vivid: false, lift: "sm:translate-y-6" },
+  { node: <KaputQuotes />, vivid: true, lift: "" },
+  { node: <TasklyCompare />, vivid: false, lift: "sm:translate-y-10" },
+  { node: <FlowToday />, vivid: true, lift: "sm:-translate-y-4" },
+  { node: <PulseInsight />, vivid: true, lift: "sm:translate-y-2" },
+  { node: <KaputExplore />, vivid: false, lift: "sm:translate-y-8" },
+  { node: <TasklySetup />, vivid: true, lift: "sm:-translate-y-6" },
+  { node: <FlowInsights />, vivid: false, lift: "sm:translate-y-4" },
 ];
 
 /* Mockups are authored at a natural ~560px width; scale them down uniformly

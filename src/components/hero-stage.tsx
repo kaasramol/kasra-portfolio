@@ -3,12 +3,7 @@
 import Link from "next/link";
 import { motion, useMotionValue, useSpring, useTransform, type MotionValue } from "framer-motion";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import {
-  KaputMap,
-  TeamPulseInsight,
-  OnboardChecklist,
-  FocusFlowTimeline,
-} from "./project-screens";
+import { KaputExplore, PulseInsight, TasklySetup, FlowToday } from "./project-screens";
 
 /* Mockups are authored at a natural 560px width. Each tile crops and scales
    one down to its own box, then the whole stage is scaled to fit the column. */
@@ -32,7 +27,7 @@ interface Tile {
 
 const tiles: Tile[] = [
   {
-    node: <KaputMap />,
+    node: <KaputExplore />,
     label: "Kaput · Map UX",
     href: "/case-study/kaput",
     glow: "#c98b5e",
@@ -45,7 +40,7 @@ const tiles: Tile[] = [
     z: 10,
   },
   {
-    node: <TeamPulseInsight />,
+    node: <PulseInsight />,
     label: "TeamPulse · Insights",
     href: "/case-study/teampulse",
     glow: "#6f9bae",
@@ -58,7 +53,7 @@ const tiles: Tile[] = [
     z: 20,
   },
   {
-    node: <OnboardChecklist />,
+    node: <TasklySetup />,
     label: "Onboard · Activation",
     href: "/case-study/onboard",
     glow: "#7fae87",
@@ -71,7 +66,7 @@ const tiles: Tile[] = [
     z: 20,
   },
   {
-    node: <FocusFlowTimeline />,
+    node: <FlowToday />,
     label: "FocusFlow · Today",
     href: "/case-study/focusflow",
     glow: "#9a8ac9",
@@ -106,7 +101,7 @@ function StageTile({ tile, mx, my }: { tile: Tile; mx: MotionValue<number>; my: 
         <Link
           href={tile.href}
           aria-label={`Open the ${tile.label} case study`}
-          className="group relative block w-full overflow-hidden rounded-xl border border-white/10 bg-[#0d0e12] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] transition-transform duration-500 ease-out hover:-translate-y-1 hover:border-white/20"
+          className="group relative block w-full overflow-hidden rounded-[14px] transition-transform duration-500 ease-out hover:-translate-y-1"
         >
           {/* Mockup, zoomed from its natural width so the tile sizes itself to the content */}
           <div className="pointer-events-none" style={{ width: MOCKUP_W, zoom: scale }}>
