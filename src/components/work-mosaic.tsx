@@ -10,8 +10,6 @@ import {
   TasklyCompare,
   PulseDashboard,
   PulseInsight,
-  FlowToday,
-  FlowInsights,
 } from "./project-screens";
 
 interface Cell {
@@ -24,11 +22,9 @@ const cells: Cell[] = [
   { node: <PulseDashboard />, vivid: false, lift: "sm:translate-y-6" },
   { node: <KaputQuotes />, vivid: true, lift: "" },
   { node: <TasklyCompare />, vivid: false, lift: "sm:translate-y-10" },
-  { node: <FlowToday />, vivid: true, lift: "sm:-translate-y-4" },
   { node: <PulseInsight />, vivid: true, lift: "sm:translate-y-2" },
   { node: <KaputExplore />, vivid: false, lift: "sm:translate-y-8" },
   { node: <TasklySetup />, vivid: true, lift: "sm:-translate-y-6" },
-  { node: <FlowInsights />, vivid: false, lift: "sm:translate-y-4" },
 ];
 
 /* Mockups are authored at a natural ~560px width; scale them down uniformly
@@ -70,7 +66,7 @@ export function WorkMosaic() {
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Products across the stack</h2>
       </div>
 
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6">
         {cells.map((cell, i) => (
           <motion.div
             key={i}

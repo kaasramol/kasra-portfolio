@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion, useMotionValue, useSpring, useTransform, type MotionValue } from "framer-motion";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { KaputExplore, PulseInsight, TasklySetup, FlowToday } from "./project-screens";
+import { KaputExplore, PulseInsight, TasklySetup } from "./project-screens";
 
 /* Mockups are authored at a natural 560px width. Each tile crops and scales
    one down to its own box, then the whole stage is scaled to fit the column. */
@@ -32,8 +32,8 @@ const tiles: Tile[] = [
     href: "/case-study/kaput",
     glow: "#c98b5e",
     x: 0,
-    y: 100,
-    w: 420,
+    y: 96,
+    w: 440,
     depth: 1,
     float: 7,
     delay: 0.5,
@@ -44,7 +44,7 @@ const tiles: Tile[] = [
     label: "TeamPulse · Insights",
     href: "/case-study/teampulse",
     glow: "#6f9bae",
-    x: 330,
+    x: 320,
     y: 0,
     w: 320,
     depth: 1.8,
@@ -57,26 +57,13 @@ const tiles: Tile[] = [
     label: "Onboard · Activation",
     href: "/case-study/onboard",
     glow: "#7fae87",
-    x: 40,
-    y: 360,
-    w: 330,
+    x: 270,
+    y: 318,
+    w: 350,
     depth: 1.4,
     float: 9,
     delay: 0.85,
     z: 20,
-  },
-  {
-    node: <FlowToday />,
-    label: "FocusFlow · Today",
-    href: "/case-study/focusflow",
-    glow: "#9a8ac9",
-    x: 350,
-    y: 310,
-    w: 300,
-    depth: 2.3,
-    float: 6.5,
-    delay: 1,
-    z: 30,
   },
 ];
 

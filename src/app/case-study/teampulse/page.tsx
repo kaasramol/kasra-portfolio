@@ -59,7 +59,7 @@ export default function TeamPulseCaseStudy() {
         />
       }
       prevProject={{ title: "Onboard", href: "/case-study/onboard" }}
-      nextProject={{ title: "FocusFlow", href: "/case-study/focusflow" }}
+      nextProject={{ title: "Kaput", href: "/case-study/kaput" }}
     >
       <CaseStudyNav items={teampulseSections} />
       <CaseSection id="overview" title="Overview">

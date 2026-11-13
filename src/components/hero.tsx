@@ -28,7 +28,7 @@ function EmailChip() {
 }
 
 const stats = [
-  { value: "4", label: "Case studies" },
+  { value: "3", label: "Case studies" },
   { value: "2026", label: "Open to co-op" },
   { value: "YVR", label: "Vancouver, BC" },
 ];

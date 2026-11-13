@@ -1,5 +1,5 @@
 import { StickyCaseStudy } from "@/components/sticky-case-study";
-import { KaputScreens, OnboardScreens, TeamPulseScreens, FocusFlowScreens } from "@/components/project-screens";
+import { KaputScreens, OnboardScreens, TeamPulseScreens } from "@/components/project-screens";
 import { ScrollReveal, AnimatedDivider } from "@/components/motion";
 import { WordReveal } from "@/components/word-reveal";
 import { WorkMosaic } from "@/components/work-mosaic";
@@ -41,17 +41,6 @@ const projects = [
     glow: "#6f9bae",
     year: "2024",
     screens: <TeamPulseScreens />,
-  },
-  {
-    title: "FocusFlow",
-    subtitle: "Productivity App Concept",
-    description:
-      "Cross-platform focus management app integrating with calendars and Slack to protect deep work time.",
-    tags: ["Mobile + Web", "Product Strategy", "Cross-Platform"],
-    href: "/case-study/focusflow",
-    glow: "#9a8ac9",
-    year: "2024",
-    screens: <FocusFlowScreens />,
   },
 ];
 

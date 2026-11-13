@@ -76,7 +76,7 @@ export default function KaputCaseStudy() {
         />
       }
       nextProject={{ title: "Onboard", href: "/case-study/onboard" }}
-      prevProject={{ title: "FocusFlow", href: "/case-study/focusflow" }}
+      prevProject={{ title: "TeamPulse", href: "/case-study/teampulse" }}
     >
       <CaseStudyNav items={kaputSections} />
       <CaseSection id="overview" title="Overview">
