@@ -284,7 +284,7 @@ export function WfNote({
 }) {
   return (
     <div
-      className={`absolute z-20 w-[118px] px-2.5 py-2 text-[13px] leading-[1.15] shadow-[0_10px_24px_-10px_rgba(0,0,0,0.9)] ${className}`}
+      className={`absolute z-20 hidden w-[118px] px-2.5 py-2 text-[13px] leading-[1.15] shadow-[0_10px_24px_-10px_rgba(0,0,0,0.9)] sm:block ${className}`}
       style={{ background: color, color: "#2a2410", transform: `rotate(${rotate}deg)`, fontFamily: "var(--font-hand), cursive", ...style }}
     >
       {children}
@@ -304,7 +304,7 @@ export function WfHand({
   className?: string;
 }) {
   return (
-    <p className={`absolute z-20 text-[15px] leading-tight ${className}`} style={{ color, fontFamily: "var(--font-hand), cursive", ...style }}>
+    <p className={`absolute z-20 hidden text-[15px] leading-tight sm:block ${className}`} style={{ color, fontFamily: "var(--font-hand), cursive", ...style }}>
       {children}
     </p>
   );
@@ -328,7 +328,7 @@ export function WfArrow({
   const my = (y1 + y2) / 2 - (x2 - x1) * bend;
   const d = `M${x1},${y1} Q${mx},${my} ${x2},${y2}`;
   return (
-    <svg className="pointer-events-none absolute inset-0 z-10 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden>
+    <svg className="pointer-events-none absolute inset-0 z-10 hidden h-full w-full sm:block" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden>
       <defs>
         <marker id={`wf-arrow-${color.replace("#", "")}`} markerWidth="6" markerHeight="6" refX="4" refY="3" orient="auto" markerUnits="strokeWidth">
           <path d="M0,0.5 L5,3 L0,5.5" fill="none" stroke={color} strokeWidth="1" strokeLinecap="round" />
