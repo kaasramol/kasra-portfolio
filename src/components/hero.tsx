@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { HeroReveal } from "@/components/motion";
 import { Logo } from "@/components/logo";
@@ -35,15 +36,36 @@ const stats = [
 export function Hero() {
   return (
     <section className="grain relative flex min-h-[100dvh] flex-col overflow-hidden">
-      {/* Background — warm vignette + faint grid so the dark field has structure */}
+      {/* Background — sunset portrait, muted and faded into the dark, plus a faint grid */}
       <div className="absolute inset-0 -z-10" aria-hidden>
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 70% 55% at 75% 40%, rgba(207,196,170,0.07), transparent 65%), radial-gradient(ellipse 60% 50% at 10% 90%, rgba(207,196,170,0.05), transparent 60%), linear-gradient(180deg, #14130e 0%, #0f0e0b 100%)",
+              "radial-gradient(ellipse 70% 55% at 75% 40%, rgba(207,196,170,0.07), transparent 65%), linear-gradient(180deg, #14130e 0%, #0f0e0b 100%)",
           }}
         />
+        <div
+          className="absolute inset-0"
+          style={{
+            maskImage:
+              "linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.75) 55%, transparent 100%), linear-gradient(90deg, black 0%, black 45%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.75) 55%, transparent 100%), linear-gradient(90deg, black 0%, black 45%, transparent 100%)",
+            maskComposite: "intersect",
+            WebkitMaskComposite: "source-in",
+          }}
+        >
+          <Image
+            src="/images/hero-sunset.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[28%_25%] opacity-[0.34] saturate-[0.6] contrast-[1.05]"
+          />
+        </div>
+        <div className="absolute inset-0 bg-[var(--background)]/35" />
         <div
           className="absolute inset-0 opacity-[0.35]"
           style={{

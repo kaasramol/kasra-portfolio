@@ -1,6 +1,7 @@
 import { SectionHeading } from "@/components/section-heading";
 import { StaggerContainer, StaggerItem } from "@/components/motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "About | Kasra Molaei",
@@ -13,19 +14,17 @@ export default function AboutPage() {
       <div className="mx-auto max-w-3xl">
         <SectionHeading label="About" title="Kasra Molaei" />
 
-        {/* Decorative pattern header */}
-        <div className="grain relative mb-10 flex h-64 items-center justify-center overflow-hidden rounded-2xl bg-[var(--surface)]">
-          <svg className="absolute inset-0 h-full w-full opacity-[0.07]" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-                <circle cx="16" cy="16" r="1.5" fill="var(--foreground)" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-          </svg>
-          <div className="relative z-10 text-center">
-            <span className="text-6xl font-bold tracking-tight text-[var(--foreground)] opacity-10" style={{ fontFamily: "var(--font-serif), Georgia, serif" }}>KM</span>
-          </div>
+        {/* Portrait */}
+        <div className="relative mb-10 h-[420px] overflow-hidden rounded-2xl border border-[var(--border)] sm:h-[520px]">
+          <Image
+            src="/images/about/portrait.jpg"
+            alt="Kasra Molaei"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="object-cover object-[50%_62%] saturate-[0.85]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)]/70 via-transparent to-transparent" />
         </div>
 
         <div className="space-y-5 text-lg leading-relaxed text-[var(--text-secondary)]">
