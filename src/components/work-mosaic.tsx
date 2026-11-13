@@ -40,7 +40,7 @@ function MosaicTile({ node, vivid }: { node: ReactNode; vivid: boolean }) {
     >
       <div
         className="absolute top-1/2 left-1/2"
-        style={{ width: 560, transform: `translate(-50%, -50%) scale(${vivid ? 0.46 : 0.38})` }}
+        style={{ width: 560, transform: `translate(-50%, -50%) scale(${vivid ? 0.58 : 0.5})` }}
       >
         {node}
       </div>
